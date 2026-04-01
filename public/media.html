@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="assets/site.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer src="assets/site.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,9 +43,12 @@
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <div class="site-shell">
     <header class="site-nav sticky top-0 z-50 border-b border-outline-variant/15">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <a href="index.html" class="serif-display text-2xl md:text-3xl text-primary tracking-tight">Afrodescendant Ali</a>
-            <nav class="flex flex-wrap gap-5 md:gap-8 sans-label text-[11px]">
+        <div class="site-header-inner max-w-7xl mx-auto px-6 md:px-12 py-5">
+            <div class="site-brand-row">
+                <a href="index.html" class="serif-display text-2xl md:text-3xl text-primary tracking-tight">Afrodescendant Ali</a>
+                <button type="button" class="site-nav-toggle sans-label text-[10px]" data-nav-toggle aria-expanded="false" aria-controls="site-nav-menu">Menu</button>
+            </div>
+            <nav id="site-nav-menu" class="site-nav-menu sans-label text-[11px]" data-nav-menu>
                 <a href="index.html" class="site-nav-link">Home</a>
                 <a href="about.html" class="site-nav-link">About</a>
                 <a href="work.html" class="site-nav-link">Work</a>
@@ -55,14 +59,14 @@
     </header>
 
     <main>
-        <section class="max-w-[1440px] mx-auto px-8 md:px-12 py-20 border-b border-surface-container-high">
+        <section class="page-hero max-w-[1440px] mx-auto px-8 md:px-12 py-20 border-b border-surface-container-high">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <span class="eyebrow mb-6 block">Media</span>
-                    <h1 class="serif-display text-5xl md:text-7xl leading-[1.1] mb-8 text-primary max-w-xl tight-headline">
+                    <h1 class="page-hero-title serif-display text-5xl md:text-7xl leading-[1.1] mb-8 text-primary max-w-xl tight-headline">
                         A cross-platform analysis and education presence
                     </h1>
-                    <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed font-light">
+                    <p class="page-hero-copy text-xl text-on-surface-variant max-w-xl leading-relaxed font-light">
                         Verified active platform mix includes YouTube, Facebook, and TikTok.
                     </p>
                 </div>
@@ -95,21 +99,21 @@
                     <p class="text-xs text-on-surface-variant leading-relaxed font-light mb-8">
                         Long-form video serves as the educational hub for analysis and context.
                     </p>
-                    <a class="text-link sans-label text-[10px]" href="https://www.youtube.com/@afrodescendantali" target="_blank" rel="noreferrer">YouTube</a>
+                    <a class="platform-link text-link sans-label text-[10px]" href="https://www.youtube.com/@afrodescendantali" target="_blank" rel="noreferrer">YouTube</a>
                 </div>
                 <div class="bg-surface p-10 hover:bg-surface-container-low transition-colors group">
                     <h3 class="serif-display text-2xl mb-6 group-hover:text-secondary transition-colors">Facebook</h3>
                     <p class="text-xs text-on-surface-variant leading-relaxed font-light mb-8">
                         Facebook supports discussion and conversion activity with an older audience mix.
                     </p>
-                    <a class="text-link sans-label text-[10px]" href="https://web.facebook.com/jermaine.pitter.7" target="_blank" rel="noreferrer">Facebook</a>
+                    <a class="platform-link text-link sans-label text-[10px]" href="https://web.facebook.com/jermaine.pitter.7" target="_blank" rel="noreferrer">Facebook</a>
                 </div>
                 <div class="bg-surface p-10 hover:bg-surface-container-low transition-colors group">
                     <h3 class="serif-display text-2xl mb-6 group-hover:text-secondary transition-colors">TikTok</h3>
                     <p class="text-xs text-on-surface-variant leading-relaxed font-light mb-8">
                         Short-form distribution supports discovery and wider reach for channel entry points.
                     </p>
-                    <a class="text-link sans-label text-[10px]" href="https://www.tiktok.com/@afrodescendantali" target="_blank" rel="noreferrer">TikTok</a>
+                    <a class="platform-link text-link sans-label text-[10px]" href="https://www.tiktok.com/@afrodescendantali" target="_blank" rel="noreferrer">TikTok</a>
                 </div>
             </div>
         </section>

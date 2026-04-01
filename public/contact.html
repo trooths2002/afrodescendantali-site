@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="assets/site.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script defer src="assets/site.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,9 +43,12 @@
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <div class="site-shell">
     <header class="site-nav sticky top-0 z-50 border-b border-outline-variant/15">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <a href="index.html" class="serif-display text-2xl md:text-3xl text-primary tracking-tight">Afrodescendant Ali</a>
-            <nav class="flex flex-wrap gap-5 md:gap-8 sans-label text-[11px]">
+        <div class="site-header-inner max-w-7xl mx-auto px-6 md:px-12 py-5">
+            <div class="site-brand-row">
+                <a href="index.html" class="serif-display text-2xl md:text-3xl text-primary tracking-tight">Afrodescendant Ali</a>
+                <button type="button" class="site-nav-toggle sans-label text-[10px]" data-nav-toggle aria-expanded="false" aria-controls="site-nav-menu">Menu</button>
+            </div>
+            <nav id="site-nav-menu" class="site-nav-menu sans-label text-[11px]" data-nav-menu>
                 <a href="index.html" class="site-nav-link">Home</a>
                 <a href="about.html" class="site-nav-link">About</a>
                 <a href="work.html" class="site-nav-link">Work</a>
@@ -55,16 +59,16 @@
     </header>
 
     <main>
-        <section class="relative min-h-[700px] flex items-center px-8 md:px-12 py-32 bg-surface-container-low overflow-hidden border-b border-outline-variant/10">
+        <section class="page-hero relative min-h-[700px] flex items-center px-8 md:px-12 py-32 bg-surface-container-low overflow-hidden border-b border-outline-variant/10">
             <div class="hero-art absolute right-0 top-0 w-2/5 h-full opacity-[0.03] pointer-events-none hidden lg:block">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYrKYpQbjG2U_Ti7hu5_f9ctT513RuUS6WOI7BkUiAYoX8hjpIR30sHgitNyyvwgXTgrJh_qo-y_npRYmWnaWFlY7pWHPXdgBbBFMc7rlXFizMqNNPvQ2oql0idw4VRc8SNqLs3zpHOIt0qi2yyrL9smyCpTgXNrGX0_W1UWW4ezfcwDeZL_Rk3fZFY_uoPGlO0Ky4nywYtqCEcPunsGwv3IWGhBb16Tgc_DS-40Zwq0fEZL5xI80I54vIZqpkLOi5jigMo6OTTn0" alt="Abstract topographic texture" class="w-full h-full object-cover grayscale mix-blend-multiply">
             </div>
             <div class="max-w-4xl relative z-10">
                 <span class="eyebrow mb-8 block">Contact</span>
-                <h1 class="serif-display text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.05] mb-8 font-light tight-headline">
+                <h1 class="page-hero-title serif-display text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.05] mb-8 font-light tight-headline">
                     Contact
                 </h1>
-                <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-2xl font-light">
+                <p class="page-hero-copy text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-2xl font-light">
                     For inquiries, use the email below.
                 </p>
             </div>
@@ -73,7 +77,7 @@
         <section class="bg-surface px-8 md:px-12 py-24 border-b border-outline-variant/10">
             <div class="max-w-4xl mx-auto text-center">
                 <span class="eyebrow mb-6 block">Email-first fallback</span>
-                <p class="serif-display text-4xl md:text-6xl text-primary leading-tight">info@afrodescendantali.com</p>
+                <a class="email-link serif-display text-4xl md:text-6xl text-primary leading-tight break-all md:break-normal" href="mailto:info@afrodescendantali.com">info@afrodescendantali.com</a>
             </div>
         </section>
 
