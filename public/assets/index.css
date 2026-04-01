@@ -1,0 +1,84 @@
+/* Afrodescendant Ali - Shared Artifact Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Public+Sans:wght@300;400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+    --color-primary: #000101;
+    --color-on-primary: #ffffff;
+    --color-secondary: #745b22;
+    --color-surface: #faf9f4;
+    --color-on-surface: #1b1c19;
+    --color-on-surface-variant: #44474a;
+    --color-outline: #75777a;
+    --color-outline-variant: #c5c6ca;
+    --color-surface-container-low: #f5f4ef;
+    --color-surface-container: #efeee9;
+    --color-surface-container-high: #e9e8e3;
+    --color-surface-container-highest: #e3e3de;
+    --color-secondary-container: #fedb95;
+    --color-on-secondary-container: #785f25;
+    
+    --font-headline: 'Newsreader', serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-label: 'Public Sans', sans-serif;
+    
+    --paper-texture: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDv08HODaCtWe2MNnYHmDPUNvWvUIcmrH_zIFfI5ScNBi8mP9HmL-dgfsq8VjGd03qX48NCFAGqQtcxykgzkiXrb2VZGp6L3Be6rxeq0hNqDUE6VnaFm5FKwDPDGWUyP2j43u27cNS_Tn5p0cHLvS-O9T-n6mQYGM4yWoHT0jrCnfLht-rhYtd18S2Ng36K68XvjZM27sSXJegJ1qqVET95U3yqlIXnz1YOs-w9tXo1BYN8_hjl1iPF9Das_9psmPVwTjhuIv1wDUk);
+}
+
+body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.serif-display { font-family: var(--font-headline); }
+.sans-label { 
+    font-family: var(--font-label); 
+    text-transform: uppercase; 
+    letter-spacing: 0.15em; 
+    font-weight: 700; 
+}
+
+.paper-texture { 
+    background-image: var(--paper-texture);
+    background-color: var(--color-surface);
+    background-blend-mode: multiply;
+}
+
+.tight-headline { 
+    letter-spacing: -0.02em; 
+    line-height: 1.02; 
+}
+
+.material-symbols-outlined { 
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle;
+}
+
+.selection\:bg-secondary-container ::selection {
+    background-color: var(--color-secondary-container);
+    color: var(--color-on-secondary-container);
+}
+
+/* Base Component Reset for Artifacts */
+.artifact-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-headline);
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
