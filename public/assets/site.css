@@ -141,7 +141,7 @@
     color: var(--color-secondary);
 }
 
-.hero-art img { filter: none; }
+.hero-art img { filter: invert(1) sepia(0.35) hue-rotate(5deg) saturate(1.4); }
 
 .hero-art--home { opacity: 1; }
 
@@ -237,5 +237,6 @@
 /* Hero art dark background fix */
 .hero-art { background-color: #0d0d0d !important; }
 .hero-art img { mix-blend-mode: normal; }
+
 
 
