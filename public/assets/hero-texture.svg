@@ -1,57 +1,56 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900" aria-hidden="true">
   <defs>
     <linearGradient id="parch" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e4dbc8;stop-opacity:1"/>
-      <stop offset="40%" style="stop-color:#ddd4be;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#cec4ae;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#c8b99a;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#bfaf91;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#b0a07e;stop-opacity:1"/>
     </linearGradient>
     <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
-      <stop offset="60%" style="stop-color:#000000;stop-opacity:0"/>
-      <stop offset="100%" style="stop-color:#1a1208;stop-opacity:0.35"/>
+      <stop offset="50%" style="stop-color:#000000;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#1a1208;stop-opacity:0.5"/>
     </radialGradient>
   </defs>
   <rect width="800" height="900" fill="url(#parch)"/>
-  <g stroke="#8b7355" stroke-width="0.4" opacity="0.5">
+  <g stroke="#6b5535" stroke-width="0.5" opacity="0.75">
     <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
     <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
     <line x1="0" y1="500" x2="800" y2="500"/><line x1="0" y1="600" x2="800" y2="600"/>
     <line x1="0" y1="700" x2="800" y2="700"/><line x1="0" y1="800" x2="800" y2="800"/>
-    <line x1="0" y1="450" x2="800" y2="450" stroke="#745b22" stroke-width="0.8" opacity="0.6"/>
+    <line x1="0" y1="450" x2="800" y2="450" stroke="#745b22" stroke-width="1.2" opacity="0.9"/>
   </g>
-  <g stroke="#8b7355" stroke-width="0.4" opacity="0.5">
+  <g stroke="#6b5535" stroke-width="0.5" opacity="0.75">
     <line x1="100" y1="0" x2="100" y2="900"/><line x1="200" y1="0" x2="200" y2="900"/>
-    <line x1="300" y1="0" x2="300" y2="900"/><line x1="400" y1="0" x2="400" y2="900"/>
-    <line x1="500" y1="0" x2="500" y2="900"/><line x1="600" y1="0" x2="600" y2="900"/>
-    <line x1="700" y1="0" x2="700" y2="900"/>
-    <line x1="400" y1="0" x2="400" y2="900" stroke="#745b22" stroke-width="0.8" opacity="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="900"/><line x1="500" y1="0" x2="500" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/><line x1="700" y1="0" x2="700" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900" stroke="#745b22" stroke-width="1.2" opacity="0.9"/>
   </g>
-  <path d="M 370,95 C 390,88 420,85 445,90 C 475,96 490,110 500,125 C 515,145 518,165 515,185 C 530,195 545,210 548,230 C 552,255 540,275 535,295 C 545,315 558,335 562,360 C 568,390 560,415 555,440 C 565,465 572,492 568,520 C 562,550 545,572 530,592 C 510,618 488,638 468,660 C 445,685 428,705 415,728 C 405,748 398,770 390,788 C 382,770 374,748 364,728 C 350,705 333,685 310,660 C 290,638 268,618 248,592 C 233,572 216,550 210,520 C 206,492 213,465 223,440 C 218,415 210,390 216,360 C 220,335 233,315 243,295 C 238,275 226,255 230,230 C 233,210 248,195 262,185 C 260,165 262,145 278,125 C 288,110 303,96 333,90 C 350,86 360,93 370,95 Z" fill="none" stroke="#4a3520" stroke-width="1.8" opacity="0.55" stroke-linejoin="round"/>
-  <g transform="translate(660, 160)" opacity="0.55">
-    <line x1="0" y1="-38" x2="0" y2="-12" stroke="#4a3520" stroke-width="1.2"/>
-    <line x1="0" y1="12" x2="0" y2="38" stroke="#4a3520" stroke-width="1.2"/>
-    <line x1="12" y1="0" x2="38" y2="0" stroke="#4a3520" stroke-width="1.2"/>
-    <line x1="-38" y1="0" x2="-12" y2="0" stroke="#4a3520" stroke-width="1.2"/>
-    <line x1="-27" y1="-27" x2="-8" y2="-8" stroke="#8b7355" stroke-width="0.6"/>
-    <line x1="8" y1="8" x2="27" y2="27" stroke="#8b7355" stroke-width="0.6"/>
-    <line x1="27" y1="-27" x2="8" y2="-8" stroke="#8b7355" stroke-width="0.6"/>
-    <line x1="-8" y1="8" x2="-27" y2="27" stroke="#8b7355" stroke-width="0.6"/>
-    <circle cx="0" cy="0" r="5" fill="none" stroke="#4a3520" stroke-width="1"/>
+  <path d="M 370,95 C 390,88 420,85 445,90 C 475,96 490,110 500,125 C 515,145 518,165 515,185 C 530,195 545,210 548,230 C 552,255 540,275 535,295 C 545,315 558,335 562,360 C 568,390 560,415 555,440 C 565,465 572,492 568,520 C 562,550 545,572 530,592 C 510,618 488,638 468,660 C 445,685 428,705 415,728 C 405,748 398,770 390,788 C 382,770 374,748 364,728 C 350,705 333,685 310,660 C 290,638 268,618 248,592 C 233,572 216,550 210,520 C 206,492 213,465 223,440 C 218,415 210,390 216,360 C 220,335 233,315 243,295 C 238,275 226,255 230,230 C 233,210 248,195 262,185 C 260,165 262,145 278,125 C 288,110 303,96 333,90 C 350,86 360,93 370,95 Z" fill="none" stroke="#2a1f0e" stroke-width="2.2" opacity="0.85" stroke-linejoin="round"/>
+  <g transform="translate(660, 160)" opacity="0.8">
+    <line x1="0" y1="-38" x2="0" y2="-12" stroke="#2a1f0e" stroke-width="1.4"/>
+    <line x1="0" y1="12" x2="0" y2="38" stroke="#2a1f0e" stroke-width="1.4"/>
+    <line x1="12" y1="0" x2="38" y2="0" stroke="#2a1f0e" stroke-width="1.4"/>
+    <line x1="-38" y1="0" x2="-12" y2="0" stroke="#2a1f0e" stroke-width="1.4"/>
+    <line x1="-27" y1="-27" x2="-8" y2="-8" stroke="#6b5535" stroke-width="0.8"/>
+    <line x1="8" y1="8" x2="27" y2="27" stroke="#6b5535" stroke-width="0.8"/>
+    <line x1="27" y1="-27" x2="8" y2="-8" stroke="#6b5535" stroke-width="0.8"/>
+    <line x1="-8" y1="8" x2="-27" y2="27" stroke="#6b5535" stroke-width="0.8"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#2a1f0e" stroke-width="1.2"/>
     <circle cx="0" cy="0" r="1.5" fill="#745b22"/>
-    <text x="0" y="-44" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#4a3520">N</text>
-    <text x="0" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#4a3520">S</text>
-    <text x="48" y="4" text-anchor="start" font-family="Georgia, serif" font-size="9" fill="#4a3520">E</text>
-    <text x="-48" y="4" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#4a3520">W</text>
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#8b7355" stroke-width="0.5" stroke-dasharray="2,3"/>
+    <text x="0" y="-44" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#2a1f0e">N</text>
+    <text x="0" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#2a1f0e">S</text>
+    <text x="48" y="4" text-anchor="start" font-family="Georgia, serif" font-size="9" fill="#2a1f0e">E</text>
+    <text x="-48" y="4" text-anchor="end" font-family="Georgia, serif" font-size="9" fill="#2a1f0e">W</text>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#6b5535" stroke-width="0.7" stroke-dasharray="2,3"/>
   </g>
-  <g font-family="Georgia, serif" font-size="8" fill="#8b7355" opacity="0.7">
+  <g font-family="Georgia, serif" font-size="8" fill="#4a3520" opacity="0.85">
     <text x="8" y="103">30&#176;N</text><text x="8" y="203">20&#176;N</text>
     <text x="8" y="303">10&#176;N</text><text x="8" y="453">0&#176;</text>
     <text x="8" y="503">10&#176;S</text><text x="8" y="603">20&#176;S</text>
     <text x="8" y="703">30&#176;S</text>
   </g>
-  <rect x="12" y="12" width="776" height="876" fill="none" stroke="#8b7355" stroke-width="0.8" opacity="0.5"/>
-  <rect x="18" y="18" width="764" height="864" fill="none" stroke="#8b7355" stroke-width="0.3" opacity="0.4"/>
-  <g stroke="#745b22" stroke-width="0.8" fill="none" opacity="0.5">
+  <rect x="12" y="12" width="776" height="876" fill="none" stroke="#6b5535" stroke-width="1" opacity="0.7"/>
+  <rect x="18" y="18" width="764" height="864" fill="none" stroke="#6b5535" stroke-width="0.4" opacity="0.5"/>
+  <g stroke="#745b22" stroke-width="1" fill="none" opacity="0.7">
     <path d="M12,12 L38,12 M12,12 L12,38"/>
     <path d="M788,12 L762,12 M788,12 L788,38"/>
     <path d="M12,888 L38,888 M12,888 L12,862"/>
