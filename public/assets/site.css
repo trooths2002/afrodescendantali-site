@@ -231,7 +231,14 @@
     }
 
     .email-link {
-        font-size: clamp(2.1rem, 10.5vw, 3.5rem) !important;
-        line-height: 1.12 !important;
+        display: inline-block;
+        max-width: 100%;
+        font-size: clamp(1.7rem, 8.6vw, 2.6rem) !important;
+        line-height: 1.24 !important;
     }
 }
+
+/* Hero art dark background fix */
+.hero-art { background-color: #0d0d0d !important; }
+.hero-art img { mix-blend-mode: normal; }
+
