@@ -141,13 +141,9 @@
     color: var(--color-secondary);
 }
 
-.hero-art img {
-    filter: grayscale(100%);
-}
+.hero-art img { filter: none; }
 
-.hero-art--home {
-    opacity: 0.08;
-}
+.hero-art--home { opacity: 1; }
 
 .page-hero-title {
     text-wrap: balance;
@@ -241,4 +237,5 @@
 /* Hero art dark background fix */
 .hero-art { background-color: #0d0d0d !important; }
 .hero-art img { mix-blend-mode: normal; }
+
 
