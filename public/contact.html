@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afrodescendant Ali | Contact</title>
-    <meta name="description" content="Email-first contact page for Afrodescendant Ali.">
+    <meta name="description" content="Contact Afrodescendant Ali for paid Pan-African briefings, custom intelligence memos, media questions, and serious collaboration inquiries.">
+    <link rel="canonical" href="https://www.afrodescendantali.com/contact.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.afrodescendantali.com/#organization","name":"Afrodescendant Ali","url":"https://www.afrodescendantali.com/","email":"info@afrodescendantali.com"},{"@type":"Person","@id":"https://www.afrodescendantali.com/#person","name":"Afrodescendant Ali","url":"https://www.afrodescendantali.com/about.html"},{"@type":"WebSite","@id":"https://www.afrodescendantali.com/#website","url":"https://www.afrodescendantali.com/","name":"Afrodescendant Ali","publisher":{"@id":"https://www.afrodescendantali.com/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.afrodescendantali.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.afrodescendantali.com/contact.html"}]}]}</script>
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="assets/site.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -63,6 +65,7 @@
                 <a href="index.html" class="site-nav-link">Home</a>
                 <a href="about.html" class="site-nav-link">About</a>
                 <a href="work.html" class="site-nav-link">Work</a>
+                <a href="analysis/index.html" class="site-nav-link">Analysis</a>
                 <a href="media.html" class="site-nav-link">Media</a>
                 <a href="contact.html" class="site-nav-link" aria-current="page">Contact</a>
             </nav>
@@ -77,29 +80,54 @@
             <div class="max-w-4xl relative z-10">
                 <span class="eyebrow mb-8 block">Contact</span>
                 <h1 class="page-hero-title serif-display text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.05] mb-8 font-light tight-headline">
-                    Contact
+                    Start a qualified inquiry
                 </h1>
                 <p class="page-hero-copy text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-                    For inquiries, use the email below.
+                    For paid briefings, custom intelligence memos, media questions, or serious collaboration inquiries, include the objective, deadline, and decision you need support with.
                 </p>
             </div>
         </section>
 
-        <section class="bg-surface px-8 md:px-12 py-24 border-b border-outline-variant/10">
+        <section class="bg-surface px-8 md:px-12 py-24 border-b border-outline-variant/10 reveal-on-scroll">
             <div class="max-w-4xl mx-auto text-center">
                 <span class="eyebrow mb-6 block">Contact</span>
                 <a class="email-link serif-display text-4xl md:text-6xl text-primary leading-tight inline-block" href="mailto:info@afrodescendantali.com">info@<wbr>afrodescendantali.<wbr>com</a>
             </div>
         </section>
 
-        <section class="bg-surface-container-low px-8 md:px-12 py-20">
-            <div class="max-w-3xl mx-auto text-center space-y-6">
-                <p class="text-on-surface-variant text-lg leading-relaxed font-light">
-                    This address is the visible contact point for the current site.
-                </p>
-                <p class="text-on-surface-variant text-sm leading-relaxed font-light">
-                    Media, work, and general inquiries can be directed here.
-                </p>
+        <section class="bg-surface-container-low px-8 md:px-12 py-20 reveal-on-scroll">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                <div class="lg:col-span-5">
+                    <span class="eyebrow mb-5 block">Inquiry helper</span>
+                    <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight mb-6">Send a clearer first email.</h2>
+                    <p class="text-on-surface-variant text-lg leading-relaxed font-light">
+                        Strong inquiries name the decision, the audience or organization involved, what has already been reviewed, and when the answer is needed. This helper creates a mailto draft on your device only. It does not submit a form, store data, or use a backend.
+                    </p>
+                    <div class="qualification-list mt-8">
+                        <p><strong>Fastest routing:</strong> choose briefing for urgent interpretation, memo for written synthesis, and audit for content-to-revenue systems.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 inquiry-helper" data-inquiry-helper>
+                    <label class="inquiry-field">
+                        <span class="sans-label text-[10px]">Inquiry type</span>
+                        <select data-inquiry-type>
+                            <option value="Paid briefing">Paid briefing</option>
+                            <option value="Custom intelligence memo">Custom intelligence memo</option>
+                            <option value="Media / intelligence system audit">Media / intelligence system audit</option>
+                            <option value="Media inquiry">Media inquiry</option>
+                            <option value="General inquiry">General inquiry</option>
+                        </select>
+                    </label>
+                    <label class="inquiry-field">
+                        <span class="sans-label text-[10px]">Objective</span>
+                        <textarea rows="4" data-inquiry-objective placeholder="Briefly describe the decision, project, or question."></textarea>
+                    </label>
+                    <label class="inquiry-field">
+                        <span class="sans-label text-[10px]">Deadline or timing</span>
+                        <input type="text" data-inquiry-deadline placeholder="Example: this week, before a meeting, no fixed deadline">
+                    </label>
+                    <a class="site-button site-button--primary inquiry-mailto" href="mailto:info@afrodescendantali.com?subject=Paid%20briefing%20inquiry">Open email draft</a>
+                </div>
             </div>
         </section>
     </main>
@@ -122,6 +150,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="work.html">Work</a>
+                <a href="analysis/index.html">Analysis</a>
                 <a href="media.html">Media</a>
                 <a href="contact.html" aria-current="page">Contact</a>
             </nav>
