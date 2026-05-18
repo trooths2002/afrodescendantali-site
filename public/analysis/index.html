@@ -37,37 +37,134 @@
                 <span class="eyebrow mb-6 block">Analysis</span>
                 <h1 class="page-hero-title serif-display text-5xl md:text-7xl font-light leading-tight text-primary mb-8">Public intelligence that leads to qualified action</h1>
                 <p class="article-deck text-xl max-w-3xl">Essays on Pan-African geopolitics, diaspora power, East Africa, media systems, and the path from public analysis to paid briefings, memos, and audits.</p>
+                <div class="desk-status-grid mt-14">
+                    <div><span class="eyebrow">Desk focus</span><strong>Pan-African power</strong></div>
+                    <div><span class="eyebrow">Primary buyer job</span><strong>Decision clarity</strong></div>
+                    <div><span class="eyebrow">Paid path</span><strong>Briefing / memo / audit</strong></div>
+                </div>
             </div>
         </section>
 
         <section class="px-8 md:px-24 py-24 bg-surface-container-low">
             <div class="analysis-shell">
+                <div class="analysis-control-panel" data-analysis-filters>
+                    <div>
+                        <span class="eyebrow mb-4 block">Analysis hub</span>
+                        <h2 class="serif-display text-4xl md:text-5xl font-light text-primary leading-tight">Filter by topic, type, and region.</h2>
+                    </div>
+                    <div class="filter-groups">
+                        <div class="filter-group" aria-label="Filter by topic">
+                            <span class="sans-label text-[10px]">Topic</span>
+                            <button type="button" class="filter-chip" data-filter-group="topic" data-filter-value="all" aria-pressed="true">All</button>
+                            <button type="button" class="filter-chip" data-filter-group="topic" data-filter-value="strategy">Strategy</button>
+                            <button type="button" class="filter-chip" data-filter-group="topic" data-filter-value="capital">Capital</button>
+                            <button type="button" class="filter-chip" data-filter-group="topic" data-filter-value="media">Media</button>
+                        </div>
+                        <div class="filter-group" aria-label="Filter by type">
+                            <span class="sans-label text-[10px]">Type</span>
+                            <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="all" aria-pressed="true">All</button>
+                            <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="analysis">Analysis</button>
+                            <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="memo-angle">Memo angle</button>
+                            <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="audit-angle">Audit angle</button>
+                        </div>
+                        <div class="filter-group" aria-label="Filter by region">
+                            <span class="sans-label text-[10px]">Region</span>
+                            <button type="button" class="filter-chip" data-filter-group="region" data-filter-value="all" aria-pressed="true">All</button>
+                            <button type="button" class="filter-chip" data-filter-group="region" data-filter-value="pan-african">Pan-African</button>
+                            <button type="button" class="filter-chip" data-filter-group="region" data-filter-value="east-africa">East Africa</button>
+                            <button type="button" class="filter-chip" data-filter-group="region" data-filter-value="diaspora">Diaspora</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="analysis-index-grid">
-                    <a class="analysis-card" href="strategic-clarity-changing-pan-african-world.html">
+                    <a class="analysis-card" href="strategic-clarity-changing-pan-african-world.html" data-topic="strategy" data-type="analysis" data-region="pan-african">
                         <span class="eyebrow">Strategy</span>
                         <h2 class="serif-display text-3xl font-light">Strategic Clarity for a Changing Pan-African World</h2>
                         <p>Why the work begins with context, power, history, and decisions instead of outrage cycles.</p>
                     </a>
-                    <a class="analysis-card" href="why-east-africa-matters-diaspora-intelligence.html">
+                    <a class="analysis-card" href="why-east-africa-matters-diaspora-intelligence.html" data-topic="strategy" data-type="analysis" data-region="east-africa">
                         <span class="eyebrow">East Africa</span>
                         <h2 class="serif-display text-3xl font-light">Why East Africa Matters to Diaspora Intelligence</h2>
                         <p>How ports, logistics, regional politics, and Mombasa-based observation sharpen diaspora analysis.</p>
                     </a>
-                    <a class="analysis-card" href="from-public-analysis-to-paid-intelligence.html">
+                    <a class="analysis-card" href="from-public-analysis-to-paid-intelligence.html" data-topic="strategy" data-type="memo-angle" data-region="pan-african">
                         <span class="eyebrow">Offers</span>
                         <h2 class="serif-display text-3xl font-light">From Public Analysis to Paid Intelligence</h2>
                         <p>The ladder from public insight to dossiers, briefings, memos, and media intelligence audits.</p>
                     </a>
-                    <a class="analysis-card" href="diaspora-capital-remittances-strategic-power.html">
+                    <a class="analysis-card" href="diaspora-capital-remittances-strategic-power.html" data-topic="capital" data-type="memo-angle" data-region="diaspora">
                         <span class="eyebrow">Capital</span>
                         <h2 class="serif-display text-3xl font-light">Diaspora Capital, Remittances, and Strategic Power</h2>
                         <p>Why family transfers and diaspora capital are strategic facts, not background economics.</p>
                     </a>
-                    <a class="analysis-card" href="media-analysis-content-revenue-system.html">
+                    <a class="analysis-card" href="media-analysis-content-revenue-system.html" data-topic="media" data-type="audit-angle" data-region="diaspora">
                         <span class="eyebrow">Media Systems</span>
                         <h2 class="serif-display text-3xl font-light">How Media Analysis Becomes a Content-to-Revenue System</h2>
                         <p>How serious analysis can become a clearer publishing, offer, CTA, and follow-up system.</p>
                     </a>
+                </div>
+                <p class="filter-empty text-on-surface-variant font-light mt-8" data-filter-empty hidden>No analysis matches that combination yet. Use a broader filter or request a custom memo.</p>
+            </div>
+        </section>
+
+        <section class="px-8 md:px-24 py-24 bg-surface reveal-on-scroll">
+            <div class="analysis-shell">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                    <div class="lg:col-span-4">
+                        <span class="eyebrow mb-5 block">Watchlist</span>
+                        <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight">Ongoing issues Ali tracks</h2>
+                    </div>
+                    <div class="lg:col-span-8 watchlist-grid">
+                        <article><span>01</span><strong>East African ports and corridors</strong><p>How transport routes, debt, security, and maritime pressure shape regional leverage.</p></article>
+                        <article><span>02</span><strong>Diaspora remittance capital</strong><p>How family transfers become political economy, survival infrastructure, and bargaining power.</p></article>
+                        <article><span>03</span><strong>Resource nationalism</strong><p>How minerals, food corridors, and energy supply chains change African negotiating space.</p></article>
+                        <article><span>04</span><strong>Black America and global power</strong><p>How domestic politics, media narratives, and global restructuring interact.</p></article>
+                        <article><span>05</span><strong>Caribbean strategic hinge</strong><p>Migration, logistics, offshore finance, and security competition across the region.</p></article>
+                        <article><span>06</span><strong>Media-to-revenue systems</strong><p>How creators and institutions turn attention, research, and CTAs into qualified paid action.</p></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-8 md:px-24 py-24 bg-primary text-on-primary reveal-on-scroll">
+            <div class="analysis-shell corridor-layout">
+                <div>
+                    <span class="eyebrow mb-5 block">Maps &amp; corridors</span>
+                    <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight mb-6">Visual regional intelligence</h2>
+                    <p class="text-white/70 text-lg leading-relaxed font-light">The redesign should treat routes, ports, remittances, and media flows as first-order intelligence. This layer turns abstract geopolitics into visible movement.</p>
+                </div>
+                <div class="corridor-map" aria-label="Conceptual map of diaspora corridors">
+                    <span class="node node-africa">East Africa</span>
+                    <span class="node node-caribbean">Caribbean</span>
+                    <span class="node node-us">Black America</span>
+                    <span class="flow flow-one"></span>
+                    <span class="flow flow-two"></span>
+                    <span class="flow flow-three"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-8 md:px-24 py-24 bg-surface-container-low reveal-on-scroll">
+            <div class="analysis-shell method-trust-grid">
+                <div>
+                    <span class="eyebrow mb-5 block">Method</span>
+                    <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight mb-6">How the analysis works</h2>
+                    <ol class="method-list">
+                        <li><strong>Observe the signal.</strong> Identify the public event, route, institution, or media pattern.</li>
+                        <li><strong>Locate the system.</strong> Connect the event to power, capital, geography, and history.</li>
+                        <li><strong>Interpret the consequence.</strong> Ask what changes for African and diaspora decision-makers.</li>
+                        <li><strong>Route the next action.</strong> Decide whether the reader needs an article, dossier, briefing, memo, or audit.</li>
+                    </ol>
+                </div>
+                <div>
+                    <span class="eyebrow mb-5 block">Trust &amp; evidence</span>
+                    <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight mb-6">What the work is, and is not</h2>
+                    <div class="trust-list">
+                        <p><strong>Built for:</strong> strategic interpretation, research synthesis, media intelligence, and decision support.</p>
+                        <p><strong>Grounded in:</strong> public evidence, historical memory, geographic logic, and transparent caveats.</p>
+                        <p><strong>Not:</strong> legal, financial, medical, investment, or guaranteed outcome advice.</p>
+                    </div>
+                    <a href="../contact.html" class="site-button site-button--primary mt-8">Request a qualified briefing</a>
                 </div>
             </div>
         </section>

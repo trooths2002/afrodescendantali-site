@@ -88,6 +88,52 @@ document.addEventListener('DOMContentLoaded', function () {
         updateMailto();
     });
 
+    document.querySelectorAll('[data-analysis-filters]').forEach(function (root) {
+        var state = { topic: 'all', type: 'all', region: 'all' };
+        var cards = document.querySelectorAll('.analysis-card[data-topic]');
+        var empty = document.querySelector('[data-filter-empty]');
+
+        var applyFilters = function () {
+            var visible = 0;
+            cards.forEach(function (card) {
+                var isVisible = ['topic', 'type', 'region'].every(function (group) {
+                    return state[group] === 'all' || card.getAttribute('data-' + group) === state[group];
+                });
+                card.hidden = !isVisible;
+                if (isVisible) {
+                    visible += 1;
+                }
+            });
+
+            if (empty) {
+                empty.hidden = visible !== 0;
+            }
+        };
+
+        root.querySelectorAll('[data-filter-group]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var group = button.getAttribute('data-filter-group');
+                state[group] = button.getAttribute('data-filter-value');
+                root.querySelectorAll('[data-filter-group="' + group + '"]').forEach(function (item) {
+                    item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+                });
+                applyFilters();
+            });
+        });
+
+        applyFilters();
+    });
+
+    if (!document.querySelector('.briefing-cta-layer') && !document.body.classList.contains('no-global-briefing-cta')) {
+        var main = document.querySelector('main');
+        if (main) {
+            var cta = document.createElement('section');
+            cta.className = 'briefing-cta-layer';
+            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="' + (location.pathname.indexOf('/analysis/') !== -1 ? '../contact.html' : 'contact.html') + '" class="site-button site-button--light">Start a qualified inquiry</a></div>';
+            main.appendChild(cta);
+        }
+    }
+
     var revealItems = document.querySelectorAll('.reveal-on-scroll');
 
     if ('IntersectionObserver' in window) {
