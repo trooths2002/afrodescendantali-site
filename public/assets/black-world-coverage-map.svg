@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Black World coverage map</title>
+  <desc id="desc">Conceptual intelligence map connecting Sub-Saharan Africa, Black America, the Black Caribbean, Afro-Latino communities, and Afro-Europe.</desc>
+  <rect width="1200" height="720" fill="#08131d"/>
+  <g opacity="0.16" stroke="#fedb95" stroke-width="1">
+    <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200"/>
+    <path d="M150 0V720M300 0V720M450 0V720M600 0V720M750 0V720M900 0V720M1050 0V720"/>
+  </g>
+  <g opacity="0.25" fill="none" stroke="#faf9f4" stroke-width="2">
+    <path d="M692 196c58 30 102 80 122 142 22 70 8 150-35 204-41 52-107 80-178 77-77-4-151-42-190-103-38-61-41-143-6-206 35-64 108-110 184-123 36-6 71-3 103 9z"/>
+    <path d="M248 244c46-24 103-22 146 5 40 26 67 72 70 122 3 56-26 113-73 144-47 30-111 32-161 6-53-28-87-85-84-145 3-56 41-106 102-132z"/>
+    <path d="M412 296c26-17 63-14 86 7 23 21 29 58 15 86-16 31-53 47-87 38-31-9-53-37-55-69-2-25 13-49 41-62z"/>
+    <path d="M509 253c46-31 109-31 154-1 41 27 65 78 60 128-5 52-41 101-91 122-53 22-119 10-159-30-39-39-51-101-30-151 12-29 34-52 66-68z"/>
+    <path d="M632 164c44-24 99-23 141 3 43 26 70 75 70 125 0 55-34 108-83 133-52 27-119 20-162-19-44-39-60-104-38-158 12-35 37-63 72-84z"/>
+  </g>
+  <g fill="none" stroke="#fedb95" stroke-width="3" stroke-linecap="round" opacity="0.72">
+    <path d="M622 352C502 316 410 310 300 342"/>
+    <path d="M622 352C512 390 455 435 330 495"/>
+    <path d="M622 352C760 316 850 288 946 210"/>
+    <path d="M622 352C760 388 872 444 988 520"/>
+  </g>
+  <g font-family="Public Sans, Arial, sans-serif" text-transform="uppercase" letter-spacing="2">
+    <g>
+      <circle cx="622" cy="352" r="13" fill="#fedb95"/>
+      <text x="650" y="358" font-size="18" fill="#faf9f4">Sub-Saharan Africa</text>
+    </g>
+    <g>
+      <circle cx="300" cy="342" r="10" fill="#fedb95"/>
+      <text x="132" y="336" font-size="16" fill="#faf9f4">Black America</text>
+    </g>
+    <g>
+      <circle cx="330" cy="495" r="10" fill="#fedb95"/>
+      <text x="158" y="502" font-size="16" fill="#faf9f4">Black Caribbean</text>
+    </g>
+    <g>
+      <circle cx="946" cy="210" r="10" fill="#fedb95"/>
+      <text x="964" y="216" font-size="16" fill="#faf9f4">Afro-Europe</text>
+    </g>
+    <g>
+      <circle cx="988" cy="520" r="10" fill="#fedb95"/>
+      <text x="832" y="560" font-size="16" fill="#faf9f4">Afro-Latino</text>
+    </g>
+  </g>
+  <text x="64" y="92" fill="#fedb95" font-family="Public Sans, Arial, sans-serif" font-size="17" letter-spacing="5">BLACK WORLD COVERAGE</text>
+  <text x="64" y="132" fill="#faf9f4" font-family="Newsreader, Georgia, serif" font-size="46">One intelligence map, five coverage lanes</text>
+</svg>

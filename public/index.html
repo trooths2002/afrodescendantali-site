@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="assets/site.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script defer src="assets/site.js?v=20260518-redesign"></script>
+    <script defer src="assets/site.js?v=20260519-commerce-path"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,13 +42,13 @@
         };
     </script>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="home-desk-page bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <div class="site-shell">
     <header class="site-nav sticky top-0 z-50 border-b border-outline-variant/15">
         <div class="site-header-inner max-w-7xl mx-auto px-6 md:px-12 py-5">
             <div class="site-brand-row">
                 <a href="index.html" class="site-brand-logo" aria-label="Afrodescendant Ali - Home">
-            <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none" aria-hidden="true" style="color:#000101;">
+            <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none" aria-hidden="true" style="color:#faf9f4;">
               <path d="M8 38 L18 10 L28 38" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
               <line x1="11.5" y1="28" x2="24.5" y2="28" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
               <path d="M22 38 L32 10 L42 38" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
@@ -66,43 +66,62 @@
                 <a href="about.html" class="site-nav-link">About</a>
                 <a href="work.html" class="site-nav-link">Work</a>
                 <a href="analysis/index.html" class="site-nav-link">Analysis</a>
-                <a href="media.html" class="site-nav-link">Media</a>
+                <a href="coverage/index.html" class="site-nav-link">Coverage</a>                <a href="media.html" class="site-nav-link">Media</a>
                 <a href="contact.html" class="site-nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="page-hero home-hero relative min-h-[78vh] flex flex-col justify-center px-8 md:px-24 py-28 overflow-hidden">
-            <div class="hero-art hero-art--home absolute right-0 top-0 h-full pointer-events-none hidden md:block" style="background-color:#0d0d0d;">
-                <img src="assets/hero-art.png" alt="Abstract cartographic texture" class="w-full h-full object-cover">
-            </div>
-            <div class="home-hero-content max-w-4xl relative z-10">
-                <span class="eyebrow mb-8 block">Pan-African intelligence</span>
-                <h1 class="page-hero-title serif-display text-5xl md:text-[5.35rem] font-light leading-[1.05] text-primary mb-10 tracking-tight tight-headline">
-                    Strategic clarity for a changing Pan-African world
+        <section class="page-hero home-hero intelligence-desk-hero">
+            <div class="home-hero-content">
+                <h1 class="page-hero-title serif-display tight-headline">
+                    Pan-African intelligence for people turning public analysis into paid action.
                 </h1>
-                <p class="page-hero-copy text-xl md:text-2xl text-on-surface-variant font-light max-w-3xl leading-relaxed">
-                    Independent geopolitical, historical, and diaspora analysis for readers who need deeper context before they act, organize, invest attention, or brief their audience.
+                <p class="page-hero-copy">
+                    A mature intelligence desk for readers, organizers, creators, and operators who need historical context, geopolitical judgment, and a clear next step before they move.
                 </p>
-                <div class="site-cta-row mt-12">
-                    <a href="work.html" class="site-button site-button--primary">View the intelligence work</a>
-                    <a href="contact.html" class="site-button site-button--secondary">Contact for paid briefing</a>
-                </div>
-                <div class="desk-status-grid home-desk-status mt-10">
-                    <div><span class="eyebrow">Analysis desk</span><strong>Power / capital / media</strong></div>
-                    <div><span class="eyebrow">Live path</span><strong>Article → briefing → memo</strong></div>
-                    <div><span class="eyebrow">Free-tier build</span><strong>Static Cloudflare Pages</strong></div>
+                <div class="site-cta-row home-hero-actions">
+                    <a href="contact.html" class="site-button site-button--primary">Request a briefing</a>
+                    <a href="analysis/index.html" class="site-button site-button--secondary">Read analysis</a>
                 </div>
             </div>
+            <aside class="home-desk-panel" aria-label="Afrodescendant Ali intelligence desk status">
+                <div class="home-desk-panel-media" aria-hidden="true">
+                    <img src="assets/hero-art.png" alt="">
+                </div>
+                <div class="home-desk-panel-content">
+                    <span class="desk-panel-label">Desk status</span>
+                    <h2 class="serif-display">East Africa, diaspora capital, media power, and strategic memory.</h2>
+                    <ul class="desk-panel-list">
+                        <li><a href="analysis/why-east-africa-matters-diaspora-intelligence.html">Latest analysis</a></li>
+                        <li><a href="analysis/index.html#watchlist">Watchlist issues</a></li>
+                        <li><a href="work.html">Paid memo lane</a></li>
+                        <li><a href="work.html">Gumroad dossier path</a></li>
+                        <li><a href="contact.html">Qualified inquiry</a></li>
+                    </ul>
+                </div>
+            </aside>
         </section>
 
-        <section class="bg-primary text-on-primary py-4 px-8 md:px-24 border-y border-outline-variant/10">
-            <div class="flex flex-wrap gap-x-10 gap-y-3">
-                <span class="sans-label text-[9px] text-secondary">Pan-African analysis</span>
-                <span class="sans-label text-[9px] text-white/75">Education</span>
-                <span class="sans-label text-[9px] text-white/75">Community empowerment</span>
-                <span class="sans-label text-[9px] text-white/75">Geopolitical awareness</span>
+        <section class="desk-latest-strip" aria-label="Latest public analysis paths">
+            <div class="desk-latest-inner">
+                <div class="desk-latest-heading">
+                    <span class="eyebrow">Latest analysis</span>
+                    <h2 class="serif-display">Public reading paths that lead to paid depth</h2>
+                </div>
+                <a href="analysis/why-east-africa-matters-diaspora-intelligence.html">
+                    <span>Region brief</span>
+                    Why East Africa matters to diaspora intelligence
+                </a>
+                <a href="analysis/diaspora-capital-remittances-strategic-power.html">
+                    <span>Capital lane</span>
+                    Diaspora capital as strategic power
+                </a>
+                <a href="analysis/media-analysis-content-revenue-system.html">
+                    <span>Media system</span>
+                    How media analysis becomes revenue
+                </a>
             </div>
         </section>
 
@@ -110,16 +129,20 @@
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
                 <div class="lg:col-span-4">
                     <h2 class="serif-display text-4xl md:text-5xl font-light text-primary leading-tight">
-                        From public signal to paid intelligence
+                        Global Black-world coverage, East Africa-rooted
                     </h2>
                 </div>
                 <div class="lg:col-span-8 space-y-8">
                     <p class="text-on-surface-variant leading-relaxed text-lg font-light">
-                        The site connects public analysis to deeper products and advisory work: dossiers, briefing packs, custom memos, and system audits for serious readers and operators.
+                        The site connects Sub-Saharan Africa, Black America, the Black Caribbean, Afro-Latino communities, and Afro-Europe into one intelligence map for serious readers and operators.
                     </p>
                     <p class="text-on-surface-variant leading-relaxed text-base font-light max-w-3xl">
-                        The focus is mature, educated, and action-oriented: people looking for analysis outside mainstream framing, with enough context to make better decisions.
+                        The coverage model follows foreign-affairs discipline: regions, topics, watchlists, evidence, and paid next steps. The aim is not simply commentary; it is qualified action.
                     </p>
+                    <div class="site-cta-row">
+                        <a href="coverage/index.html" class="site-button site-button--primary">Explore coverage</a>
+                        <a href="analysis/index.html" class="site-button site-button--secondary">Read analysis</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -295,7 +318,7 @@
                 <a href="about.html">About</a>
                 <a href="work.html">Work</a>
                 <a href="analysis/index.html">Analysis</a>
-                <a href="media.html">Media</a>
+                <a href="coverage/index.html">Coverage</a>                <a href="media.html">Media</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
