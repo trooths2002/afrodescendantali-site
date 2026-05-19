@@ -162,7 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var commerceMain = document.querySelector('main');
         var path = location.pathname;
         var isNestedCommercePage = path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
-        var isCommerceEligible = path.indexOf('/work.html') !== -1 || path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
+        var isWorkPath = path === '/work' || path === '/work/' || path.indexOf('/work.html') !== -1;
+        var isCommerceEligible = isWorkPath || path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
 
         if (commerceMain && isCommerceEligible) {
             var commercePrefix = isNestedCommercePage ? '../' : '';
@@ -281,7 +282,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (main) {
             var cta = document.createElement('section');
             cta.className = 'briefing-cta-layer';
-            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="' + (location.pathname.indexOf('/analysis/') !== -1 ? '../contact.html' : 'contact.html') + '" class="site-button site-button--light">Start a qualified inquiry</a></div>';
+            var isNestedPath = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1;
+            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="' + (isNestedPath ? '../contact.html' : 'contact.html') + '" class="site-button site-button--light">Start a qualified inquiry</a></div>';
             main.appendChild(cta);
         }
     }
