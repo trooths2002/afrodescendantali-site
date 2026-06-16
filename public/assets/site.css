@@ -306,6 +306,12 @@
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
+.site-button--briefing-subscribe {
+    line-height: 1.28;
+    text-align: center;
+    white-space: normal;
+}
+
 .site-button:hover,
 .site-button:focus-visible {
     transform: translateY(-1px);
@@ -1472,6 +1478,10 @@
         width: 100%;
     }
 
+    .site-button--briefing-subscribe {
+        letter-spacing: 0.1em;
+    }
+
     .offer-tab-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1570,6 +1580,5 @@
 /* Hero art dark background fix */
 .hero-art { background-color: #0d0d0d !important; }
 .hero-art img { mix-blend-mode: normal; }
-
 
 
