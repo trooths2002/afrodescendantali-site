@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!document.querySelector('.coverage-scope-layer') && !document.body.classList.contains('no-global-coverage-scope')) {
         var mainForCoverage = document.querySelector('main');
         if (mainForCoverage) {
-            var inNestedSection = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1;
+            var inNestedSection = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1 || location.pathname.indexOf('/work/') !== -1;
             var prefix = inNestedSection ? '../' : '';
             var coverage = document.createElement('section');
             coverage.className = 'coverage-scope-layer';
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!document.querySelector('.commerce-path-layer') && !document.body.classList.contains('no-commerce-path-layer')) {
         var commerceMain = document.querySelector('main');
         var path = location.pathname;
-        var isNestedCommercePage = path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
+        var isNestedCommercePage = path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1 || path.indexOf('/work/') !== -1;
         var isWorkPath = path === '/work' || path === '/work/' || path.indexOf('/work.html') !== -1;
         var isCommerceEligible = isWorkPath || path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
 
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (main) {
             var cta = document.createElement('section');
             cta.className = 'briefing-cta-layer';
-            var isNestedPath = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1;
+            var isNestedPath = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1 || location.pathname.indexOf('/work/') !== -1;
             cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="' + (isNestedPath ? '../contact.html' : 'contact.html') + '" class="site-button site-button--light">Start a qualified inquiry</a></div>';
             main.appendChild(cta);
         }
