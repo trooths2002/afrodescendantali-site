@@ -1,0 +1,441 @@
+﻿diff --git a/public/analysis/index.html b/public/analysis/index.html
+index b87750e..41828d8 100644
+--- a/public/analysis/index.html
++++ b/public/analysis/index.html
+@@ -76,7 +76,40 @@
+                         </div>
+                     </div>
+                 </div>
++                <div class="source-fed-strip">
++                    <div>
++                        <span class="eyebrow mb-4 block">Source-fed desk</span>
++                        <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight">Current events become proof, specificity, and paid paths.</h2>
++                    </div>
++                    <div>
++                        <p>The Analysis section now accepts source intake from public reporting such as AllAfrica Business, CFR-style foreign-affairs analysis, official institutions, and trusted local publishers. Each article is original interpretation with a visible source trail, a diaspora lever, and a recommended paid route.</p>
++                        <div class="source-fed-actions">
++                            <a href="../method.html" class="site-button site-button--light">See method</a>
++                            <a href="../starter-brief.html" class="site-button site-button--dark-outline">Request starter brief</a>
++                        </div>
++                    </div>
++                </div>
+                 <div class="analysis-index-grid">
++                    <a class="analysis-card" href="kenya-fuel-shock-worker-mobility.html" data-topic="strategy" data-type="memo-angle" data-region="east-africa">
++                        <span class="eyebrow">Source-fed / East Africa</span>
++                        <h2 class="serif-display text-3xl font-light">Kenya Fuel Shock and the Politics of Worker Mobility</h2>
++                        <p>How fuel pressure, matatu fares, work access, and food costs become an intelligence issue.</p>
++                    </a>
++                    <a class="analysis-card" href="nigeria-refinery-ownership-energy-security.html" data-topic="capital" data-type="memo-angle" data-region="pan-african">
++                        <span class="eyebrow">Source-fed / Energy</span>
++                        <h2 class="serif-display text-3xl font-light">Nigeria Refinery Power, Ownership, and Energy Security</h2>
++                        <p>Why refinery politics is about strategic infrastructure, not only fuel supply.</p>
++                    </a>
++                    <a class="analysis-card" href="china-financing-africa-deal-terms.html" data-topic="capital" data-type="analysis" data-region="pan-african">
++                        <span class="eyebrow">Source-fed / Deal terms</span>
++                        <h2 class="serif-display text-3xl font-light">China Financing in Africa and the Power of Deal Terms</h2>
++                        <p>How long credit, infrastructure finance, and bargaining power shape African outcomes.</p>
++                    </a>
++                    <a class="analysis-card" href="critical-minerals-data-access.html" data-topic="strategy" data-type="audit-angle" data-region="pan-african">
++                        <span class="eyebrow">Source-fed / Minerals</span>
++                        <h2 class="serif-display text-3xl font-light">Critical Minerals, Data Access, and Black Strategic Power</h2>
++                        <p>Why mineral value chains begin with data, procurement, and control over the map.</p>
++                    </a>
+                     <a class="analysis-card" href="strategic-clarity-changing-pan-african-world.html" data-topic="strategy" data-type="analysis" data-region="pan-african">
+                         <span class="eyebrow">Strategy</span>
+                         <h2 class="serif-display text-3xl font-light">Strategic Clarity for a Changing Pan-African World</h2>
+@@ -103,6 +136,17 @@
+                         <p>How serious analysis can become a clearer publishing, offer, CTA, and follow-up system.</p>
+                     </a>
+                 </div>
++                <div class="mt-12 p-8 bg-surface border border-outline-variant/20">
++                    <span class="eyebrow mb-4 block">Free weekly briefing</span>
++                    <h2 class="serif-display text-3xl md:text-4xl font-light text-primary leading-tight mb-4">Track the signal before the paid path.</h2>
++                    <p class="text-on-surface-variant leading-relaxed font-light max-w-3xl">
++                        Weekly Pan-African intelligence connecting Black America, Africa, the Caribbean, diaspora capital, media power, and geopolitical signals.
++                    </p>
++                    <div class="site-cta-row mt-6">
++                        <a href="https://afrodescendantali.substack.com" target="_blank" rel="noopener noreferrer" class="site-button site-button--primary site-button--briefing-subscribe">Subscribe free to Afrodescendant Ali Briefings</a>
++                        <a href="https://afrodescendantali.substack.com/p/start-here-why-these-briefings-exist" target="_blank" rel="noopener noreferrer" class="site-button site-button--secondary">Start Here</a>
++                    </div>
++                </div>
+                 <p class="filter-empty text-on-surface-variant font-light mt-8" data-filter-empty hidden>No analysis matches that combination yet. Use a broader filter or request a custom memo.</p>
+             </div>
+         </section>
+diff --git a/public/assets/site.css b/public/assets/site.css
+index 3707f00..f4bacfc 100644
+--- a/public/assets/site.css
++++ b/public/assets/site.css
+@@ -306,6 +306,12 @@
+     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+ }
+ 
++.site-button--briefing-subscribe {
++    line-height: 1.28;
++    text-align: center;
++    white-space: normal;
++}
++
+ .site-button:hover,
+ .site-button:focus-visible {
+     transform: translateY(-1px);
+@@ -670,6 +676,50 @@
+     max-width: 42rem;
+ }
+ 
++.evidence-source-box,
++.lead-path-box {
++    margin: 2.5rem 0;
++    padding: clamp(1.5rem, 3vw, 2.25rem);
++    background: var(--color-surface-container-low);
++    border: 1px solid rgba(116, 91, 34, 0.2);
++}
++
++.evidence-source-box ul,
++.lead-path-box ul {
++    margin-bottom: 0;
++}
++
++.evidence-source-box a,
++.lead-path-box a {
++    color: var(--color-secondary);
++    text-decoration: none;
++    border-bottom: 1px solid rgba(116, 91, 34, 0.28);
++}
++
++.source-fed-strip {
++    display: grid;
++    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
++    gap: clamp(2rem, 5vw, 4rem);
++    align-items: start;
++    padding: clamp(2rem, 4vw, 3rem);
++    margin-bottom: 3rem;
++    background: var(--color-primary);
++    color: var(--color-on-primary);
++}
++
++.source-fed-strip p {
++    color: rgba(255, 255, 255, 0.7);
++    font-weight: 300;
++    line-height: 1.75;
++}
++
++.source-fed-actions {
++    display: flex;
++    flex-wrap: wrap;
++    gap: 0.85rem;
++    margin-top: 1.5rem;
++}
++
+ .related-links {
+     display: grid;
+     gap: 0.75rem;
+@@ -1309,6 +1359,10 @@
+         grid-template-columns: 1fr;
+     }
+ 
++    .source-fed-strip {
++        grid-template-columns: 1fr;
++    }
++
+     .analysis-control-panel,
+     .method-trust-grid,
+     .corridor-layout,
+@@ -1472,6 +1526,10 @@
+         width: 100%;
+     }
+ 
++    .site-button--briefing-subscribe {
++        letter-spacing: 0.1em;
++    }
++
+     .offer-tab-list {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+diff --git a/public/assets/site.js b/public/assets/site.js
+index c8c0231..175bc48 100644
+--- a/public/assets/site.js
++++ b/public/assets/site.js
+@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
+     if (!document.querySelector('.coverage-scope-layer') && !document.body.classList.contains('no-global-coverage-scope')) {
+         var mainForCoverage = document.querySelector('main');
+         if (mainForCoverage) {
+-            var inNestedSection = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1;
++            var inNestedSection = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1 || location.pathname.indexOf('/work/') !== -1;
+             var prefix = inNestedSection ? '../' : '';
+             var coverage = document.createElement('section');
+             coverage.className = 'coverage-scope-layer';
+@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
+     if (!document.querySelector('.commerce-path-layer') && !document.body.classList.contains('no-commerce-path-layer')) {
+         var commerceMain = document.querySelector('main');
+         var path = location.pathname;
+-        var isNestedCommercePage = path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
++        var isNestedCommercePage = path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1 || path.indexOf('/work/') !== -1;
+         var isWorkPath = path === '/work' || path === '/work/' || path.indexOf('/work.html') !== -1;
+         var isCommerceEligible = isWorkPath || path.indexOf('/analysis/') !== -1 || path.indexOf('/coverage/') !== -1;
+ 
+@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
+         if (main) {
+             var cta = document.createElement('section');
+             cta.className = 'briefing-cta-layer';
+-            var isNestedPath = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1;
++            var isNestedPath = location.pathname.indexOf('/analysis/') !== -1 || location.pathname.indexOf('/coverage/') !== -1 || location.pathname.indexOf('/work/') !== -1;
+             cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="' + (isNestedPath ? '../contact.html' : 'contact.html') + '" class="site-button site-button--light">Start a qualified inquiry</a></div>';
+             main.appendChild(cta);
+         }
+diff --git a/public/index.html b/public/index.html
+index 33f11b3..3422805 100644
+--- a/public/index.html
++++ b/public/index.html
+@@ -94,9 +94,11 @@
+                     <span class="desk-panel-label">Desk status</span>
+                     <h2 class="serif-display">East Africa, diaspora capital, media power, and strategic memory.</h2>
+                     <ul class="desk-panel-list">
+-                        <li><a href="analysis/why-east-africa-matters-diaspora-intelligence.html">Latest analysis</a></li>
++                        <li><a href="analysis/kenya-fuel-shock-worker-mobility.html">Latest source-fed analysis</a></li>
+                         <li><a href="analysis/index.html#watchlist">Watchlist issues</a></li>
+-                        <li><a href="work.html">Paid memo lane</a></li>
++                        <li><a href="starter-brief.html">Starter brief</a></li>
++                        <li><a href="proof.html">Proof of work</a></li>
++                        <li><a href="work/memo.html">Paid memo lane</a></li>
+                         <li><a href="work.html">Gumroad dossier path</a></li>
+                         <li><a href="contact.html">Qualified inquiry</a></li>
+                     </ul>
+@@ -110,17 +112,17 @@
+                     <span class="eyebrow">Latest analysis</span>
+                     <h2 class="serif-display">Public reading paths that lead to paid depth</h2>
+                 </div>
+-                <a href="analysis/why-east-africa-matters-diaspora-intelligence.html">
+-                    <span>Region brief</span>
+-                    Why East Africa matters to diaspora intelligence
++                <a href="analysis/kenya-fuel-shock-worker-mobility.html">
++                    <span>Source-fed brief</span>
++                    Kenya fuel shock and worker mobility
+                 </a>
+-                <a href="analysis/diaspora-capital-remittances-strategic-power.html">
+-                    <span>Capital lane</span>
+-                    Diaspora capital as strategic power
++                <a href="analysis/china-financing-africa-deal-terms.html">
++                    <span>Deal terms</span>
++                    China financing and African bargaining power
+                 </a>
+-                <a href="analysis/media-analysis-content-revenue-system.html">
+-                    <span>Media system</span>
+-                    How media analysis becomes revenue
++                <a href="analysis/nigeria-refinery-ownership-energy-security.html">
++                    <span>Energy security</span>
++                    Nigeria refinery power and ownership
+                 </a>
+             </div>
+         </section>
+@@ -247,20 +249,20 @@
+                     </div>
+                 </div>
+                 <div class="analysis-index-grid">
+-                    <a class="analysis-card" href="analysis/strategic-clarity-changing-pan-african-world.html">
+-                        <span class="eyebrow">Strategy</span>
+-                        <h3 class="serif-display text-3xl font-light">Strategic Clarity for a Changing Pan-African World</h3>
+-                        <p>Why the work begins with context, power, history, and decisions instead of outrage cycles.</p>
++                    <a class="analysis-card" href="analysis/kenya-fuel-shock-worker-mobility.html">
++                        <span class="eyebrow">Source-fed / East Africa</span>
++                        <h3 class="serif-display text-3xl font-light">Kenya Fuel Shock and Worker Mobility</h3>
++                        <p>How a current fuel-price story becomes an analysis, lead qualification, and briefing path.</p>
+                     </a>
+-                    <a class="analysis-card" href="analysis/why-east-africa-matters-diaspora-intelligence.html">
+-                        <span class="eyebrow">East Africa</span>
+-                        <h3 class="serif-display text-3xl font-light">Why East Africa Matters to Diaspora Intelligence</h3>
+-                        <p>How ports, logistics, regional politics, and Mombasa-based observation sharpen diaspora analysis.</p>
++                    <a class="analysis-card" href="analysis/china-financing-africa-deal-terms.html">
++                        <span class="eyebrow">Deal terms</span>
++                        <h3 class="serif-display text-3xl font-light">China Financing in Africa</h3>
++                        <p>How long credit, infrastructure finance, and deal structure shape African bargaining power.</p>
+                     </a>
+-                    <a class="analysis-card" href="analysis/from-public-analysis-to-paid-intelligence.html">
+-                        <span class="eyebrow">Offers</span>
+-                        <h3 class="serif-display text-3xl font-light">From Public Analysis to Paid Intelligence</h3>
+-                        <p>The ladder from public insight to dossiers, briefings, memos, and media intelligence audits.</p>
++                    <a class="analysis-card" href="analysis/critical-minerals-data-access.html">
++                        <span class="eyebrow">Critical minerals</span>
++                        <h3 class="serif-display text-3xl font-light">Data Access and Black Strategic Power</h3>
++                        <p>Why minerals strategy begins with data, procurement, and control over the map.</p>
+                     </a>
+                     <a class="analysis-card" href="analysis/index.html">
+                         <span class="eyebrow">Archive</span>
+@@ -271,6 +273,24 @@
+             </div>
+         </section>
+ 
++        <section class="px-8 md:px-24 py-16 bg-surface border-y border-outline-variant/10 reveal-on-scroll">
++            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
++                <div class="lg:col-span-8">
++                    <span class="eyebrow mb-5 block">Free weekly briefing</span>
++                    <h2 class="serif-display text-4xl md:text-5xl font-light text-primary leading-tight mb-6">
++                        Get the weekly briefing.
++                    </h2>
++                    <p class="text-on-surface-variant text-lg leading-relaxed font-light max-w-3xl">
++                        Weekly Pan-African intelligence connecting Black America, Africa, the Caribbean, diaspora capital, media power, and geopolitical signals.
++                    </p>
++                </div>
++                <div class="lg:col-span-4 site-cta-stack">
++                    <a href="https://afrodescendantali.substack.com" target="_blank" rel="noopener noreferrer" class="site-button site-button--primary site-button--briefing-subscribe">Subscribe free to Afrodescendant Ali Briefings</a>
++                    <a href="https://afrodescendantali.substack.com/p/start-here-why-these-briefings-exist" target="_blank" rel="noopener noreferrer" class="site-button site-button--secondary">Start Here</a>
++                </div>
++            </div>
++        </section>
++
+         <section class="home-action-band bg-primary text-on-primary px-8 md:px-24 py-24 reveal-on-scroll">
+             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                 <div class="lg:col-span-8">
+@@ -313,6 +333,10 @@
+               <text x="52" y="42" font-family="&apos;Public Sans&apos;, sans-serif" font-size="7" font-weight="400" letter-spacing="0.18em" fill="#745b22">PAN-AFRICAN INTELLIGENCE</text>
+             </svg>
+           </p>
++            <div class="text-sm text-on-surface-variant leading-relaxed font-light max-w-3xl mx-auto">
++                <p>Weekly Pan-African intelligence connecting Black America, Africa, the Caribbean, diaspora capital, media power, and geopolitical signals.</p>
++                <a href="https://afrodescendantali.substack.com" target="_blank" rel="noopener noreferrer" class="text-link sans-label text-[10px] inline-block mt-3">Subscribe free to Afrodescendant Ali Briefings</a>
++            </div>
+             <nav class="footer-nav sans-label text-[10px]">
+                 <a href="index.html" aria-current="page">Home</a>
+                 <a href="about.html">About</a>
+diff --git a/public/sitemap.xml b/public/sitemap.xml
+index caa02d7..d39967f 100644
+--- a/public/sitemap.xml
++++ b/public/sitemap.xml
+@@ -14,10 +14,28 @@
+   </url>
+   <url>
+     <loc>https://www.afrodescendantali.com/work.html</loc>
+-    <lastmod>2026-05-18</lastmod>
++    <lastmod>2026-05-19</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>0.9</priority>
+   </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/work/briefing.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/work/memo.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/work/audit.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
+   <url>
+     <loc>https://www.afrodescendantali.com/analysis/</loc>
+     <lastmod>2026-05-19</lastmod>
+@@ -66,6 +84,48 @@
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/analysis/kenya-fuel-shock-worker-mobility.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/analysis/nigeria-refinery-ownership-energy-security.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/analysis/china-financing-africa-deal-terms.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/analysis/critical-minerals-data-access.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/method.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.75</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/proof.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.8</priority>
++  </url>
++  <url>
++    <loc>https://www.afrodescendantali.com/starter-brief.html</loc>
++    <lastmod>2026-05-19</lastmod>
++    <changefreq>monthly</changefreq>
++    <priority>0.85</priority>
++  </url>
+   <url>
+     <loc>https://www.afrodescendantali.com/analysis/why-east-africa-matters-diaspora-intelligence.html</loc>
+     <lastmod>2026-05-18</lastmod>
+diff --git a/public/work.html b/public/work.html
+index c5fcc1f..f6e7e34 100644
+--- a/public/work.html
++++ b/public/work.html
+@@ -131,6 +131,8 @@
+                             <p class="text-sm text-on-surface-variant font-light mb-6">Dossiers about $11.99 / $12. Browse the current intelligence catalog on Gumroad.</p>
+                             <a href="https://teman.gumroad.com/l/mcyhd" target="_blank" rel="noopener noreferrer" class="site-button site-button--primary">Get the dossier</a>
+                             <a href="https://teman.gumroad.com" target="_blank" rel="noopener noreferrer" class="text-link sans-label text-[10px] mt-5 inline-block">Browse all intelligence</a>
++                            <p class="text-sm text-on-surface-variant font-light mt-6">Not ready for a dossier yet? Use the free weekly briefing to track recurring signals first. Gumroad remains the paid catalog path.</p>
++                            <a href="https://afrodescendantali.substack.com" target="_blank" rel="noopener noreferrer" class="text-link sans-label text-[10px] mt-3 inline-block">Subscribe free to Afrodescendant Ali Briefings</a>
+                         </div>
+                     </div>
+ 
+@@ -158,7 +160,7 @@
+                         </div>
+                         <div class="offer-panel-action">
+                             <p class="text-sm text-on-surface-variant font-light mb-6">Planned paid briefing lane: 45-minute briefing, pre-brief review, concise written action summary.</p>
+-                            <a href="contact.html" class="site-button site-button--primary">Request a briefing</a>
++                            <a href="work/briefing.html" class="site-button site-button--primary">View briefing offer</a>
+                         </div>
+                     </div>
+ 
+@@ -186,7 +188,7 @@
+                         </div>
+                         <div class="offer-panel-action">
+                             <p class="text-sm text-on-surface-variant font-light mb-6">Custom memo lane: deeper written synthesis for questions where public content is not specific enough.</p>
+-                            <a href="contact.html" class="site-button site-button--primary">Request a memo</a>
++                            <a href="work/memo.html" class="site-button site-button--primary">View memo offer</a>
+                         </div>
+                     </div>
+ 
+@@ -214,7 +216,7 @@
+                         </div>
+                         <div class="offer-panel-action">
+                             <p class="text-sm text-on-surface-variant font-light mb-6">Use this lane when the question is not one report, but the whole audience-to-revenue system.</p>
+-                            <a href="contact.html" class="site-button site-button--primary">Request an audit</a>
++                            <a href="work/audit.html" class="site-button site-button--primary">View audit offer</a>
+                         </div>
+                     </div>
+                 </div>
+@@ -222,6 +224,19 @@
+         </section>
+         <section class="px-8 md:px-20 bg-surface py-28 reveal-on-scroll">
+             <div class="max-w-7xl mx-auto">
++                <div class="source-fed-strip">
++                    <div>
++                        <span class="eyebrow mb-4 block">Proof and specificity</span>
++                        <h2 class="serif-display text-4xl md:text-5xl font-light leading-tight">The offer ladder now connects to source-fed public analysis.</h2>
++                    </div>
++                    <div>
++                        <p>Current public stories become evidence-backed analysis pages, each tagged by region, issue lever, and likely paid route. This creates repetition: read an issue, see the source trail, choose the paid depth.</p>
++                        <div class="source-fed-actions">
++                            <a href="proof.html" class="site-button site-button--light">See proof page</a>
++                            <a href="starter-brief.html" class="site-button site-button--dark-outline">Request starter brief</a>
++                        </div>
++                    </div>
++                </div>
+                 <div class="mb-20 text-center">
+                     <span class="eyebrow mb-5 block">Progression</span>
+                     <h2 class="serif-display text-4xl md:text-5xl font-light">signal ÔåÆ dossier ÔåÆ bundle ÔåÆ membership</h2>
