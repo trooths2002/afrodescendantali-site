@@ -53,6 +53,25 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {}
     };
 
+    var emailUser = 'info';
+    var emailDomain = 'afrodescendantali.com';
+    var emailAddress = emailUser + '@' + emailDomain;
+    var buildMailto = function (subject, body) {
+        var params = [];
+        if (subject) { params.push('subject=' + encodeURIComponent(subject)); }
+        if (body) { params.push('body=' + encodeURIComponent(body)); }
+        return 'mailto:' + emailAddress + (params.length ? '?' + params.join('&') : '');
+    };
+
+    document.querySelectorAll('[data-email-link]').forEach(function (item) {
+        var subject = item.getAttribute('data-email-subject') || '';
+        var body = item.getAttribute('data-email-body') || '';
+        item.href = buildMailto(subject, body);
+        if (item.hasAttribute('data-email-text')) {
+            item.textContent = emailAddress;
+        }
+    });
+
     document.querySelectorAll('[data-lead-track]').forEach(function (item) {
         item.addEventListener('click', function () {
             trackLeadIntent(item.getAttribute('data-lead-track'), {
@@ -84,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var updateMailto = function () {
             var selectedType = type.value || 'Inquiry';
             var body = ['Inquiry type: ' + selectedType, '', 'Objective:', objective.value || '[Add the decision, project, or question.]', '', 'Deadline or timing:', deadline.value || '[Add timing.]'].join('\n');
-            mailto.href = 'mailto:info@afrodescendantali.com?subject=' + encodeURIComponent(selectedType + ' inquiry') + '&body=' + encodeURIComponent(body);
+            mailto.href = buildMailto(selectedType + ' inquiry', body);
         };
         [type, objective, deadline].forEach(function (field) {
             field.addEventListener('input', updateMailto);
