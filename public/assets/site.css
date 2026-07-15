@@ -78,6 +78,14 @@
     background: rgba(255, 255, 255, 0.04);
     border-color: rgba(254, 219, 149, 0.28);
 }
+.home-desk-page .site-brand-logo {
+    color: var(--color-on-primary);
+}
+
+.home-desk-page .site-brand-logo:hover,
+.home-desk-page .site-brand-logo:focus-visible {
+    color: var(--color-secondary-container);
+}
 
 .home-hero {
     background: var(--color-surface);
