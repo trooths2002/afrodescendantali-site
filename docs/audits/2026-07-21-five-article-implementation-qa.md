@@ -4,12 +4,13 @@ Date: 2026-07-21
 Repository: `trooths2002/afrodescendantali-site`
 Pull request: #31
 Branch: `content/five-article-publication-batch-20260721`
+Final reviewed head: `8fdfc2bade96e61b98a62c828e73f601e019da8e`
 
 ## Verdict
 
-**PARTIAL PASS — repository implementation and static QA passed; Cloudflare branch-preview and browser-render verification remain pending.**
+**PASS — repository implementation, static QA, rights/privacy review, route-level visual review, and Cloudflare branch-preview commit alignment passed.**
 
-This record does not authorize merge or production deployment.
+This record does not authorize merge or production deployment. A separate explicit owner instruction remains required.
 
 ## Implemented routes
 
@@ -80,36 +81,39 @@ A local parser-based QA pass was run against the generated public files.
 
 ## Visual review
 
-The five SVG assets were rendered to PNG locally and inspected individually and as a contact sheet.
+The five SVG assets were rendered locally and inspected individually and as a contact sheet. The owner then supplied full-page route captures for all five articles.
 
-- PASS — all assets render successfully.
-- PASS — text remains within the 1200 × 630 canvas.
+- PASS — all five assets render successfully.
+- PASS — article headings, body text, CTAs, related links, editorial-status blocks, and footers remain inside the narrow capture viewport.
+- PASS — no horizontal overflow, broken glyphs, missing graphics, or clipped body text was observed.
 - PASS — diagrams use the established restrained dark-navy, cream, and gold editorial palette.
 - PASS — no visual requires a third-party rights decision.
 
+### ART-009 correction
+
+The first ART-009 route capture showed the `MEASUREMENT` node extending into the diagram attribution band and crossing the `ORIGINAL EDITORIAL DIAGRAM` line.
+
+- CORRECTED — the node was moved fully above the attribution band and reduced proportionally.
+- Correction commit: `8fdfc2bade96e61b98a62c828e73f601e019da8e`.
+- Local corrected SVG render: PASS.
+- Cloudflare redeployed the corrected commit successfully.
+
 ## Responsive/browser QA status
 
-Static responsive prerequisites passed:
+- PASS — desktop homepage screenshot showed correct live-screen contrast, layout, navigation, hero hierarchy, CTAs, and no visible overflow.
+- PASS — narrow/mobile homepage capture showed stacked content and expanded mobile navigation without horizontal overflow.
+- PASS — full narrow route captures were supplied for all five articles.
+- PASS — article title wrapping, body reading flow, SVG loading, CTA placement, related links, editorial-status sections, and footers rendered without clipping.
+- PASS — Cloudflare reported successful deployment of final reviewed head `8fdfc2b`.
 
-- viewport metadata is present;
-- existing shared responsive CSS and navigation are reused;
-- article graphics use intrinsic dimensions and responsive width classes;
-- no new fixed-width page container, CSS, or JavaScript was introduced.
+### Print-render qualification
 
-**Cloudflare branch-preview browser QA remains pending.** Required preview checks:
-
-- desktop route rendering;
-- mobile route rendering;
-- horizontal-overflow check;
-- navigation behavior;
-- article graphic loading;
-- CTA and related-link navigation;
-- page-source metadata confirmation;
-- preview deployment commit equals the final PR head.
+The narrow captures are browser print-to-PDF outputs rather than direct mobile screenshots. Dark fills and pale CTA copy are partially suppressed by print rendering. The desktop browser screenshot confirms the intended live-screen dark surfaces and contrast. No live-screen contrast failure is inferred from the print output.
 
 ## Merge and deployment boundary
 
-- Pull request must remain draft until Cloudflare preview evidence is reviewed.
+- PR #31 is technically ready for the owner’s merge decision.
+- The pull request may remain draft until the owner explicitly instructs that it be marked ready or merged.
 - Auto-merge must remain disabled.
 - No merge is authorized by this QA record.
 - No production deployment is authorized by this QA record.
