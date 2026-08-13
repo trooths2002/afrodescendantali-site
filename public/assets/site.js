@@ -1,3 +1,19 @@
+// Google Analytics 4 — EXE-20260813-011
+(function (window, document, measurementId) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId);
+
+    var googleTag = document.createElement('script');
+    googleTag.async = true;
+    googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(googleTag, firstScript);
+})(window, document, 'G-11B3ZP3DH2');
+
 document.addEventListener('DOMContentLoaded', function () {
     var toggle = document.querySelector('[data-nav-toggle]');
     var menu = document.querySelector('[data-nav-menu]');
