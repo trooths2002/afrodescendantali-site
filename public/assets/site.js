@@ -1,12 +1,9 @@
-// Google Analytics 4 — EXE-20260813-011
+// Google Analytics 4 — existing production measurement retained
 (function (window, document, measurementId) {
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () {
-        window.dataLayer.push(arguments);
-    };
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
     window.gtag('config', measurementId);
-
     var googleTag = document.createElement('script');
     googleTag.async = true;
     googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
@@ -15,9 +12,41 @@
 })(window, document, 'G-11B3ZP3DH2');
 
 document.addEventListener('DOMContentLoaded', function () {
+    var primaryNavigation = [
+        { label: 'Home', href: '/' },
+        { label: 'Services', href: '/services' },
+        { label: 'Work', href: '/work' },
+        { label: 'Analysis', href: '/analysis/' },
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: '/contact' }
+    ];
+    var normalizePath = function (value) {
+        var path = (value || '/').replace(/\.html$/, '');
+        if (path.length > 1 && path.endsWith('/')) { path = path.slice(0, -1); }
+        return path || '/';
+    };
+    var currentPath = normalizePath(window.location.pathname);
+    var renderNav = function (root, isFooter) {
+        if (!root) { return; }
+        root.innerHTML = '';
+        primaryNavigation.forEach(function (item) {
+            var link = document.createElement('a');
+            link.href = item.href;
+            link.textContent = item.label;
+            var itemPath = normalizePath(item.href);
+            var isCurrent = currentPath === itemPath || (itemPath === '/services' && currentPath.indexOf('/services/') === 0) || (itemPath === '/analysis' && currentPath.indexOf('/analysis/') === 0);
+            if (isCurrent) { link.setAttribute('aria-current', 'page'); }
+            if (!isFooter && (item.label === 'Services' || item.label === 'Contact' || item.label === 'Work')) {
+                link.setAttribute('data-lead-track', 'nav_' + item.label.toLowerCase());
+            }
+            root.appendChild(link);
+        });
+    };
+    renderNav(document.querySelector('[data-nav-menu]'), false);
+    document.querySelectorAll('[data-footer-nav], .footer-nav').forEach(function (root) { renderNav(root, true); });
+
     var toggle = document.querySelector('[data-nav-toggle]');
     var menu = document.querySelector('[data-nav-menu]');
-
     if (toggle && menu) {
         var setOpen = function (isOpen) {
             toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -29,38 +58,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 menu.hidden = false;
                 toggle.setAttribute('aria-expanded', 'true');
                 toggle.setAttribute('aria-label', 'Primary navigation');
-            } else {
-                setOpen(false);
-            }
+            } else { setOpen(false); }
         };
-        toggle.addEventListener('click', function () {
-            var expanded = toggle.getAttribute('aria-expanded') === 'true';
-            setOpen(!expanded);
-        });
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                if (window.innerWidth < 768) {
-                    setOpen(false);
-                }
-            });
-        });
+        toggle.addEventListener('click', function () { setOpen(toggle.getAttribute('aria-expanded') !== 'true'); });
+        menu.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { if (window.innerWidth < 768) { setOpen(false); } }); });
         window.addEventListener('resize', syncForViewport);
         syncForViewport();
     }
 
     var trackLeadIntent = function (name, detail) {
-        var payload = {
-            event: 'lead_intent_click',
-            name: name,
-            detail: detail || {},
-            path: window.location.pathname,
-            ts: new Date().toISOString()
-        };
+        var payload = { event: 'lead_intent_click', name: name, detail: detail || {}, path: window.location.pathname, ts: new Date().toISOString() };
         window.afrodescendantAliLeadEvents = window.afrodescendantAliLeadEvents || [];
         window.afrodescendantAliLeadEvents.push(payload);
-        if (Array.isArray(window.dataLayer)) {
-            window.dataLayer.push(payload);
-        }
+        if (Array.isArray(window.dataLayer)) { window.dataLayer.push(payload); }
         try {
             var key = 'afrodescendantAliLeadEvents';
             var current = JSON.parse(window.localStorage.getItem(key) || '[]');
@@ -69,62 +79,50 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {}
     };
 
-    var emailUser = 'info';
-    var emailDomain = 'afrodescendantali.com';
-    var emailAddress = emailUser + '@' + emailDomain;
+    var emailAddress = 'info@afrodescendantali.com';
     var buildMailto = function (subject, body) {
         var params = [];
         if (subject) { params.push('subject=' + encodeURIComponent(subject)); }
         if (body) { params.push('body=' + encodeURIComponent(body)); }
         return 'mailto:' + emailAddress + (params.length ? '?' + params.join('&') : '');
     };
-
     document.querySelectorAll('[data-email-link]').forEach(function (item) {
-        var subject = item.getAttribute('data-email-subject') || '';
-        var body = item.getAttribute('data-email-body') || '';
-        item.href = buildMailto(subject, body);
-        if (item.hasAttribute('data-email-text')) {
-            item.textContent = emailAddress;
-        }
-    });
-
-    document.querySelectorAll('[data-lead-track]').forEach(function (item) {
-        item.addEventListener('click', function () {
-            trackLeadIntent(item.getAttribute('data-lead-track'), {
-                text: (item.textContent || '').trim(),
-                href: item.getAttribute('href') || ''
-            });
-        });
-    });
-
-    document.querySelectorAll('[data-offer-tabs]').forEach(function (root) {
-        var tabs = root.querySelectorAll('[data-offer-tab]');
-        var panels = root.querySelectorAll('[data-offer-panel]');
-        tabs.forEach(function (tab) {
-            tab.addEventListener('click', function () {
-                var target = tab.getAttribute('data-offer-tab');
-                tabs.forEach(function (item) { item.setAttribute('aria-selected', item === tab ? 'true' : 'false'); });
-                panels.forEach(function (panel) { panel.hidden = panel.getAttribute('data-offer-panel') !== target; });
-                trackLeadIntent('offer_tab_' + target, { target: target });
-            });
-        });
+        item.href = buildMailto(item.getAttribute('data-email-subject') || '', item.getAttribute('data-email-body') || '');
+        if (item.hasAttribute('data-email-text')) { item.textContent = emailAddress; }
     });
 
     document.querySelectorAll('[data-inquiry-helper]').forEach(function (root) {
         var type = root.querySelector('[data-inquiry-type]');
         var objective = root.querySelector('[data-inquiry-objective]');
         var deadline = root.querySelector('[data-inquiry-deadline]');
+        var contextNode = root.querySelector('[data-inquiry-context]');
         var mailto = root.querySelector('.inquiry-mailto');
         if (!type || !objective || !deadline || !mailto) { return; }
+        var params = new URLSearchParams(window.location.search);
+        var requestedType = params.get('type');
+        var service = params.get('service');
+        if (requestedType) {
+            Array.prototype.slice.call(type.options).some(function (option) {
+                if (option.text === requestedType || option.value === requestedType) { type.value = option.value; return true; }
+                return false;
+            });
+        }
+        if (contextNode) { contextNode.textContent = service ? service : 'No specific offer selected.'; }
         var updateMailto = function () {
-            var selectedType = type.value || 'Inquiry';
-            var body = ['Inquiry type: ' + selectedType, '', 'Objective:', objective.value || '[Add the decision, project, or question.]', '', 'Deadline or timing:', deadline.value || '[Add timing.]'].join('\n');
+            var selectedType = type.value || 'Not Sure';
+            var body = [
+                'Service lane: ' + selectedType,
+                'Specific service: ' + (service || '[Not selected]'),
+                '',
+                'Objective:', objective.value || '[Describe the problem, project or desired result.]',
+                '',
+                'Deadline or timing:', deadline.value || '[Add timing.]',
+                '',
+                'Source material / links / context:', '[Add what is already available.]'
+            ].join('\n');
             mailto.href = buildMailto(selectedType + ' inquiry', body);
         };
-        [type, objective, deadline].forEach(function (field) {
-            field.addEventListener('input', updateMailto);
-            field.addEventListener('change', updateMailto);
-        });
+        [type, objective, deadline].forEach(function (field) { field.addEventListener('input', updateMailto); field.addEventListener('change', updateMailto); });
         updateMailto();
     });
 
@@ -146,11 +144,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 var group = button.getAttribute('data-filter-group');
                 state[group] = button.getAttribute('data-filter-value');
                 root.querySelectorAll('[data-filter-group="' + group + '"]').forEach(function (item) { item.setAttribute('aria-pressed', item === button ? 'true' : 'false'); });
-                trackLeadIntent('analysis_filter_' + group + '_' + state[group], { group: group, value: state[group] });
                 applyFilters();
             });
         });
         applyFilters();
+    });
+
+    document.querySelectorAll('[data-lead-track]').forEach(function (item) {
+        item.addEventListener('click', function () { trackLeadIntent(item.getAttribute('data-lead-track'), { text: (item.textContent || '').trim(), href: item.getAttribute('href') || '' }); });
     });
 
     if (!document.querySelector('.briefing-cta-layer') && !document.body.classList.contains('no-global-briefing-cta')) {
@@ -158,26 +159,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (main) {
             var cta = document.createElement('section');
             cta.className = 'briefing-cta-layer';
-            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, audience, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="/contact" class="site-button site-button--light" data-lead-track="global_qualified_inquiry">Start a qualified inquiry</a></div>';
+            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Practical next step</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need research, media, a website or an operating system built around this problem?</h2><p>Start with the service lane that best fits. Complex organization-specific intelligence and automation work can route to AGV after qualification.</p></div><div><a href="/services" class="site-button site-button--light">Explore services</a><a href="/contact?type=Not%20Sure" class="text-link sans-label text-[10px] mt-4 inline-block">Start an inquiry</a></div></div>';
             main.appendChild(cta);
-            cta.querySelectorAll('[data-lead-track]').forEach(function (item) {
-                item.addEventListener('click', function () { trackLeadIntent(item.getAttribute('data-lead-track'), { text: (item.textContent || '').trim(), href: item.getAttribute('href') || '' }); });
-            });
         }
     }
 
     var revealItems = document.querySelectorAll('.reveal-on-scroll');
     if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
+        var observer = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.12 });
         revealItems.forEach(function (item) { observer.observe(item); });
-    } else {
-        revealItems.forEach(function (item) { item.classList.add('is-visible'); });
-    }
+    } else { revealItems.forEach(function (item) { item.classList.add('is-visible'); }); }
 });
