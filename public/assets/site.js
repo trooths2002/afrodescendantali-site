@@ -79,7 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {}
     };
 
-    var emailAddress = 'info@afrodescendantali.com';
+    var emailUser = 'info';
+    var emailDomain = 'afrodescendantali.com';
+    var emailAddress = emailUser + '@' + emailDomain;
     var buildMailto = function (subject, body) {
         var params = [];
         if (subject) { params.push('subject=' + encodeURIComponent(subject)); }
