@@ -1,0 +1,28 @@
+{
+  "schema_version": "afrodescendantali.service.v0.1",
+  "entity_type": "service_area",
+  "service_id": "ada-service-media-content-publication",
+  "name": "Media, Content & Publication",
+  "human_url": "https://www.afrodescendantali.com/services/media-content-publication",
+  "machine_url": "https://www.afrodescendantali.com/services/media-content-publication/service.json",
+  "manifest_url": "https://www.afrodescendantali.com/services/manifest.json",
+  "provider": {"name":"Afrodescendant Ali","url":"https://www.afrodescendantali.com/"},
+  "summary": "Video, field capture, documentary and archive storytelling, social content, campaign graphics, channel audits, and editorial publication production.",
+  "offers": [
+    {"name":"Video Editing & Repurposing Sprint","pricing_mode":"starting_at","public_price_label":"Starting at $600"},
+    {"name":"Videography & Field Capture Session","pricing_mode":"starting_at","public_price_label":"Sessions from $450"},
+    {"name":"Documentary & Archive Story Build","pricing_mode":"request_quote","public_price_label":"Request a Quote"},
+    {"name":"Remote Event / Zoom Media Support","pricing_mode":"request_quote","public_price_label":"Request a Quote"},
+    {"name":"Social Content Production Sprint","pricing_mode":"starting_at","public_price_label":"Starting at $750"},
+    {"name":"Flyer & Campaign Graphics Package","pricing_mode":"starting_at","public_price_label":"Starting at $350"},
+    {"name":"YouTube & Content Channel Audit","pricing_mode":"starting_at","public_price_label":"Audits from $750"},
+    {"name":"Print / Editorial Publication Production","pricing_mode":"starting_at","public_price_label":"Issue production from $750"}
+  ],
+  "related_work_url":"https://www.afrodescendantali.com/work",
+  "contact_url":"https://www.afrodescendantali.com/contact?type=Media%2C%20Content%20%26%20Publication",
+  "public_safe":true,
+  "last_verified":"2026-08-28",
+  "machine_action_endpoint":null,
+  "agent_policy":{"allowed":["retrieve","summarize","compare public service information","follow public links"],"prohibited":["submit inquiries","send correspondence","commit funds","claim unverified outcomes","act on behalf of the provider or client"]},
+  "representation_note":"This machine-readable object describes the same public service information shown on the human page. It does not create an autonomous action endpoint."
+}
