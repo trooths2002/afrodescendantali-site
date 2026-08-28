@@ -83,27 +83,25 @@ document.addEventListener('DOMContentLoaded', function () {
         syncForViewport();
     }
 
-    // Owned/public-safe artifacts already published in this first-party repository.
+    // Simple fallback proof band. Home replaces this with the richer portfolio treatment.
     var artifactCards = [
-        { image: '/analysis/afcfta-implementation-watch/assets/dashboard-preview-reference.webp', type: 'Research system', label: 'AfCFTA implementation dashboard' },
-        { image: '/analysis/afcfta-implementation-watch/assets/explainer-library-reference.webp', type: 'Editorial product', label: 'Explainer library' },
-        { image: '/analysis/afcfta-implementation-watch/assets/short-form-education-reference.webp', type: 'Media system', label: 'Short-form education package' },
-        { image: '/analysis/afcfta-implementation-watch/assets/trade-friction-reference.webp', type: 'Research visual', label: 'Trade-friction evidence view' },
-        { image: '/assets/articles/au-caricom-reparations-institutional-link-20260810.jpg', type: 'Published analysis', label: 'Africa–Caribbean reparations analysis' }
+        { image: '/assets/work/work-agv-website-v01.jpg', type: 'Website', label: 'Ascend Global Ventures website' },
+        { image: '/assets/work/work-media-beckles-v01.jpg', type: 'Media', label: 'Reparations media package' },
+        { image: '/assets/work/work-service-business-launch-v01.jpg', type: 'Business launch', label: 'Service-business launch' }
     ];
     var buildArtifactBand = function (title, intro) {
         var section = document.createElement('section');
         section.className = 'bwmu-artifact-band reveal-on-scroll';
         var figures = artifactCards.map(function (item) {
-            return '<figure class="bwmu-artifact-card"><img loading="lazy" src="' + item.image + '" alt="' + item.label + ' — owned Afrodescendant Ali public project artifact"><figcaption><span class="bwmu-artifact-type">' + item.type + '</span>' + item.label + '</figcaption></figure>';
+            return '<figure class="bwmu-artifact-card"><img loading="lazy" src="' + item.image + '" alt="' + item.label + '"><figcaption><span class="bwmu-artifact-type">' + item.type + '</span>' + item.label + '</figcaption></figure>';
         }).join('');
-        section.innerHTML = '<div class="bwmu-artifact-intro"><div><span class="eyebrow">Real work, already public</span><h2>' + title + '</h2></div><p>' + intro + '</p></div><div class="bwmu-artifact-grid">' + figures + '</div>';
+        section.innerHTML = '<div class="bwmu-artifact-intro"><div><span class="eyebrow">Selected work</span><h2>' + title + '</h2></div><p>' + intro + '</p></div><div class="bwmu-artifact-grid">' + figures + '</div>';
         return section;
     };
     if (currentPath === '/' && !document.querySelector('.bwmu-artifact-band')) {
         var homeHero = document.querySelector('.intelligence-desk-hero');
         if (homeHero) {
-            var homeArtifacts = buildArtifactBand('Ideas become things you can use.', 'The site should show the work, not just describe capability. These are owned, first-party public artifacts from Afrodescendant Ali research, publishing and media systems; they do not imply client endorsement or private-client outcomes.');
+            var homeArtifacts = buildArtifactBand('See what an idea can become.', 'Websites, media, research, communications and operating systems built to help real projects move forward. Explore selected examples of the problem, the work, and the finished deliverable.');
             homeHero.insertAdjacentElement('afterend', homeArtifacts);
             var accessBand = document.createElement('section');
             accessBand.className = 'bwmu-access-band reveal-on-scroll';
@@ -113,15 +111,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (currentPath === '/work' && !document.querySelector('.bwmu-artifact-band')) {
         var workHero = document.querySelector('.page-hero');
-        if (workHero) workHero.insertAdjacentElement('afterend', buildArtifactBand('The proof is in what gets made.', 'Selected Work stays claim-safe and often anonymized. This visual layer uses owned public artifacts to show the level of craft without inventing client outcomes or exposing private material.'));
+        if (workHero) workHero.insertAdjacentElement('afterend', buildArtifactBand('See what an idea can become.', 'Websites, media, research, communications and operating systems built to help real projects move forward. Explore the problem, the work, and the finished deliverable.'));
     }
 
     var serviceArtifactMap = {
-        '/services/media-content-publication': { image: '/analysis/afcfta-implementation-watch/assets/short-form-education-reference.webp', type: 'Owned public media artifact', title: 'A repeatable short-form education system', copy: 'A first-party example of turning research into a visible media product. It demonstrates production craft without implying a private-client result.' },
-        '/services/websites-digital-presence': { image: '/analysis/afcfta-implementation-watch/assets/full-page-v2-reference.webp', type: 'Owned public web artifact', title: 'A structured public intelligence web experience', copy: 'A first-party page system showing responsive information architecture, visual hierarchy, evidence presentation, and practical web implementation.' },
-        '/services/research-communications-public-affairs': { image: '/analysis/afcfta-implementation-watch/assets/trade-friction-reference.webp', type: 'Owned public research artifact', title: 'Evidence organized for a decision or public explanation', copy: 'The work combines source discipline, visual synthesis, and readable outputs while keeping unknowns and caveats visible.' },
-        '/services/business-knowledge-audience-systems': { image: '/analysis/afcfta-implementation-watch/assets/dashboard-preview-reference.webp', type: 'Owned public system artifact', title: 'Information turned into a working system', copy: 'An example of structuring recurring information so a project can be tracked, updated, and used instead of living in scattered files.' },
-        '/services/specialist-intelligence-automation': { image: '/assets/articles/art-005-source-infrastructure.svg', type: 'Owned public systems artifact', title: 'Human-readable work with machine-readable structure underneath', copy: 'A public-safe example of the systems thinking behind discoverability, source infrastructure, and bounded automation work.' }
+        '/services/media-content-publication': { image: '/analysis/afcfta-implementation-watch/assets/short-form-education-reference.webp', type: 'Media example', title: 'Research turned into a short-form media package', copy: 'A researched topic was shaped into clear, repeatable content for social and editorial publishing.' },
+        '/services/websites-digital-presence': { image: '/analysis/afcfta-implementation-watch/assets/full-page-v2-reference.webp', type: 'Website example', title: 'Complex information organized into a clear website', copy: 'The work combines page structure, visual hierarchy, responsive design, and clear next steps for visitors.' },
+        '/services/research-communications-public-affairs': { image: '/analysis/afcfta-implementation-watch/assets/trade-friction-reference.webp', type: 'Research example', title: 'Evidence turned into a clear public explanation', copy: 'Sources, findings, and unanswered questions are organized so people can understand what is known and what still needs work.' },
+        '/services/business-knowledge-audience-systems': { image: '/analysis/afcfta-implementation-watch/assets/dashboard-preview-reference.webp', type: 'Business systems example', title: 'Scattered information turned into a working system', copy: 'Recurring information is organized so a project can be tracked, updated, and used instead of getting lost across files and messages.' },
+        '/services/specialist-intelligence-automation': { image: '/assets/articles/art-005-source-infrastructure.svg', type: 'Specialist systems example', title: 'A website built for people and modern search tools', copy: 'The service information is structured so visitors can understand it clearly and search or AI tools can find the same core answers.' }
     };
     var serviceArtifact = serviceArtifactMap[currentPath];
     if (serviceArtifact && !document.querySelector('.bwmu-service-artifact')) {
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (serviceHero) {
             var visual = document.createElement('section');
             visual.className = 'bwmu-service-artifact reveal-on-scroll';
-            visual.innerHTML = '<figure><img loading="lazy" src="' + serviceArtifact.image + '" alt="' + serviceArtifact.title + ' — owned Afrodescendant Ali public artifact"><figcaption><span class="bwmu-artifact-type">' + serviceArtifact.type + '</span><strong>' + serviceArtifact.title + '</strong><p>' + serviceArtifact.copy + '</p></figcaption></figure>';
+            visual.innerHTML = '<figure><img loading="lazy" src="' + serviceArtifact.image + '" alt="' + serviceArtifact.title + '"><figcaption><span class="bwmu-artifact-type">' + serviceArtifact.type + '</span><strong>' + serviceArtifact.title + '</strong><p>' + serviceArtifact.copy + '</p></figcaption></figure>';
             serviceHero.insertAdjacentElement('afterend', visual);
         }
     }
@@ -173,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if(!document.querySelector('.briefing-cta-layer')&&!document.body.classList.contains('no-global-briefing-cta')){
         var main=document.querySelector('main');
-        if(main){var cta=document.createElement('section');cta.className='briefing-cta-layer';cta.innerHTML='<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Need help with this?</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Turn the research into a practical next step.</h2><p>I can help with research, media, websites, communications and business systems. Advanced organization-specific intelligence and automation work is handled through Ascend Global Ventures.</p></div><div><a href="/services" class="site-button site-button--light">Explore services</a><a href="/contact?type=Not%20Sure" class="text-link sans-label text-[10px] mt-4 inline-block">Tell me what you need</a></div></div>';main.appendChild(cta);}
+        if(main){var cta=document.createElement('section');cta.className='briefing-cta-layer';cta.innerHTML='<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Need help with this?</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Turn the research into a practical next step.</h2><p>I can help with research, media, websites, communications and business systems. More complex trade, research and automation projects are handled through Ascend Global Ventures.</p></div><div><a href="/services" class="site-button site-button--light">Explore services</a><a href="/contact?type=Not%20Sure" class="text-link sans-label text-[10px] mt-4 inline-block">Tell me what you need</a></div></div>';main.appendChild(cta);}
     }
 
     var revealItems=document.querySelectorAll('.reveal-on-scroll');
