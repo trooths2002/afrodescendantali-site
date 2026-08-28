@@ -8,6 +8,7 @@
   "public_safe":true,
   "last_verified":"2026-08-28",
   "machine_action_endpoint":null,
+  "provenance":{"publisher":"Afrodescendant Ali","verification_date":"2026-08-28","source_authority":"The corresponding first-party human service pages on afrodescendantali.com","pricing_authority":"Public price labels shown on the corresponding human service pages","representation_relationship":"Machine representations are descriptive mirrors of the public human service information and must not expand its claims or authority."},
   "services":[
     {"service_id":"ada-service-media-content-publication","name":"Media, Content & Publication","human_url":"https://www.afrodescendantali.com/services/media-content-publication","machine_url":"https://www.afrodescendantali.com/services/media-content-publication/service.json"},
     {"service_id":"ada-service-websites-digital-presence","name":"Websites & Digital Presence","human_url":"https://www.afrodescendantali.com/services/websites-digital-presence","machine_url":"https://www.afrodescendantali.com/services/websites-digital-presence/service.json"},
