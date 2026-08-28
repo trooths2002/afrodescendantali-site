@@ -1,0 +1,1 @@
+EXE-20260828-021: derived portfolio-safe image replacements approved for public website delivery. Source files remain private. This marker is temporary lineage evidence for the non-production branch.
