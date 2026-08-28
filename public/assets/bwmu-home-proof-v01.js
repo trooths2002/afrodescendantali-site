@@ -1,32 +1,41 @@
 (function () {
+  function ensurePortfolioStyles() {
+    if (document.querySelector('link[href*="work-portfolio-v01.css"]')) return;
+    var link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='/assets/work-portfolio-v01.css?v=20260828-01';
+    document.head.appendChild(link);
+  }
+
   function run() {
     if (!document.body.classList.contains('bwmu-home')) return;
+    ensurePortfolioStyles();
 
-    var heroPanel = document.querySelector('.home-desk-panel');
+    var heroPanel=document.querySelector('.home-desk-panel');
     if (heroPanel) {
       heroPanel.classList.add('bwmu-hero-visual-panel');
-      heroPanel.innerHTML = [
-        '<div class="bwmu-hero-visual" role="img" aria-label="A first-party Afrodescendant Ali visual showing Black World research, web publishing, media production, and operating systems moving from idea to finished work.">',
+      heroPanel.innerHTML=[
+        '<div class="bwmu-hero-visual" role="img" aria-label="Afrodescendant Ali project visual combining a responsive website, Black-world media production, business launch work, and an Africa network field.">',
           '<img class="bwmu-hero-network" src="/analysis/afcfta-implementation-watch/assets/hero-africa-trade-network.webp" alt="" aria-hidden="true">',
           '<div class="bwmu-hero-browser">',
             '<span class="bwmu-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>',
-            '<img src="/analysis/afcfta-implementation-watch/assets/full-page-v2-reference.webp" alt="Complete first-party web experience for the AfCFTA Implementation Watch">',
-            '<span class="bwmu-hero-tag">Website + publishing</span>',
+            '<img src="/assets/work/work-agv-website-v01.jpg" alt="Desktop and mobile website work built by Afrodescendant Ali">',
+            '<span class="bwmu-hero-tag">Website + systems</span>',
           '</div>',
           '<div class="bwmu-hero-float bwmu-hero-float--research">',
-            '<img src="/analysis/afcfta-implementation-watch/assets/dashboard-preview-reference.webp" alt="AfCFTA research dashboard">',
-            '<span>Research + systems</span>',
-          '</div>',
-          '<div class="bwmu-hero-float bwmu-hero-float--media">',
-            '<img src="/analysis/afcfta-implementation-watch/assets/short-form-education-reference.webp" alt="Short-form media production system">',
+            '<img src="/assets/work/work-media-beckles-v01.jpg" alt="Research-led media package built by Afrodescendant Ali">',
             '<span>Media + content</span>',
           '</div>',
-          '<div class="bwmu-hero-flow" aria-hidden="true"><span>Question</span><b>→</b><span>Build</span><b>→</b><span>Finished work</span></div>',
+          '<div class="bwmu-hero-float bwmu-hero-float--media">',
+            '<img src="/assets/work/work-service-business-launch-v01.jpg" alt="Anonymized service-business launch package">',
+            '<span>Business launch</span>',
+          '</div>',
+          '<div class="bwmu-hero-flow" aria-hidden="true"><span>Idea</span><b>→</b><span>Build</span><b>→</b><span>Finished work</span></div>',
         '</div>',
         '<div class="bwmu-hero-visual-copy">',
           '<span class="eyebrow">What Afrodescendant Ali does</span>',
           '<h2>Turn an idea, problem, or body of information into something usable.</h2>',
-          '<p>Research, websites, media, communications, and business systems are different outputs of the same practical job: helping Black-world builders move a real project forward.</p>',
+          '<p>Research, websites, media, communications, and business systems are different ways of helping Black-world builders move a real project forward.</p>',
           '<div class="bwmu-hero-service-links">',
             '<a href="/services/media-content-publication">Media</a>',
             '<a href="/services/websites-digital-presence">Websites</a>',
@@ -37,102 +46,32 @@
       ].join('');
     }
 
-    var band = document.querySelector('.bwmu-artifact-band');
-    if (band) {
-      var intro = band.querySelector('.bwmu-artifact-intro p');
-      if (intro) intro.textContent = 'Each example below is an owned, first-party public artifact. Open the work to see the source context, then follow the service link to understand what kind of client work that capability supports.';
-
-      var grid = band.querySelector('.bwmu-artifact-grid');
-      if (grid) {
-        var cards = [
-          {
-            image: '/analysis/afcfta-implementation-watch/assets/dashboard-preview-reference.webp',
-            fallback: '/analysis/afcfta-implementation-watch/assets/full-page-v2-reference.webp',
-            type: 'Research system',
-            title: 'AfCFTA implementation dashboard',
-            demonstrate: 'Shows how scattered sources, findings, questions, and verification checks can be organized into a working knowledge system.',
-            workHref: '/analysis/afcfta-implementation-watch/#dashboard',
-            workLabel: 'Open the dashboard context',
-            services: [
-              ['/services/business-knowledge-audience-systems', 'Business & knowledge systems'],
-              ['/services/research-communications-public-affairs', 'Research & communications']
-            ]
-          },
-          {
-            image: '/analysis/afcfta-implementation-watch/assets/explainer-library-reference.webp',
-            fallback: '/analysis/afcfta-implementation-watch/assets/full-page-v2-reference.webp',
-            type: 'Editorial product',
-            title: 'Explainer library',
-            demonstrate: 'Shows research synthesis, editorial packaging, information architecture, and reusable public education content.',
-            workHref: '/analysis/afcfta-implementation-watch/#explainers',
-            workLabel: 'Open the explainer library',
-            services: [
-              ['/services/research-communications-public-affairs', 'Research & communications'],
-              ['/services/media-content-publication', 'Media & publication']
-            ]
-          },
-          {
-            image: '/analysis/afcfta-implementation-watch/assets/short-form-education-reference.webp',
-            fallback: '/analysis/afcfta-implementation-watch/assets/full-page-v2-reference.webp',
-            type: 'Media system',
-            title: 'Short-form education package',
-            demonstrate: 'Shows how a researched subject can be translated into a repeatable short-form content system for social and editorial distribution.',
-            workHref: '/analysis/afcfta-implementation-watch/#shorts',
-            workLabel: 'Open the media context',
-            services: [
-              ['/services/media-content-publication', 'Media, content & publication']
-            ]
-          },
-          {
-            image: '/analysis/afcfta-implementation-watch/assets/trade-friction-reference.webp',
-            fallback: '/analysis/afcfta-implementation-watch/assets/dashboard-preview-reference.webp',
-            type: 'Research visual',
-            title: 'Trade-friction evidence view',
-            demonstrate: 'Shows evidence triage, issue framing, visual synthesis, and the bridge from public research to a bounded intelligence question.',
-            workHref: '/analysis/afcfta-implementation-watch/#friction',
-            workLabel: 'Open Trade Friction Watch',
-            services: [
-              ['/services/specialist-intelligence-automation', 'Specialist intelligence'],
-              ['/services/research-communications-public-affairs', 'Research & communications']
-            ]
-          },
-          {
-            image: '/assets/articles/au-caricom-reparations-institutional-link-20260810.jpg',
-            fallback: '/analysis/afcfta-implementation-watch/assets/hero-africa-trade-network.webp',
-            type: 'Published analysis',
-            title: 'Africa–Caribbean reparations analysis',
-            demonstrate: 'Shows source verification, public-interest analysis, claim discipline, editorial presentation, and a clear path from research to communications support.',
-            workHref: '/analysis/au-caricom-reparations-institutional-coordination/',
-            workLabel: 'Read the published analysis',
-            services: [
-              ['/services/research-communications-public-affairs', 'Research, communications & public affairs']
-            ]
-          }
-        ];
-
-        grid.innerHTML = cards.map(function (item) {
-          var serviceLinks = item.services.map(function (service) {
-            return '<a class="bwmu-proof-service" href="' + service[0] + '">' + service[1] + '</a>';
-          }).join('');
-          return [
-            '<article class="bwmu-proof-card">',
-              '<a class="bwmu-proof-media" href="' + item.workHref + '" aria-label="' + item.workLabel + '">',
-                '<img loading="lazy" src="' + item.image + '" onerror="this.onerror=null;this.src=\'' + item.fallback + '\';" alt="Complete view of ' + item.title + ' — owned Afrodescendant Ali public artifact">',
-              '</a>',
-              '<div class="bwmu-proof-body">',
-                '<span class="bwmu-artifact-type">' + item.type + '</span>',
-                '<h3><a href="' + item.workHref + '">' + item.title + '</a></h3>',
-                '<p class="bwmu-proof-demonstrates"><strong>What this demonstrates:</strong> ' + item.demonstrate + '</p>',
-                '<a class="bwmu-proof-open" href="' + item.workHref + '">' + item.workLabel + ' →</a>',
-                '<div class="bwmu-proof-service-row"><span>Related services</span>' + serviceLinks + '</div>',
-              '</div>',
-            '</article>'
-          ].join('');
-        }).join('');
-      }
-    }
+    var band=document.querySelector('.bwmu-artifact-band');
+    if (!band) return;
+    band.className='home-portfolio-v01 reveal-on-scroll is-visible';
+    band.innerHTML=[
+      '<div class="home-portfolio-v01__head">',
+        '<div><span class="eyebrow">Selected work</span><h2>See what an idea can become.</h2></div>',
+        '<p>A business website, a research-led media package, and a service-business launch are three different kinds of work—but the purpose is the same: turn something you want to do into something finished, usable, and presentable.</p>',
+      '</div>',
+      '<div class="home-portfolio-v01__grid">',
+        '<article class="home-proof-case">',
+          '<a class="home-proof-case__media" href="/work#case-website"><img loading="lazy" src="/assets/work/work-agv-website-v01.jpg" alt="Desktop and mobile Ascend Global Ventures website work"></a>',
+          '<div class="home-proof-case__body"><span class="home-proof-case__type">Website & digital presence</span><h3>A complex service became a usable public website.</h3><p>Information architecture, responsive pages, proof, inquiry routing, and machine discoverability brought together in one first-party build.</p><div class="home-proof-case__links"><a href="/work#case-website">See the case →</a><a href="/services/websites-digital-presence">Website services</a></div></div>',
+        '</article>',
+        '<article class="home-proof-case">',
+          '<a class="home-proof-case__media" href="/work#case-media"><img loading="lazy" src="/assets/work/work-media-beckles-v01.jpg" alt="Sir Hilary Beckles reparations media package"></a>',
+          '<div class="home-proof-case__body"><span class="home-proof-case__type">Media, content & publication</span><h3>Research became a visual story people could move through.</h3><p>Historical argument, contextual imagery, editorial sequencing, and finished carousel design turned into a reusable media package.</p><div class="home-proof-case__links"><a href="/work#case-media">See the case →</a><a href="/services/media-content-publication">Media services</a></div></div>',
+        '</article>',
+        '<article class="home-proof-case">',
+          '<a class="home-proof-case__media" href="/work#case-launch"><img loading="lazy" src="/assets/work/work-service-business-launch-v01.jpg" alt="Anonymized business launch website, marketing, and readiness work"></a>',
+          '<div class="home-proof-case__body"><span class="home-proof-case__type">Service-business launch</span><h3>A business idea moved toward a credible public launch.</h3><p>Website and marketing previews were connected to the practical launch work behind them: claims, brand assets, contact channels, and readiness gates.</p><div class="home-proof-case__links"><a href="/work#case-launch">See the case →</a><a href="/services/websites-digital-presence">Launch & website services</a></div></div>',
+        '</article>',
+      '</div>',
+      '<div class="home-portfolio-v01__footer"><a href="/work">Explore all selected work →</a></div>'
+    ].join('');
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',run);
   else run();
 })();
