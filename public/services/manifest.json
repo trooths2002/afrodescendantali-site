@@ -1,0 +1,19 @@
+{
+  "schema_version":"afrodescendantali.service-manifest.v0.1",
+  "entity_type":"service_manifest",
+  "name":"Afrodescendant Ali Service Manifest",
+  "human_url":"https://www.afrodescendantali.com/services",
+  "manifest_url":"https://www.afrodescendantali.com/services/manifest.json",
+  "provider":{"name":"Afrodescendant Ali","url":"https://www.afrodescendantali.com/"},
+  "public_safe":true,
+  "last_verified":"2026-08-28",
+  "machine_action_endpoint":null,
+  "services":[
+    {"service_id":"ada-service-media-content-publication","name":"Media, Content & Publication","human_url":"https://www.afrodescendantali.com/services/media-content-publication","machine_url":"https://www.afrodescendantali.com/services/media-content-publication/service.json"},
+    {"service_id":"ada-service-websites-digital-presence","name":"Websites & Digital Presence","human_url":"https://www.afrodescendantali.com/services/websites-digital-presence","machine_url":"https://www.afrodescendantali.com/services/websites-digital-presence/service.json"},
+    {"service_id":"ada-service-research-communications-public-affairs","name":"Research, Communications & Public Affairs","human_url":"https://www.afrodescendantali.com/services/research-communications-public-affairs","machine_url":"https://www.afrodescendantali.com/services/research-communications-public-affairs/service.json"},
+    {"service_id":"ada-service-business-knowledge-audience-systems","name":"Business, Knowledge & Audience Systems","human_url":"https://www.afrodescendantali.com/services/business-knowledge-audience-systems","machine_url":"https://www.afrodescendantali.com/services/business-knowledge-audience-systems/service.json"},
+    {"service_id":"agv-service-specialist-intelligence-automation","name":"Specialist Intelligence & Automation","human_url":"https://www.afrodescendantali.com/services/specialist-intelligence-automation","machine_url":"https://www.afrodescendantali.com/services/specialist-intelligence-automation/service.json"}
+  ],
+  "representation_note":"This is a first-party discovery index for public service representations. Human pages remain the customer-facing authority; machine representations must not contradict them. No autonomous action endpoint is exposed."
+}
