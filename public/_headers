@@ -1,0 +1,17 @@
+/services/manifest.json
+  Link: <https://www.afrodescendantali.com/services>; rel="describedby"
+
+/services/media-content-publication/service.json
+  Link: <https://www.afrodescendantali.com/services/media-content-publication>; rel="describedby"
+
+/services/websites-digital-presence/service.json
+  Link: <https://www.afrodescendantali.com/services/websites-digital-presence>; rel="describedby"
+
+/services/research-communications-public-affairs/service.json
+  Link: <https://www.afrodescendantali.com/services/research-communications-public-affairs>; rel="describedby"
+
+/services/business-knowledge-audience-systems/service.json
+  Link: <https://www.afrodescendantali.com/services/business-knowledge-audience-systems>; rel="describedby"
+
+/services/specialist-intelligence-automation/service.json
+  Link: <https://www.afrodescendantali.com/services/specialist-intelligence-automation>; rel="describedby"
