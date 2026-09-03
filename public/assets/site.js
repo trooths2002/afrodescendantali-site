@@ -97,6 +97,49 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // ADA -> AGV Passive Bridge Telemetry -- OPP-20260903-015
+    document.querySelectorAll('[data-agv-bridge]').forEach(function (item) {
+        item.addEventListener('click', function () {
+            var variant = item.getAttribute('data-agv-bridge') || 'unknown';
+            var href = item.getAttribute('href') || '';
+            var bridgePayload = {
+                source_surface: 'afrodescendantali',
+                source_page: window.location.pathname,
+                source_content_type: 'bridge_attribution',
+                bridge_variant: variant,
+                destination: href,
+                campaign: 'ada_agv_bridge_v01',
+                text: (item.textContent || '').trim(),
+                ts: new Date().toISOString()
+            };
+
+            // 1. Emit GA4 custom event
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'ada_agv_bridge_click', {
+                    source_surface: bridgePayload.source_surface,
+                    source_page: bridgePayload.source_page,
+                    source_content_type: bridgePayload.source_content_type,
+                    bridge_variant: bridgePayload.bridge_variant,
+                    destination: bridgePayload.destination,
+                    campaign: bridgePayload.campaign
+                });
+            }
+
+            // 2. Preserve in site dataLayer for GTM / event observers
+            if (Array.isArray(window.dataLayer)) {
+                window.dataLayer.push({
+                    event: 'ada_agv_bridge_click',
+                    bridge_variant: variant,
+                    destination: href,
+                    source_page: window.location.pathname
+                });
+            }
+
+            // 3. Record in first-party local lead intent stream
+            trackLeadIntent('ada_agv_bridge_' + variant, bridgePayload);
+        });
+    });
+
     document.querySelectorAll('[data-offer-tabs]').forEach(function (root) {
         var tabs = root.querySelectorAll('[data-offer-tab]');
         var panels = root.querySelectorAll('[data-offer-panel]');

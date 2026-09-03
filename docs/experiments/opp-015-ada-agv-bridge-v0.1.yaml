@@ -1,0 +1,32 @@
+experiment_id: EXP-20260903-OPP015-01
+opportunity_id: OPP-20260903-015
+title: ADA to AGV Passive Bridge Telemetry v0.1
+status: L2_READY
+source_surface:
+  domain: afrodescendantali.com
+  repo: trooths2002/afrodescendantali-site
+  branch: experiment/opp-015-ada-agv-bridge-v0.1
+  event_name: ada_agv_bridge_click
+  measurement_id: G-11B3ZP3DH2
+target_surface:
+  domain: ascendglobalventures.com
+  platform: Cloudflare Worker
+  source_repo_status: HOLD_UNRESOLVED
+campaign_contract:
+  utm_source: afrodescendantali
+  utm_medium: owned
+  utm_campaign: ada_agv_bridge_v01
+placements:
+  - variant: about_systems
+    page: /about
+    selector: '[data-agv-bridge="about_systems"]'
+    destination: "https://ascendglobalventures.com/?utm_source=afrodescendantali&utm_medium=owned&utm_campaign=ada_agv_bridge_v01&utm_content=about_systems"
+  - variant: method_systems
+    page: /method
+    selector: '[data-agv-bridge="method_systems"]'
+    destination: "https://ascendglobalventures.com/?utm_source=afrodescendantali&utm_medium=owned&utm_campaign=ada_agv_bridge_v01&utm_content=method_systems"
+  - variant: work_enterprise
+    page: /work
+    selector: '[data-agv-bridge="work_enterprise"]'
+    destination: "https://ascendglobalventures.com/?utm_source=afrodescendantali&utm_medium=owned&utm_campaign=ada_agv_bridge_v01&utm_content=work_enterprise"
+commercial_result: PENDING_OBSERVATION
