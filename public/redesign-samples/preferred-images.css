@@ -1,0 +1,9 @@
+.preferred .p-hero{position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(17,17,17,.98) 0%,rgba(17,17,17,.82) 45%,rgba(17,17,17,.3) 100%),url('/redesign-samples/assets/preferred-hero.png');background-position:center;background-size:cover}
+.preferred .p-hero>div{position:relative;z-index:1}
+.preferred .p-hero>.desk{position:relative;z-index:1;background:rgba(17,17,17,.68);backdrop-filter:blur(2px)}
+.preferred .p-band{position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(234,226,212,.98) 0%,rgba(234,226,212,.9) 55%,rgba(234,226,212,.52) 100%),url('/redesign-samples/assets/archive-documentary.png');background-position:center;background-size:cover}
+.preferred .p-band>*{position:relative;z-index:1}
+.preferred .work-desk{position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(17,17,17,.98),rgba(17,17,17,.86)),url('/redesign-samples/assets/redacted-proof.png');background-position:center;background-size:cover}
+.preferred .proof{background-color:rgba(17,17,17,.72);backdrop-filter:blur(2px)}
+.preferred .proof:nth-child(2){background-color:#d2b274}
+@media(max-width:800px){.preferred .p-hero{background-position:62% center}.preferred .p-band{background-position:68% center}.preferred .work-desk{background-position:center}}
