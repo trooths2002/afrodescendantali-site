@@ -1,0 +1,18 @@
+{
+  "schema_version":"afrodescendantali.service-manifest.v0.2",
+  "entity_type":"service_manifest",
+  "name":"Afrodescendant Ali engagement paths",
+  "human_url":"https://www.afrodescendantali.com/services",
+  "manifest_url":"https://www.afrodescendantali.com/services/manifest.json",
+  "provider":{"name":"Afrodescendant Ali","url":"https://www.afrodescendantali.com/"},
+  "public_safe":true,
+  "last_verified":"2026-09-17",
+  "commercial_boundary":{"ali":"SIGNAL → UNDERSTANDING → TRUST → PUBLIC EXPRESSION","agv":"DIAGNOSIS → DECISION → LEVERAGE → SYSTEM → MEASUREMENT","handoff":"When the buyer problem becomes organizational decision, commercial capture, systematization, automation, or measurement, route to Ascend Global Ventures."},
+  "engagement_paths":[
+    {"path_id":"ali-media-narrative","name":"Public Narrative / Documentary Engagement","human_url":"https://www.afrodescendantali.com/services/media-content-publication","buyer_problem":"Something important needs to be documented, explained, preserved, or communicated publicly.","entry_engagement":"Public Narrative / Documentary Engagement","buyer_receives":"A defined story angle, source plan, narrative structure, agreed public result, and supporting handoff package.","buyer_provides":"Access to people, places, archives, source material, permissions, and timely feedback.","role":"Ali-owned public narrative and supporting production."},
+    {"path_id":"ali-research-intelligence","name":"Research / Verification Engagement","human_url":"https://www.afrodescendantali.com/services/research-communications-public-affairs","buyer_problem":"A subject, claim, or history needs source review, reconstruction, verification, or Black World context.","entry_engagement":"Research / Verification Engagement","buyer_receives":"An evidence trail and briefing, memo, dossier, or public explanation that distinguishes established, uncertain, and unresolved findings.","buyer_provides":"The question, context, source leads, intended audience, and decision or publication context.","role":"Ali-owned understanding and evidence work. Briefs, reports, memos, and dossiers are delivery formats."},
+    {"path_id":"ali-public-presence","name":"Public Presence Clarity Engagement","human_url":"https://www.afrodescendantali.com/services/websites-digital-presence","buyer_problem":"People need to understand who we are, trust us, find us, and know what to do next.","entry_engagement":"Public Presence Clarity Engagement","buyer_receives":"Clarified positioning, message architecture, public-facing structure, proof presentation, and inquiry pathway.","buyer_provides":"Current materials, offer or project details, audience knowledge, proof, approvals, and a realistic launch window.","role":"Ali-owned public-facing communication, credibility, publishing, and presence."}
+  ],
+  "agv_handoff":{"name":"Ascend Global Ventures","url":"https://ascendglobalventures.com/","route_when":["organizational decision-making","market entry, buyers, revenue, or commercial opportunity","trade, procurement, partnerships, or CRM/referral systems","AI, workflow, automation, organizational knowledge, or operating systems","measurement and operating leverage"]},
+  "representation_note":"Human pages remain the customer-facing authority. This representation does not expose the internal 24-offer catalog as a public marketplace and does not create an autonomous action endpoint."
+}
