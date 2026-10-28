@@ -7,6 +7,7 @@ This directory stores unpublished writing samples used to develop and calibrate 
 - [RSS writing samples — 2026-10-28](./rss-writing-samples-2026-10-28.md)
 - [Writing template](../../docs/afrodescendant-ali-writing-template-v01.md)
 - [Editorial style guide](../../docs/afrodescendant-ali-editorial-style-guide-v01.md)
+- [Visual style template](../../docs/afrodescendant-ali-visual-style-template-v01.md)
 - [RSS-to-original-journalism workflow](../../docs/rss-to-original-journalism-v01.md)
 
 ## How to use the samples
