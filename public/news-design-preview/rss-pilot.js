@@ -34,6 +34,7 @@
     article.className = "story-card";
     article.dataset.feedLane = item.lane;
     article.dataset.sourceStatus = item.sourceStatus;
+    article.dataset.approvalState = item.approvalState;
 
     const thumb = document.createElement("div");
     thumb.className = "story-thumb " + (thumbByLane[item.lane] || "thumb-africa");
@@ -50,8 +51,8 @@
 
     const title = document.createElement("h3");
     const link = document.createElement("a");
-    link.href = item.link;
-    link.target = "_blank";
+    link.href = item.previewPath || item.link;
+    link.target = item.previewPath ? "_self" : "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = item.title;
     title.appendChild(link);
@@ -61,7 +62,7 @@
 
     const source = document.createElement("p");
     source.className = "card-source";
-    source.textContent = item.sourceName + " · Direct source link · Preview approved";
+    source.textContent = item.sourceName + " · " + (item.previewPath ? "Original preview · Source link in story" : "Direct source link · Preview approved");
 
     body.append(kicker, title, summary, source);
     article.append(thumb, body);
