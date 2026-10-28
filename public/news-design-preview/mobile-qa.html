@@ -1,6 +1,433 @@
-<!doctype html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Signal mobile QA harness</title><style>html,body{margin:0;background:#333}body{min-height:100vh;display:grid;place-items:start center;padding:24px;font-family:system-ui,sans-serif}iframe{width:375px;height:812px;border:12px solid #111;border-radius:28px;background:#f6f1e8;box-shadow:0 16px 36px rgba(0,0,0,.35)}</style></head><body><iframe title="Signal newsroom mobile preview" srcdoc='<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Signal mobile QA harness</title>
-<style>html,body{margin:0;background:#333}body{min-height:100vh;display:grid;place-items:start center;padding:24px;font-family:system-ui,sans-serif}iframe{width:375px;height:812px;border:12px solid #111;border-radius:28px;background:#f6f1e8;box-shadow:0 16px 36px rgba(0,0,0,.35)}</style></head>
-<body><iframe title="Signal newsroom mobile preview" src="https://htmlpreview.github.io/?https://raw.githubusercontent.com/trooths2002/afrodescendantali-site/exe-20261028-006-signal-homepage-v01/public/news-design-preview/index.html"></iframe></body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal — Afrodescendant Ali Newsroom Preview</title>
+  <meta name="description" content="Private noindex design preview for the Signal newsroom direction of AfrodescendantAli.com.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://www.afrodescendantali.com/news-design-preview/">
+  <style>:root{
+  --ink:#101416;
+  --ink-soft:#1a2327;
+  --paper:#f6f1e8;
+  --paper-deep:#e9e1d5;
+  --line:#c9c1b4;
+  --muted:#6b6861;
+  --red:#b52f24;
+  --red-bright:#e34133;
+  --gold:#c8994c;
+  --green:#193d32;
+  --blue:#2d596c;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+.page-width{width:min(1480px,calc(100% - 60px));margin-inline:auto}
+.skip-link{position:absolute;left:-9999px;top:12px;z-index:20;padding:10px 14px;background:var(--gold);color:var(--ink)}
+.skip-link:focus{left:12px}
+.masthead{background:var(--ink);color:#f7f1e9}
+.masthead-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:36px;padding:14px 0}
+.brand{display:inline-flex;align-items:center;gap:12px;min-width:max-content}
+.brand-mark{display:grid;place-items:center;width:34px;height:34px;color:var(--gold);font-size:19px}
+.brand-name{font:700 25px/1 var(--serif);letter-spacing:-.04em}
+.brand-note{display:block;margin-left:-46px;margin-top:34px;color:#c6c0b7;font-size:8px;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
+.regional-nav,.subnav{display:flex;align-items:center;gap:28px;overflow:auto;scrollbar-width:none}
+.regional-nav::-webkit-scrollbar,.subnav::-webkit-scrollbar{display:none}
+.regional-nav a,.subnav a{white-space:nowrap;font-size:12px;font-weight:700}
+.regional-nav a{color:#f6f1e8}
+.regional-nav a:hover,.subnav a:hover,.regional-nav a:focus-visible,.subnav a:focus-visible{color:var(--gold)}
+.masthead-tools{display:flex;align-items:center;gap:18px}
+.masthead-tools a,.masthead-tools button{color:#f7f1e9;background:transparent;border:0;font-size:19px;line-height:1;cursor:pointer}
+.masthead-tools button{font-size:18px}
+.subnav{min-height:42px;border-top:1px solid rgba(255,255,255,.15);gap:24px}
+.subnav a{padding:13px 0 11px;color:#c8c1b7;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid transparent}
+.subnav a.active,.subnav a:hover{color:#fff;border-color:var(--gold)}
+.developing-bar{background:var(--red);color:#fff}
+.developing-inner{display:flex;align-items:center;gap:14px;min-height:36px;font-size:12px}
+.developing-inner a{color:#fff}
+.developing-inner a:hover{text-decoration:underline}
+.developing-dot{display:inline-block;width:9px;height:9px;flex:none;border-radius:50%;background:var(--red-bright);box-shadow:0 0 0 4px rgba(227,65,51,.13)}
+.developing-bar .developing-dot{background:#ff7364;box-shadow:none}
+.developing-inner strong{font:700 20px/1 var(--serif)}
+.developing-divider{opacity:.45}
+.developing-time{margin-left:auto;white-space:nowrap;font-size:11px}
+.lead-layout{display:grid;grid-template-columns:minmax(0,2.35fr) minmax(330px,.92fr);gap:0;padding:0 0 24px}
+.lead-story{min-width:0}
+.lead-art{position:relative;min-height:452px;overflow:hidden;background:#26353d}
+.lead-art img{width:100%;height:100%;min-height:452px;object-fit:cover;filter:saturate(.8) contrast(1.06)}
+.art-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,7,9,.8) 0%,rgba(3,7,9,.42) 47%,rgba(3,7,9,.05) 85%),linear-gradient(0deg,rgba(3,7,9,.7),transparent 55%)}
+.lead-story-copy{position:absolute;inset:auto auto 0 0;z-index:1;width:min(800px,92%);padding:28px 38px 34px;color:#fff}
+.story-status{display:flex;align-items:center;gap:10px;margin:0 0 9px;color:#ff8275;font-size:12px;font-weight:800;letter-spacing:.12em}
+.story-kicker{margin:0 0 10px;color:var(--red);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.lead-story-copy .story-kicker{color:#f0c77b}
+.lead-story-copy h1{max-width:760px;margin:0 0 15px;font:400 clamp(39px,4.8vw,73px)/.95 var(--serif);letter-spacing:-.04em}
+.lead-deck{max-width:720px;margin:0;color:#f1ebe2;font:18px/1.4 var(--serif)}
+.story-meta{display:flex;flex-wrap:wrap;gap:12px;margin:17px 0;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.story-meta span+span:before{content:"·";margin-right:12px;color:var(--gold)}
+.light-meta{color:#e5dbce}
+.button{display:inline-flex;align-items:center;gap:11px;padding:11px 15px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.button-red{background:var(--red);color:#fff}
+.button-red:hover{background:var(--red-bright)}
+.live-rail{background:var(--ink-soft);color:#f6f1e8;padding:19px 21px 16px}
+.rail-heading{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.rail-heading h2{display:flex;align-items:center;gap:10px;margin:0;font:400 30px/1 var(--serif);letter-spacing:-.03em}
+.rail-heading h2 .developing-dot{background:#ff6b5f}
+.rail-heading a{color:#c9c1b6;font-size:10px;font-weight:700;white-space:nowrap}
+.rail-heading a:hover{color:#fff}
+.timeline{list-style:none;margin:18px 0 0;padding:0}
+.timeline li{position:relative;display:grid;grid-template-columns:55px 1fr;gap:10px;padding:0 0 22px 17px;border-left:1px solid #69635b}
+.timeline li:before{content:"";position:absolute;left:-5px;top:3px;width:9px;height:9px;border-radius:50%;background:var(--red-bright)}
+.timeline time{color:#d7aa64;font-size:11px;font-weight:800}
+.timeline strong{display:block;color:#f6f1e8;font:700 15px/1.1 var(--serif)}
+.timeline p{margin:5px 0 0;color:#b9b3aa;font-size:11px;line-height:1.35}
+.timeline-muted{opacity:.62}
+.context-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:0;padding-bottom:52px}
+.context-card{position:relative;min-height:156px;padding:20px 22px;border:1px solid var(--line);background:var(--paper)}
+.context-icon{display:inline-grid;place-items:center;width:27px;height:27px;margin-bottom:8px;background:var(--red);color:#fff;font-size:15px}
+.context-card>div{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.context-card h2{margin:0;font:400 28px/1 var(--serif);letter-spacing:-.03em}
+.arrow{font-size:20px}
+.context-card ul{margin:10px 0 0;padding-left:18px;color:#4d4a45;font:13px/1.4 var(--serif)}
+.context-card p:not(.source-note){margin:10px 0 0;color:#4d4a45;font:14px/1.42 var(--serif)}
+.source-note{display:flex;align-items:center;gap:6px;margin:14px 0 0;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.source-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red)}
+.source-dot-muted{background:var(--gold)}
+.section-block{padding:0 0 68px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:19px;border-top:2px solid var(--ink);padding-top:13px}
+.eyebrow{margin:0;color:var(--red);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.section-heading h2{margin:7px 0 0;font:400 34px/1 var(--serif);letter-spacing:-.04em}
+.section-link{color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.section-link:hover{color:var(--red)}
+.story-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:11px}
+.story-card{min-width:0;background:var(--paper);border:1px solid var(--line)}
+.story-thumb{position:relative;display:flex;align-items:flex-end;min-height:96px;padding:10px;background:#556;overflow:hidden}
+.story-thumb:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent 40%,rgba(0,0,0,.35))}
+.story-thumb span{position:relative;z-index:1;color:#fff;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.thumb-africa{background:linear-gradient(135deg,#657443,#d0a95e 55%,#7a4b28)}
+.thumb-america{background:linear-gradient(135deg,#223d50,#c7794b)}
+.thumb-caribbean{background:linear-gradient(135deg,#296073,#d9b471)}
+.thumb-latin{background:linear-gradient(135deg,#8f5a42,#d6a456 48%,#4b6a56)}
+.thumb-europe{background:linear-gradient(135deg,#324a48,#c5815d)}
+.thumb-ocean{background:linear-gradient(135deg,#2c5968,#80bbc1 60%,#365849)}
+.story-card-body{padding:12px 12px 13px}
+.story-card-body .story-kicker{margin-bottom:7px;font-size:9px}
+.story-card-body .story-kicker span{color:var(--muted);font-weight:500}
+.story-card h3{margin:0 0 8px;font:400 18px/1.03 var(--serif);letter-spacing:-.03em}
+.story-card-body>p:not(.story-kicker):not(.card-source){margin:0;color:var(--muted);font:12px/1.35 var(--serif)}
+.card-source{margin:12px 0 0;color:var(--muted);font-size:8px;font-weight:800;line-height:1.25;letter-spacing:.06em;text-transform:uppercase}
+.story-card[data-source-status="candidate"] .card-source{color:#9a681f}
+.media-region-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;padding-bottom:72px}
+.compact-heading{margin-bottom:14px}
+.media-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.media-card{min-width:0}
+.media-thumb{position:relative;min-height:102px;overflow:hidden}
+.media-thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.06),rgba(0,0,0,.48))}
+.thumb-video-1{background:linear-gradient(135deg,#a64a31,#d4b36b)}
+.thumb-video-2{background:linear-gradient(135deg,#3e6d59,#d3a04f)}
+.thumb-video-3{background:linear-gradient(135deg,#202b35,#a56a44)}
+.play{position:absolute;z-index:1;left:12px;bottom:10px;display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(255,255,255,.85);border-radius:50%;color:#fff;font-size:10px}
+.duration{position:absolute;z-index:1;right:10px;bottom:10px;color:#fff;font-size:9px;font-weight:800}
+.media-card .story-kicker{margin:10px 0 5px;font-size:9px}
+.media-card h3{margin:0 0 5px;font:400 19px/1.05 var(--serif);letter-spacing:-.03em}
+.media-card p:not(.story-kicker){margin:0;color:var(--muted);font:12px/1.35 var(--serif)}
+.region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.region-card{position:relative;display:flex;align-items:flex-end;min-height:102px;padding:12px;background:#506;overflow:hidden}
+.region-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.62))}
+.region-card span{position:relative;z-index:1;color:#fff;font:400 17px/1 var(--serif)}
+.region-africa{background:linear-gradient(135deg,#77894b,#c58f49)}
+.region-america{background:linear-gradient(135deg,#2f4553,#9d5f44)}
+.region-caribbean{background:linear-gradient(135deg,#2a6770,#a4c2ab)}
+.region-latin{background:linear-gradient(135deg,#995b45,#c9aa56)}
+.region-europe{background:linear-gradient(135deg,#45615a,#bd7861)}
+.region-ocean{background:linear-gradient(135deg,#357187,#73b2bb)}
+.region-card:hover{transform:translateY(-2px);transition:transform .2s ease}
+.dark-section{background:var(--ink);color:#f6f1e8;padding:70px 0}
+.case-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.eyebrow-light{color:#d5a65b}
+.case-layout h2{margin:10px 0 18px;font:400 48px/.96 var(--serif);letter-spacing:-.04em}
+.case-layout h2 em{color:#d6a35b}
+.case-layout>div:first-child>p:not(.eyebrow){max-width:360px;color:#b8b1a6;font:15px/1.45 var(--serif)}
+.light-link{display:inline-flex;margin-top:14px;color:#fff;font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.light-link:hover{color:#d5a65b}
+.case-list{border-top:1px solid #5d5a54}
+.case-list article{padding:19px 10px 19px 0;border-bottom:1px solid #5d5a54}
+.case-list article>span{color:#e1b169;font-size:9px;font-weight:800;letter-spacing:.12em}
+.case-list h3{margin:7px 0 5px;font:400 26px/1 var(--serif);letter-spacing:-.03em}
+.case-list p{margin:0;color:#b8b1a6;font:13px/1.4 var(--serif)}
+.case-list b{display:block;margin-top:12px;color:#d5a65b;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.method-section{background:#ded5c9;border-top:1px solid var(--line);padding:58px 0}
+.method-layout{display:grid;grid-template-columns:.8fr 1.25fr;gap:26px 85px}
+.method-layout h2{margin:9px 0 0;font:400 43px/1 var(--serif);letter-spacing:-.04em}
+.method-steps{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.method-steps span{padding:12px 0;border-top:1px solid #b9b0a3;font:17px/1 var(--serif)}
+.method-steps b{margin-right:7px;color:var(--red);font:700 10px var(--sans);letter-spacing:.08em}
+.method-layout>p{grid-column:2;max-width:670px;margin:0;color:#5f5a53;font:14px/1.45 var(--serif)}
+.support-section{background:var(--paper-deep);border-top:1px solid var(--line);padding:47px 0}
+.support-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.support-layout h2{max-width:560px;margin:9px 0 0;font:400 40px/1 var(--serif);letter-spacing:-.04em}
+.support-layout>div:last-child>p{max-width:470px;color:var(--muted);font:14px/1.45 var(--serif)}
+.support-layout a{display:inline-flex;padding-bottom:4px;border-bottom:1px solid var(--ink);font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.support-layout a:hover{color:var(--red);border-color:var(--red)}
+.site-footer{background:var(--ink);color:#f4eee6;padding:42px 0 18px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px;padding-bottom:38px}
+.footer-brand .brand-name{font-size:22px}
+.footer-grid>div:first-child>p{margin:13px 0 0;color:#aaa49b;font-size:11px}
+.footer-grid .eyebrow{margin-bottom:10px;color:#d5a65b}
+.footer-grid>div:not(:first-child) a{display:block;margin:8px 0;color:#aaa49b;font-size:11px}
+.footer-grid>div:not(:first-child) a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:15px;border-top:1px solid #4e4a44;color:#88847d;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:1100px){
+  .masthead-top{grid-template-columns:auto 1fr auto;gap:22px}
+  .regional-nav{gap:17px}
+  .lead-layout{grid-template-columns:minmax(0,1.7fr) minmax(285px,.8fr)}
+  .lead-story{grid-template-columns:1fr}
+  .lead-copy{padding:25px 30px 6px;background:var(--ink-soft);color:#fff}
+  .lead-story-copy h1{font-size:clamp(39px,5.4vw,64px)}
+  .story-grid{grid-template-columns:repeat(3,1fr)}
+  .story-card h3{font-size:21px}
+}
+@media (max-width:800px){
+  .page-width{width:min(100% - 34px,1480px)}
+  .masthead-top{display:flex;justify-content:space-between}
+  .regional-nav{display:none}
+  .brand-note{display:none}
+  .subnav{gap:20px}
+  .developing-inner{flex-wrap:wrap;padding:9px 0;gap:8px}
+  .developing-inner>a:first-of-type{width:100%;order:3}
+  .developing-divider{display:none}
+  .developing-time{margin-left:auto}
+  .lead-layout{grid-template-columns:1fr}
+  .lead-art,.lead-art img{min-height:390px}
+  .context-grid{grid-template-columns:1fr}
+  .story-grid{grid-template-columns:repeat(2,1fr)}
+  .media-region-grid,.case-layout,.support-layout{grid-template-columns:1fr;gap:44px}
+  .method-layout{grid-template-columns:1fr;gap:24px}
+  .method-layout>p{grid-column:auto}
+}
+@media (max-width:540px){
+  .page-width{width:min(100% - 28px,1480px)}
+  .masthead-top{padding:11px 0}
+  .brand-name{font-size:21px}
+  .brand-mark{width:26px;height:26px;font-size:15px}
+  .masthead-tools{gap:13px}
+  .masthead-tools a,.masthead-tools button{font-size:17px}
+  .subnav{min-height:39px;gap:18px}
+  .subnav a{font-size:9px;padding:11px 0 9px}
+  .lead-art,.lead-art img{min-height:300px}
+  .lead-story-copy{width:100%;padding:20px 20px 22px}
+  .lead-story-copy h1{font-size:43px}
+  .lead-deck{font-size:15px}
+  .light-meta{font-size:8px;gap:7px}
+  .story-meta span+span:before{margin-right:7px}
+  .live-rail{padding:17px}
+  .rail-heading h2{font-size:27px}
+  .timeline li{grid-template-columns:46px 1fr;padding-bottom:17px}
+  .timeline strong{font-size:14px}
+  .context-card{min-height:auto;padding:18px}
+  .section-block{padding-bottom:52px}
+  .section-heading{align-items:flex-start;flex-direction:column;gap:10px}
+  .section-heading h2{font-size:31px}
+  .story-grid{grid-template-columns:1fr}
+  .story-thumb{min-height:130px}
+  .media-row{grid-template-columns:1fr}
+  .media-thumb{min-height:150px}
+  .region-grid{grid-template-columns:repeat(2,1fr)}
+  .region-card{min-height:95px}
+  .case-layout h2{font-size:42px}
+  .method-steps{grid-template-columns:1fr}
+  .support-layout h2{font-size:35px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid>div:first-child{grid-column:1/-1}
+  .footer-bottom{align-items:flex-start;flex-direction:column;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .region-card{transition:none}
+}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead-top page-width">
+      <a class="brand" href="/" aria-label="Afrodescendant Ali home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-name">AfrodescendantAli</span>
+        <span class="brand-note">People. Places. Perspectives.</span>
+      </a>
+
+      <nav class="regional-nav" aria-label="Regional coverage">
+        <a class="active" href="/coverage/">Africa</a>
+        <a href="/coverage/black-america.html">Black America</a>
+        <a href="/coverage/black-caribbean.html">Caribbean</a>
+        <a href="/coverage/afro-latino.html">Afro-Latin America</a>
+        <a href="/coverage/afro-europe.html">Afro-Europe</a>
+        <a href="/coverage/">Indian Ocean</a>
+      </nav>
+
+      <div class="masthead-tools" aria-label="Site tools">
+        <a href="#latest" aria-label="Search">⌕</a>
+        <a href="#method" aria-label="Source method">◌</a>
+        <button type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div class="subnav page-width">
+      <a class="active" href="#latest">Signal</a>
+      <a href="/analysis/">Analysis</a>
+      <a href="/coverage/">Coverage</a>
+      <a href="#cases">Case Files</a>
+      <a href="/media.html">Culture</a>
+      <a href="/media.html">Voices</a>
+      <a href="/media.html">Video</a>
+      <a href="/media.html">Podcasts</a>
+      <a href="/about.html">About</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="developing-bar" aria-label="Developing story">
+      <div class="page-width developing-inner">
+        <span class="developing-dot" aria-hidden="true"></span>
+        <strong>Developing</strong>
+        <a href="#lead-story">Regional leaders meet on food security and climate resilience</a>
+        <span class="developing-divider" aria-hidden="true">|</span>
+        <a href="#live-updates">Live updates</a>
+        <a href="#context">What it means</a>
+        <span class="developing-time">2m ago&amp;nbsp; →</span>
+      </div>
+    </section>
+
+    <section class="page-width lead-layout" id="lead-story">
+      <article class="lead-story">
+        <div class="lead-art">
+          <img src="https://raw.githubusercontent.com/trooths2002/afrodescendantali-site/exe-20261028-006-signal-homepage-v01/public/assets/hero-art.png" alt="Editorial artwork representing connected Black World regions and systems">
+          <div class="art-scrim"></div>
+          <div class="lead-story-copy">
+            <p class="story-status"><span class="developing-dot"></span> DEVELOPING</p>
+            <p class="story-kicker">Africa · Institutions · Climate</p>
+            <h1>Regional leaders meet on food security and climate resilience</h1>
+            <p class="lead-deck">High-level talks open with a focus on food systems, climate finance, youth employment, and the practical demands of regional cooperation.</p>
+            <div class="story-meta light-meta">
+              <span>9 Oct 2024</span><span>Cape Town, South Africa</span><span>By A. Mensah</span>
+            </div>
+            <a class="button button-red" href="#context">Follow live updates <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="live-rail" id="live-updates" aria-labelledby="live-title">
+        <div class="rail-heading">
+          <h2 id="live-title"><span class="developing-dot"></span> Live Updates</h2>
+          <a href="#latest">View all →</a>
+        </div>
+        <ol class="timeline">
+          <li><time>10:24</time><div><strong>Leaders arrive for opening session</strong><p>Delegations from across Africa and the diaspora begin arriving.</p></div></li>
+          <li><time>09:41</time><div><strong>New climate finance initiative announced</strong><p>A coalition pledges expanded support for resilience and food systems.</p></div></li>
+          <li><time>08:16</time><div><strong>Youth delegation presents key demands</strong><p>Young leaders call for investment in agro-innovation and green jobs.</p></div></li>
+          <li><time>06:37</time><div><strong>Partner countries outline next steps</strong><p>Regional blocs set out a joint implementation roadmap.</p></div></li>
+          <li class="timeline-muted"><time>Yesterday</time><div><strong>Draft communiqué under discussion</strong><p>Negotiations continue on financing and implementation details.</p></div></li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="page-width context-grid" id="context" aria-label="Story context">
+      <article class="context-card">
+        <span class="context-icon" aria-hidden="true">▣</span>
+        <div><h2>What We Know</h2><span class="arrow">→</span></div>
+        <ul><li>Regional leaders are meeting to advance food security and climate resilience.</li><li>A new financing initiative aims to scale climate-smart agriculture.</li><li>Civil society and youth groups are pushing for measurable commitments.</li></ul>
+        <p class="source-note"><span class="source-dot"></span> Source-controlled summary</p>
+      </article>
+      <article class="context-card">
+        <span class="context-icon" aria-hidden="true">▥</span>
+        <div><h2>Why It Matters</h2><span class="arrow">→</span></div>
+        <p>Food security and climate resilience sit at the center of economic stability, youth employment, trade, and migration across the continent and the diaspora.</p>
+        <p class="source-note"><span class="source-dot"></span> Analysis in progress</p>
+      </article>
+      <article class="context-card">
+        <span class="context-icon" aria-hidden="true">♧</span>
+        <div><h2>What We’re Watching</h2><span class="arrow">→</span></div>
+        <ul><li>Commitments on climate finance and implementation timelines.</li><li>Inclusion of youth, women, and local communities in decision-making.</li><li>Connections to jobs, regional trade, and global partnerships.</li></ul>
+        <p class="source-note"><span class="source-dot source-dot-muted"></span> Editorial watchlist</p>
+      </article>
+    </section>
+
+    <section class="page-width section-block" id="latest">
+      <div class="section-heading">
+        <div><p class="eyebrow">Across the Black World</p><h2>Latest Developing Stories</h2></div>
+        <a class="section-link" href="/analysis/">Explore all developing stories →</a>
+      </div>
+      <div class="story-grid">
+        <article class="story-card" data-feed-lane="africa" data-source-status="reviewed"><div class="story-thumb thumb-africa"><span>Africa</span></div><div class="story-card-body"><p class="story-kicker">Africa <span>· 3h ago</span></p><h3>Drought-resistant crops show promise in East Africa pilot</h3><p>Farmers report higher yields as a regional program expands.</p><p class="card-source">Public source · Direct link required</p></div></article>
+        <article class="story-card" data-feed-lane="black-america" data-source-status="reviewed"><div class="story-thumb thumb-america"><span>Black America</span></div><div class="story-card-body"><p class="story-kicker">Black America <span>· 4h ago</span></p><h3>New coalition pushes for equitable green jobs in U.S. cities</h3><p>Community leaders call for investment in clean energy training.</p><p class="card-source">Public source · Direct link required</p></div></article>
+        <article class="story-card" data-feed-lane="caribbean" data-source-status="reviewed"><div class="story-thumb thumb-caribbean"><span>Caribbean</span></div><div class="story-card-body"><p class="story-kicker">Caribbean <span>· 5h ago</span></p><h3>Caribbean nations unite on climate adaptation funding</h3><p>Leaders seek greater access to international climate finance.</p><p class="card-source">Public source · Direct link required</p></div></article>
+        <article class="story-card" data-feed-lane="afro-latin-america" data-source-status="candidate"><div class="story-thumb thumb-latin"><span>Afro-Latin America</span></div><div class="story-card-body"><p class="story-kicker">Afro-Latin America <span>· 7h ago</span></p><h3>Cities build community-led resilience at neighborhood scale</h3><p>Local initiatives are transforming public space and reducing risk.</p><p class="card-source">Candidate source · Review required</p></div></article>
+        <article class="story-card" data-feed-lane="afro-europe" data-source-status="reviewed"><div class="story-thumb thumb-europe"><span>Afro-Europe</span></div><div class="story-card-body"><p class="story-kicker">Afro-Europe <span>· 9h ago</span></p><h3>Diaspora entrepreneurs bridge Africa–Europe markets</h3><p>New partnerships aim to grow sustainable trade and innovation.</p><p class="card-source">Public source · Direct link required</p></div></article>
+        <article class="story-card" data-feed-lane="indian-ocean" data-source-status="candidate"><div class="story-thumb thumb-ocean"><span>Indian Ocean</span></div><div class="story-card-body"><p class="story-kicker">Indian Ocean <span>· 10h ago</span></p><h3>Island states push for stronger disaster risk financing</h3><p>Regional alliances call for fairer access to climate insurance.</p><p class="card-source">Candidate source · Review required</p></div></article>
+      </div>
+    </section>
+
+    <section class="page-width media-region-grid">
+      <div class="media-desk">
+        <div class="section-heading compact-heading"><div><p class="eyebrow">Watch and listen</p><h2>Video &amp;amp; Audio</h2></div><a class="section-link" href="/media.html">All media →</a></div>
+        <div class="media-row">
+          <article class="media-card"><div class="media-thumb thumb-video-1"><span class="play" aria-hidden="true">▶</span><span class="duration">18:24</span></div><p class="story-kicker">Video</p><h3>Inside the summit: what’s on the table?</h3><p>Context for the decisions behind the headlines.</p></article>
+          <article class="media-card"><div class="media-thumb thumb-video-2"><span class="play" aria-hidden="true">▶</span><span class="duration">12:06</span></div><p class="story-kicker">Video</p><h3>Youth-led solutions for food security</h3><p>Voices from organizers and farmers.</p></article>
+          <article class="media-card"><div class="media-thumb thumb-video-3"><span class="play" aria-hidden="true">◉</span><span class="duration">32:11</span></div><p class="story-kicker">Podcast</p><h3>The future of climate finance in Africa</h3><p>A deeper conversation from the desk.</p></article>
+        </div>
+      </div>
+      <div class="region-desk">
+        <div class="section-heading compact-heading"><div><p class="eyebrow">The map</p><h2>Explore by Region</h2></div><a class="section-link" href="/coverage/">Open map →</a></div>
+        <div class="region-grid">
+          <a href="/coverage/sub-saharan-africa.html" class="region-card region-africa"><span>Africa</span></a>
+          <a href="/coverage/black-america.html" class="region-card region-america"><span>Black America</span></a>
+          <a href="/coverage/black-caribbean.html" class="region-card region-caribbean"><span>Caribbean</span></a>
+          <a href="/coverage/afro-latino.html" class="region-card region-latin"><span>Afro-Latin America</span></a>
+          <a href="/coverage/afro-europe.html" class="region-card region-europe"><span>Afro-Europe</span></a>
+          <a href="/coverage/" class="region-card region-ocean"><span>Indian Ocean</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="cases">
+      <div class="page-width case-layout">
+        <div><p class="eyebrow eyebrow-light">The public record</p><h2>Case files<br><em>with the record open.</em></h2><p>Facts, institutions, claims, and consequences kept visible together.</p><a class="light-link" href="/analysis/">Browse case files →</a></div>
+        <div class="case-list">
+          <article><span>CIVIL RIGHTS</span><h3>The evidence after the encounter</h3><p>Official records, family claims, institutional responses, and what remains unresolved.</p><b>Verified / open questions</b></article>
+          <article><span>REPARATIONS</span><h3>Recognition is not implementation</h3><p>What changes when a moral claim becomes a legal, diplomatic, or financial system?</p><b>Source-controlled</b></article>
+          <article><span>MEDIA POWER</span><h3>Who controls the public record?</h3><p>How archives, platforms, creators, and institutions shape what communities remember.</p><b>Research desk</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="method-section" id="method">
+      <div class="page-width method-layout">
+        <div><p class="eyebrow">Editorial method</p><h2>Signal before spectacle.</h2></div>
+        <div class="method-steps"><span><b>01</b> Find the signal</span><span><b>02</b> Locate the system</span><span><b>03</b> Test the evidence</span><span><b>04</b> Explain the consequence</span></div>
+        <p>Published work separates confirmed facts, attributed claims, interpretation, and unknowns. RSS items remain leads until reviewed; they do not publish automatically.</p>
+      </div>
+    </section>
+
+    <section class="support-section">
+      <div class="page-width support-layout"><div><p class="eyebrow">Work with Ali · secondary path</p><h2>If a public question needs deeper work.</h2></div><div><p>The editorial desk comes first. Commissioned research, speaking, and strategic work remain available through a separate path.</p><a href="/contact.html">See how to work with Ali →</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-grid">
+      <div><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span><span class="brand-name">AfrodescendantAli</span></a><p>Black World information · analysis · context</p></div>
+      <div><p class="eyebrow eyebrow-light">Explore</p><a href="#latest">Latest</a><a href="/analysis/">Analysis</a><a href="/coverage/">Coverage</a></div>
+      <div><p class="eyebrow eyebrow-light">Connect</p><a href="/media.html">Media</a><a href="/contact.html">Contact</a><a href="/about.html">About</a></div>
+    </div>
+    <div class="page-width footer-bottom"><span>Private design preview · noindex / nofollow</span><span>Signal newsroom direction · v01</span></div>
+  </footer>
+</body>
 </html>
+'></iframe></body></html>
