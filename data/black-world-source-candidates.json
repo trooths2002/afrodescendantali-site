@@ -1,0 +1,121 @@
+{
+  "version": "0.1",
+  "project": "PM-009 — AfrodescendantAli.com",
+  "status": "DISCOVERY_ONLY — no candidate is approved or activated",
+  "reviewedAt": "2026-10-28",
+  "policy": {
+    "publicAvailabilityIsNotPermission": true,
+    "storeMetadataOnly": true,
+    "requireDirectSourceLink": true,
+    "automaticPublishing": false,
+    "activationRequires": [
+      "explicit link-only terms or written permission",
+      "runtime verification",
+      "source identity and attribution review",
+      "editorial approval",
+      "owner activation"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "auc-news-rss",
+      "lane": "africa",
+      "name": "African Union News / RSS",
+      "url": "https://library.au.int/auc-news-rss",
+      "channel": "institutional",
+      "rightsState": "DISCOVERY_ONLY",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Verify endpoint, attribution rules and whether website display is permitted."
+    },
+    {
+      "id": "nnpa-network",
+      "lane": "black-america",
+      "name": "National Newspaper Publishers Association",
+      "url": "https://nnpa.org/",
+      "channel": "publisher-network",
+      "rightsState": "PARTNERSHIP_REQUIRED",
+      "runtimeState": "NOT_APPLICABLE",
+      "nextAction": "Identify partnership or member-publisher route; do not aggregate member content without permission."
+    },
+    {
+      "id": "blackpressusa-network",
+      "lane": "black-america",
+      "name": "BlackPressUSA",
+      "url": "https://blackpressusa.com/about-us/",
+      "channel": "publisher-network",
+      "rightsState": "PARTNERSHIP_REQUIRED",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Request a link-only/member-network relationship or identify an approved feed."
+    },
+    {
+      "id": "caricom-press",
+      "lane": "caribbean",
+      "name": "CARICOM Press Releases",
+      "url": "https://caricom.org/category/pressreleases/",
+      "channel": "institutional",
+      "rightsState": "DISCOVERY_ONLY",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Confirm direct-link and metadata display terms; monitor press releases as official statements."
+    },
+    {
+      "id": "cana-news",
+      "lane": "caribbean",
+      "name": "CANA News Press Releases",
+      "url": "https://www.cananews.com/press-releases/",
+      "channel": "regional-publisher",
+      "rightsState": "PARTNERSHIP_REQUIRED",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Confirm whether press-release links may be curated and whether a partnership or fee applies."
+    },
+    {
+      "id": "oas-afrodescendant",
+      "lane": "afro-latin-america",
+      "name": "OAS Afro-descendant press material",
+      "url": "https://www.oas.org/en/media_center/press_release.asp?sCodigo=E-036%2F26",
+      "channel": "institutional",
+      "rightsState": "DISCOVERY_ONLY",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Locate the stable OAS media index and verify link-only/metadata terms."
+    },
+    {
+      "id": "enar-news",
+      "lane": "afro-europe",
+      "name": "European Network Against Racism News",
+      "url": "https://www.enar-eu.org/news/",
+      "channel": "institutional-network",
+      "rightsState": "DISCOVERY_ONLY",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Verify source terms and use as attributed press-statement/event discovery."
+    },
+    {
+      "id": "afronews-de",
+      "lane": "afro-europe",
+      "name": "Afronews Germany",
+      "url": "https://afronews.de/about-us/",
+      "channel": "community-publisher",
+      "rightsState": "PARTNERSHIP_REQUIRED",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Confirm feed availability and request link-only permission or a contributor relationship."
+    },
+    {
+      "id": "africa-diaspora-media",
+      "lane": "indian-ocean-global",
+      "name": "Africa Diaspora Media",
+      "url": "https://africadiaspora.africa/media/",
+      "channel": "diaspora-network",
+      "rightsState": "DISCOVERY_ONLY",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Verify source terms and whether its press releases can be linked in the editorial queue."
+    },
+    {
+      "id": "kenya-diaspora-press",
+      "lane": "indian-ocean-global",
+      "name": "Kenya State Department for Diaspora Affairs Press",
+      "url": "https://www.diaspora.go.ke/press",
+      "channel": "institutional",
+      "rightsState": "DISCOVERY_ONLY",
+      "runtimeState": "UNVERIFIED",
+      "nextAction": "Verify stable updates, attribution and direct-link treatment."
+    }
+  ]
+}
