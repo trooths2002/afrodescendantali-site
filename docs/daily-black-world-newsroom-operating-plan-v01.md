@@ -19,13 +19,9 @@ RSS is the discovery layer. It is not the article-writing layer.
 
 ## 2. Current baseline
 
-The daily discovery schedule currently checks only three reviewed link-only sources:
+The daily discovery schedule now checks all 25 manifest sources for metadata leads across six lanes. Three have a reviewed link-only basis; 22 remain candidate-restored sources with unresolved runtime, terms or rights questions.
 
-- AllAfrica — latest headlines;
-- Jamaica Observer — latest;
-- Jamaica Observer — news.
-
-The 22 restored candidates remain disabled until runtime, terms and rights review pass. This means the current system is a controlled Africa–Caribbean discovery pilot, not yet full Black World coverage.
+Discovery enablement does not make a source rights-cleared. The current system can surface signals across the Black World, but it is not yet a complete or resilient full-service news operation. Source verification, original writing, human reporting and separate media-rights review remain mandatory.
 
 ## 3. Daily operating loop
 
@@ -188,7 +184,7 @@ No automated transition may skip human editorial approval.
 
 ### Phase 1 — Prove the daily loop
 
-Use the three reviewed feeds to validate:
+Use the 25 enabled discovery feeds to validate:
 
 - daily discovery receipt;
 - deduplication;
@@ -199,9 +195,9 @@ Use the three reviewed feeds to validate:
 - image workflow;
 - desktop and mobile preview behavior.
 
-### Phase 2 — Close the four uncovered lanes
+### Phase 2 — Qualify the four undercovered lanes
 
-Qualify at least one reliable source or human reporting channel for:
+Use the expanded discovery pool to qualify at least one reliable source or human reporting channel for:
 
 - Black America;
 - Afro-Latin America;
