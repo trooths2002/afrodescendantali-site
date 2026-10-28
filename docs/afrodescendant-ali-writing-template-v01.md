@@ -1,4 +1,4 @@
-# Afrodescendant Ali Writing Template v0.1
+# Afrodescendant Ali Writing Template v0.2
 
 Date:
 Project: PM-009 — AfrodescendantAli.com
@@ -30,6 +30,31 @@ Rights:
 - Attribution required:
 - Media rights status:
 - Source body stored: NO
+
+## Image brief
+
+Image status: IMAGE_NEEDED | IMAGE_DISCOVERY | IMAGE_RIGHTS_REVIEW | IMAGE_READY | IMAGE_FALLBACK_ONLY | IMAGE_HOLD | IMAGE_REJECTED | IMAGE_PUBLISHED
+Primary visual function: evidence | scene | person/community | place | document | data/map | illustration | fallback
+Preferred visual source:
+Fallback visual:
+Sensitive subjects or safety concerns:
+Required crops: hero | card | mobile | social
+
+## Image asset record
+
+Asset ID:
+Asset type: photo | video_frame | illustration | map | chart | fallback_card
+Creator / source:
+Original URL or delivery record:
+Rights state: cleared_original | contributor_consent | licensed | public_domain | permission_pending | discovery_only | fallback_only | rejected
+Permission / license evidence:
+Restrictions: territory, duration, crop, attribution, commercial/editorial, embargo:
+Credit line:
+Caption:
+Alt text:
+Access / verification date:
+Expiry / recheck date:
+Reviewer / decision:
 
 ## Headline
 
@@ -113,6 +138,12 @@ Do not use a source's allegation as a fact. Do not use “proves,” “shocking
 - [ ] Regional connection is supported, not assumed.
 - [ ] Rights state permits the planned use.
 - [ ] Media has separate rights clearance.
+- [ ] Image status is IMAGE_READY or IMAGE_FALLBACK_ONLY.
+- [ ] Image asset record is complete.
+- [ ] Caption, credit and alt text are present.
+- [ ] Visual matches the verified story and is not presented as documentary evidence when illustrative.
+- [ ] Mobile, hero and card crops reviewed.
+- [ ] Broken-image and unavailable-asset fallback reviewed.
 - [ ] Copy and headline pass the house style.
 - [ ] Mobile presentation reviewed.
 - [ ] Failure and empty states reviewed.
@@ -123,5 +154,6 @@ Do not use a source's allegation as a fact. Do not use “proves,” “shocking
 ## Final status
 
 State: DISCOVERY_ONLY | SOURCE_OPENED | CLAIMS_IN_REVIEW | DRAFTING | EDITORIAL_REVIEW | APPROVED_FOR_PUBLISH | HOLD
+Image decision: IMAGE_READY | IMAGE_FALLBACK_ONLY | IMAGE_HOLD
 Reason for hold, if applicable:
 Next editor action:
