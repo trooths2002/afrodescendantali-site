@@ -137,3 +137,36 @@ The bounded normalization tests passed: 4/4. This covers tracking-parameter cano
 
 The pilot remains **PARTIAL / RELEASE HOLD**. Recurrence, automatic publication, production deployment, indexability, notifications and rights-sensitive reuse remain disabled.
 
+## Permission outreach and full current-manifest fetch — 2026-10-28
+
+Permission outreach was prepared for viable Black America and Caribbean sources. No message was sent and no contact form was submitted.
+
+- Black Enterprise: unsent draft prepared to the official editorial contact listed on its Contact page.
+- Barbados Today: unsent draft prepared to the official editorial contact listed on its About page.
+- TheGrio, Nation News, News Americas Now and CIJN: official contact/licensing routes documented; form or licensing submission remains pending.
+- The Root and Blavity remain held because no clean RSS reuse basis was established.
+
+The permission request is limited to metadata-only discovery: title, publication time, source label and canonical direct link; no article text, excerpts, images, audio/video, translation, automatic publication, resale or redistribution. Written approval is still required before activation.
+
+A new bounded, read-only fetch was run against the full current 25-feed manifest with a 12-item/feed cap and 12-second timeout. All manifest entries remained `enabled:false`.
+
+### Full-fetch evidence
+
+- Raw items: 154
+- Unique canonical links: 150
+- Duplicates removed: 4 (2.6%)
+- Parseable feeds: 15/25
+- Lane distribution:
+
+| Lane | Parseable feeds | Raw items | Unique items |
+| --- | ---: | ---: | ---: |
+| Africa | 3/4 | 36 | 32 |
+| Black America | 2/4 | 24 | 24 |
+| Caribbean | 5/10 | 50 | 50 |
+| Afro-Latin America | 3/3 | 24 | 24 |
+| Afro-Europe | 1/2 | 10 | 10 |
+| Indian Ocean & global corridors | 1/2 | 10 | 10 |
+
+Key runtime results: VOA Africa, WHO AFRO, AllAfrica, TheGrio, Black Enterprise, both Jamaica Observer feeds, Barbados Today, News Americas Now and CIJN returned parseable items. Africanews and The Voice timed out; Nation News, WIC News and Caribbean National Weekly timed out; Jamaica Gleaner and Trinidad and Tobago Newsday returned HTTP 503; The Root and Blavity returned HTML instead of feeds; Global Voices Indian Ocean returned an empty response.
+
+This fetch is evidence only. It does not constitute rights permission, approval, recurrence, automatic publication or production release. The pilot remains **PARTIAL / RELEASE HOLD** pending written permissions or documented link-only approvals and a follow-up QA/gate review.
