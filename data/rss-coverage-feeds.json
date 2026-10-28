@@ -1,0 +1,236 @@
+{
+  "version": "0.1",
+  "project": "PM-009 — AfrodescendantAli.com",
+  "executionId": "EXE-20261028-005",
+  "purpose": "Read-only source discovery for the Black World coverage desk.",
+  "activation": "OWNER_REVIEW_REQUIRED",
+  "defaults": {
+    "enabled": false,
+    "maxItemsPerFeed": 12,
+    "timeoutMs": 12000,
+    "metadataOnly": true,
+    "storeFullFeedBody": false,
+    "publishAutomatically": false,
+    "notifyAutomatically": false,
+    "requireDirectSourceLink": true,
+    "requireAttribution": true
+  },
+  "coverageLanes": [
+    {
+      "id": "africa",
+      "label": "Africa",
+      "scope": "East, West, Central, Southern and North Africa"
+    },
+    {
+      "id": "black-america",
+      "label": "Black America",
+      "scope": "United States and connected Black Atlantic systems"
+    },
+    {
+      "id": "caribbean",
+      "label": "Caribbean",
+      "scope": "Island and mainland Caribbean communities, institutions and corridors"
+    },
+    {
+      "id": "afro-latin-america",
+      "label": "Afro-Latin America",
+      "scope": "Afro-descendant peoples, rights and institutions across Latin America"
+    },
+    {
+      "id": "afro-europe",
+      "label": "Afro-Europe",
+      "scope": "Black European communities, policy, migration, memory and representation"
+    },
+    {
+      "id": "indian-ocean-global",
+      "label": "Indian Ocean & global corridors",
+      "scope": "Diaspora, migration, trade, mobility and connected Black-world systems"
+    }
+  ],
+  "feeds": [
+    {
+      "id": "africanews-latest-en",
+      "lane": "africa",
+      "name": "Africanews — latest English",
+      "language": "en",
+      "endpoint": "https://africanews.com/feed/rss",
+      "sourcePage": "https://www.africanews.com/page/widgets/",
+      "status": "reviewed",
+      "rightsReview": "RSS endpoint verified from publisher RSS/widget page. Metadata-only discovery; no republishing or embedding assumed.",
+      "enabled": false
+    },
+    {
+      "id": "voa-africa54",
+      "lane": "africa",
+      "name": "VOA Africa — Africa 54",
+      "language": "en",
+      "endpoint": "https://www.voaafrica.com/api/zbt-yl-vomx-tpeqiqqt",
+      "sourcePage": "https://www.voaafrica.com/rssfeeds",
+      "status": "reviewed",
+      "rightsReview": "Publisher RSS subscription page verified. Keep as discovery metadata with direct source links; downstream reuse requires review.",
+      "enabled": false
+    },
+    {
+      "id": "who-afro-featured",
+      "lane": "africa",
+      "name": "WHO AFRO — featured news",
+      "language": "en",
+      "endpoint": "https://www.afro.who.int/rss/featured-news.xml",
+      "sourcePage": "https://www.afro.who.int/rss-feeds",
+      "status": "reviewed",
+      "rightsReview": "Official institutional RSS page and endpoint verified. Metadata-only discovery.",
+      "enabled": false
+    },
+    {
+      "id": "thegrio-latest",
+      "lane": "black-america",
+      "name": "TheGrio",
+      "language": "en",
+      "endpoint": "https://thegrio.com/feed/",
+      "sourcePage": "https://thegrio.com/about/",
+      "status": "candidate",
+      "rightsReview": "Feed endpoint responds as RSS, but feed-use terms were not verified in this pass. Do not display or republish until reviewed.",
+      "enabled": false
+    },
+    {
+      "id": "black-enterprise-latest",
+      "lane": "black-america",
+      "name": "Black Enterprise",
+      "language": "en",
+      "endpoint": "https://www.blackenterprise.com/feed/",
+      "sourcePage": "https://www.blackenterprise.com/",
+      "status": "candidate",
+      "rightsReview": "Feed endpoint responds as RSS, but feed-use terms were not verified in this pass. Do not display or republish until reviewed.",
+      "enabled": false
+    },
+    {
+      "id": "the-root-latest",
+      "lane": "black-america",
+      "name": "The Root",
+      "language": "en",
+      "endpoint": "https://www.theroot.com/rss",
+      "sourcePage": "https://www.theroot.com/",
+      "status": "candidate",
+      "rightsReview": "Endpoint is known but origin presented bot verification during web verification. Keep disabled until bounded runtime check and terms review.",
+      "enabled": false
+    },
+    {
+      "id": "jamaica-observer-latest",
+      "lane": "caribbean",
+      "name": "Jamaica Observer — latest",
+      "language": "en",
+      "endpoint": "https://www.jamaicaobserver.com/app/latest/",
+      "sourcePage": "https://www.jamaicaobserver.com/rssfeeds/",
+      "status": "reviewed",
+      "rightsReview": "Publisher terms require non-commercial use, no editing, direct links and attribution. Activation remains owner-gated.",
+      "enabled": false
+    },
+    {
+      "id": "jamaica-observer-news",
+      "lane": "caribbean",
+      "name": "Jamaica Observer — news",
+      "language": "en",
+      "endpoint": "https://www.jamaicaobserver.com/app/news/",
+      "sourcePage": "https://www.jamaicaobserver.com/rssfeeds/",
+      "status": "reviewed",
+      "rightsReview": "Publisher terms require non-commercial use, no editing, direct links and attribution. Activation remains owner-gated.",
+      "enabled": false
+    },
+    {
+      "id": "jamaica-gleaner-caribbean",
+      "lane": "caribbean",
+      "name": "Jamaica Gleaner — Caribbean",
+      "language": "en",
+      "endpoint": "https://jamaica-gleaner.com/feed/carib.xml",
+      "sourcePage": "https://old.jamaica-gleaner.com/gleaner/rss.html",
+      "status": "reviewed",
+      "rightsReview": "Publisher terms require non-commercial use, no editing, direct links and attribution. Activation remains owner-gated.",
+      "enabled": false
+    },
+    {
+      "id": "mundo-negro-latest",
+      "lane": "afro-latin-america",
+      "name": "Mundo Negro",
+      "language": "es",
+      "endpoint": "https://mundonegro.es/feed/",
+      "sourcePage": "https://mundonegro.es/",
+      "status": "reviewed",
+      "rightsReview": "RSS endpoint verified. Metadata-only discovery; translation, excerpts and republishing require separate review.",
+      "enabled": false
+    },
+    {
+      "id": "race-and-equality",
+      "lane": "afro-latin-america",
+      "name": "Race & Equality",
+      "language": "en/es",
+      "endpoint": "https://raceandequality.org/feed/",
+      "sourcePage": "https://raceandequality.org/",
+      "status": "reviewed",
+      "rightsReview": "RSS endpoint verified. Metadata-only discovery with direct source links.",
+      "enabled": false
+    },
+    {
+      "id": "global-voices-latin-america",
+      "lane": "afro-latin-america",
+      "name": "Global Voices — Latin America",
+      "language": "multi",
+      "endpoint": "https://globalvoices.org/-/world/latin-america/feed/",
+      "sourcePage": "https://globalvoices.org/",
+      "status": "candidate",
+      "rightsReview": "Regional endpoint identified but not confirmed in this pass. Keep disabled pending runtime verification.",
+      "enabled": false
+    },
+    {
+      "id": "afropean-latest",
+      "lane": "afro-europe",
+      "name": "Afropean",
+      "language": "en",
+      "endpoint": "https://afropean.com/feed/",
+      "sourcePage": "https://afropean.com/about/",
+      "status": "reviewed",
+      "rightsReview": "RSS endpoint verified. Metadata-only discovery; no republishing assumed.",
+      "enabled": false
+    },
+    {
+      "id": "voice-online",
+      "lane": "afro-europe",
+      "name": "The Voice",
+      "language": "en",
+      "endpoint": "https://www.voice-online.co.uk/feed/",
+      "sourcePage": "https://www.voice-online.co.uk/",
+      "status": "candidate",
+      "rightsReview": "Endpoint was not confirmed in this pass. Keep disabled pending runtime verification and terms review.",
+      "enabled": false
+    },
+    {
+      "id": "diaspora-africa",
+      "lane": "indian-ocean-global",
+      "name": "Diaspora Africa",
+      "language": "en",
+      "endpoint": "https://diasporaafrica.org/feed/",
+      "sourcePage": "https://diasporaafrica.org/",
+      "status": "reviewed",
+      "rightsReview": "RSS endpoint verified. Metadata-only discovery; no republishing or excerpting assumed.",
+      "enabled": false
+    },
+    {
+      "id": "global-voices-indian-ocean",
+      "lane": "indian-ocean-global",
+      "name": "Global Voices — Indian Ocean candidate",
+      "language": "multi",
+      "endpoint": "https://globalvoices.org/-/world/indian-ocean/feed/",
+      "sourcePage": "https://globalvoices.org/",
+      "status": "candidate",
+      "rightsReview": "Regional endpoint requires runtime verification. Keep disabled.",
+      "enabled": false
+    }
+  ],
+  "knownEndpointIssues": [
+    {
+      "source": "Stabroek News",
+      "endpoint": "https://www.stabroeknews.com/feed/",
+      "issue": "Publisher RSS page exists, but endpoint returned 404 during verification.",
+      "disposition": "Do not activate until endpoint is repaired or replaced."
+    }
+  ]
+}
