@@ -2,7 +2,7 @@
 
 Date: 2026-10-28
 Project: PM-009 — AfrodescendantAli.com
-Status: source inventory verified; feeds disabled and unscheduled
+Status: retained inventory verified; candidate feeds restored as disabled and unscheduled
 
 ## Operating rule
 
@@ -56,3 +56,46 @@ For each collected item:
 The current daily inventory covers only Africa and the Caribbean. Black America, Afro-Latin America, Afro-Europe and Indian Ocean/global corridors remain source-acquisition gaps.
 
 All three feeds remain enabled:false until the owner authorizes activation after the wider six-lane coverage and editorial QA gates pass.
+
+
+## Restored candidate inventory — 2026-10-28
+
+At owner request, the 22 previously removed feeds were restored to the manifest as candidate-restored sources. They remain disabled, rights-unresolved where previously noted, and outside public publishing.
+
+Restored candidates by lane:
+
+| Lane | Candidate count | Sources |
+| --- | ---: | --- |
+| Africa | 3 | Africanews, VOA Africa, WHO AFRO |
+| Black America | 4 | TheGrio, Black Enterprise, The Root, Blavity |
+| Caribbean | 8 | Jamaica Gleaner, Nation News, Barbados Today, Trinidad and Tobago Newsday, WIC News, News Americas Now, Caribbean National Weekly, CIJN |
+| Afro-Latin America | 3 | Mundo Negro, Race & Equality, Global Voices Latin America |
+| Afro-Europe | 2 | Afropean, The Voice |
+| Indian Ocean & global corridors | 2 | Diaspora Africa, Global Voices Indian Ocean |
+
+The manifest therefore contains 25 sources:
+
+- 3 reviewed-link-only retained feeds;
+- 22 candidate-restored feeds;
+- 0 enabled feeds.
+
+## Restored-candidate bounded check
+
+Checked: 2026-10-28 at approximately 17:58 EAT
+
+The full 25-source read-only check observed:
+
+- 25 endpoints attempted;
+- 13 feed-like XML/RSS responses accepted for item parsing;
+- 122 capped items from accepted feed-like responses;
+- 12 candidates returned timeouts, HTTP errors, HTML or empty/non-feed responses;
+- all 25 remained enabled:false.
+
+Notable candidate results:
+
+- Parseable candidates included VOA Africa, TheGrio, Black Enterprise, Race & Equality, Global Voices Latin America, Afropean, Diaspora Africa, News Americas Now and CIJN.
+- Africanews returned HTTP 200 but XHTML rather than an accepted RSS/XML response in this run.
+- WHO AFRO, Mundo Negro, Nation News, Barbados Today, WIC News, Caribbean National Weekly and The Voice timed out.
+- The Root and Blavity returned HTML; Jamaica Gleaner and Newsday returned HTTP 503; Global Voices Indian Ocean returned an empty feed response.
+
+These results establish discovery availability only. They do not clear rights, authorize republication, activate recurrence or permit automatic publishing.
