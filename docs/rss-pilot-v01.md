@@ -103,3 +103,37 @@ Do not activate recurrence or production rendering until:
 6. an owner explicitly authorizes feed activation and release preparation.
 
 No GitHub Actions schedule, Cloudflare Worker schedule, production deployment, indexability change, notification, or automatic publication is included in this pilot.
+
+## Retry tranche and terms review — 2026-10-28
+
+A read-only retry was run against the unresolved endpoints plus the newly added CIJN candidate. No feed was enabled and no story was published.
+
+### Retry dispositions
+
+| Source | Runtime observation | Rights / freshness disposition |
+| --- | --- | --- |
+| Africanews | Official RSS endpoint returned parseable XML items in the direct browser retry. | Remains disabled pending collector-side confirmation and source attribution review. |
+| VOA Africa | Endpoint served XML, but the current verification surface could not parse the response for item counting. | Keep disabled pending collector verification. |
+| Jamaica Gleaner | Still not verified as a parseable feed. | Keep disabled; replace or obtain publisher confirmation. |
+| Trinidad and Tobago Newsday | Retry timed out / did not yield a verified parseable feed. | Keep disabled pending endpoint verification and terms review. |
+| WIC News | Endpoint returned XML, but parser compatibility was not confirmed; terms restrict reuse without permission. | Keep disabled; rights permission and parser verification required. |
+| News Americas Now | Direct retry exposed RSS items, but the publisher's data/licensing materials require a rights determination for reuse. | Keep disabled; metadata/link-only treatment requires written or clearly documented permission. |
+| Caribbean National Weekly | Feed URL redirected to the HTML homepage rather than a verified RSS response. | Keep disabled pending a real feed endpoint and terms review. |
+| Global Voices — Indian Ocean | Endpoint remained inaccessible in the bounded retry. | Keep disabled pending runtime verification. |
+| CIJN | Official RSS endpoint parsed successfully, but the newest observed item was dated April 2026. | Added as a disabled candidate; stale feed and RSS reuse rights require resolution. |
+
+### Black America terms review
+
+TheGrio, Black Enterprise, The Root and Blavity remain disabled. The review found no clean basis for automatic RSS reuse:
+
+- TheGrio: official contact materials point to publisher Terms of Service and editorial review, but do not grant RSS reuse.
+- Black Enterprise: official About/Contact materials and the public feed were reviewed, but no RSS-specific reuse license was located.
+- The Root: G/O terms limit ordinary access to personal, noncommercial use and do not confirm RSS reuse.
+- Blavity: terms restrict use to personal, noncommercial access and prohibit reproduction, distribution, modification, republication and commercial use.
+
+### QA result
+
+The bounded normalization tests passed: 4/4. This covers tracking-parameter canonicalization, duplicate removal, direct-link enforcement, pending-review routing and visibility of all six lanes.
+
+The pilot remains **PARTIAL / RELEASE HOLD**. Recurrence, automatic publication, production deployment, indexability, notifications and rights-sensitive reuse remain disabled.
+
