@@ -189,3 +189,12 @@ The retained inventory is **3 feeds**. All remain `enabled:false`; owner activat
 The remaining **22 feeds** were moved from the active candidate list into `excludedFeeds` with source-specific reasons. They include feeds requiring written permission or a rights determination, feeds whose general terms conflict with website reuse, and feeds without a documented authorization-free link-only basis. This includes the Black America candidates, most Caribbean candidates, Africanews, VOA Africa, WHO AFRO, Afro-Latin America, Afropean, Diaspora Africa, The Voice and Global Voices Indian Ocean.
 
 This is a rights-basis classification, not a legal opinion. Publisher permission can be reconsidered later for any excluded source, but excluded feeds are no longer part of the current activation inventory.
+## Post-reduction bounded fetch — 2026-10-28
+
+A read-only fetch of the retained three-feed inventory produced 24 raw items, 24 unique links and zero duplicates. All retained feeds remained `enabled:false`.
+
+- AllAfrica: 12 items, HTTP 200, parseable.
+- Jamaica Observer — news: 12 items, HTTP 200, parseable.
+- Jamaica Observer — latest: timeout in this run; retained on rights basis but not runtime-cleared.
+
+The retained inventory therefore has an authorization-free rights basis, but it is not yet a production-ready source set: one endpoint needs a successful retry, six-lane balance is not satisfied, and owner activation/final QA remain gated.
