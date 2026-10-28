@@ -11,15 +11,15 @@ export const COVERAGE_LANES = [
 
 export function clean(value = "") {
   return String(value)
-    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/gi, "$1")
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, "$1")
     .replace(/<[^>]*>/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;|&apos;/g, "'")
-    .replace(/&#(\\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-    .replace(/\\s+/g, " ")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/\s+/g, " ")
     .trim();
 }
 
@@ -37,7 +37,7 @@ export function canonicalizeLink(raw = "") {
         url.searchParams.delete(key);
       }
     }
-    url.pathname = url.pathname.replace(/\\/{2,}/g, "/").replace(/\\/$/, "") || "/";
+    url.pathname = url.pathname.replace(/\/{2,}/g, "/").replace(/\/$/, "") || "/";
     return url.toString();
   } catch {
     return "";
@@ -47,20 +47,20 @@ export function canonicalizeLink(raw = "") {
 function firstTag(block, names) {
   for (const name of names) {
     const safeName = name.replace(":", "\\:");
-    const match = block.match(new RegExp("<" + safeName + "(?:\\\\s[^>]*)?>([\\\\s\\\\s]*?)</" + safeName + ">", "i"));
+    const match = block.match(new RegExp("<" + safeName + "(?:\\s[^>]*)?>([\\s\\S]*?)</" + safeName + ">", "i"));
     if (match) return clean(match[1]);
   }
   return "";
 }
 
 function linkFrom(block) {
-  const atom = block.match(/<link\\b[^>]*href=["']([^"']+)["'][^>]*\\/?>(?:<\\/link>)?/i);
+  const atom = block.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*\/?>(?:<\/link>)?/i);
   if (atom) return atom[1].trim();
   return firstTag(block, ["link", "guid", "id"]);
 }
 
 export function parseFeed(xml, feed, maxItems = 12) {
-  const blocks = String(xml || "").match(/<(?:item|entry)\\b[\\s\\S]*?<\\/(?:item|entry)>/gi) || [];
+  const blocks = String(xml || "").match(/<(?:item|entry)\b[\s\S]*?<\/(?:item|entry)>/gi) || [];
   return blocks.slice(0, maxItems).map((block) => {
     const title = firstTag(block, ["title"]);
     const link = linkFrom(block);
