@@ -26,6 +26,15 @@ The slice must collect public RSS/Atom metadata, normalize it, preserve direct s
 - A local preview adapter that renders only approved-for-preview items.
 - Node tests for canonical-link deduplication, direct-link enforcement, lane coverage, and approval-state handling.
 
+
+## Expanded source tranche — 2026-10-28
+
+The source manifest now includes an AllAfrica latest-headlines feed and additional Black America and Caribbean candidates. AllAfrica is marked reviewed for metadata-only pilot use because its publisher states that headline modules are available at no charge when the site credits AllAfrica and links back to AllAfrica or the relevant feed page. The underlying rights of AllAfrica partner publishers remain unassumed.
+
+The Root, TheGrio, Black Enterprise, Blavity, Nation News, Barbados Today, Trinidad and Tobago Newsday, WIC News, News Americas Now and Caribbean National Weekly remain disabled candidates until runtime behavior and source terms support the intended metadata-only/direct-link treatment. Barbados Today and WIC News currently carry explicit rights holds in the manifest.
+
+The expanded browser fetch is evidence only: it does not activate feeds, publish stories, create recurrence, or authorize excerpts, images, translations, or article reuse.
+
 ## Runtime commands
 
 ~~~text
