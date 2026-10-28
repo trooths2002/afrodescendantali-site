@@ -1,11 +1,11 @@
 {
   "version": "0.1",
-  "executionId": "EXE-20261028-007",
+  "executionId": "EXE-20261028-016",
   "mode": "PREVIEW_FIXTURE_ONLY",
   "activation": "OWNER_REVIEW_REQUIRED",
   "feedActivation": "DISABLED",
   "publishAutomatically": false,
-  "generatedAt": "2026-10-28T09:00:00Z",
+  "generatedAt": "2026-10-28T15:55:00Z",
   "items": [
     {
       "id": "preview-africa-001",
@@ -34,17 +34,23 @@
       "fixture": true
     },
     {
-      "id": "preview-caribbean-001",
+      "id": "pilot-caribbean-roofs-001",
       "lane": "caribbean",
-      "sourceName": "Jamaica Gleaner",
-      "sourceStatus": "REVIEWED_FEED",
+      "sourceName": "Jamaica Observer",
+      "sourceStatus": "REVIEWED_LINK_ONLY",
       "approvalState": "approved_for_preview",
+      "publicationState": "PRIVATE_PREVIEW_ONLY",
+      "editorialApproval": "PENDING_OWNER_REVIEW",
       "rightsState": "DIRECT_LINK_ONLY",
-      "title": "Caribbean nations unite on climate adaptation funding",
-      "summary": "Leaders seek greater access to international climate finance.",
-      "link": "https://jamaica-gleaner.com/",
-      "publishedAt": "2026-10-28T04:00:00Z",
-      "fixture": true
+      "title": "Jamaica’s roof-recovery programme enters its deadline phase",
+      "summary": "A new government allocation is meant to move hurricane-affected households through the next stage of assistance.",
+      "link": "https://www.jamaicaobserver.com/2026/10/28/holness-pumps-another-9-65b-roofs/",
+      "previewPath": "stories/jamaica-roofs-recovery/index.html",
+      "publishedAt": "2026-10-28T00:00:00Z",
+      "imagePath": "assets/jamaica-roofs-recovery-illustration.jpg",
+      "imageStatus": "IMAGE_FALLBACK_ONLY",
+      "imageRights": "Afrodescendant Ali editorial illustration; not documentary photography.",
+      "fixture": false
     },
     {
       "id": "preview-afro-latin-america-001",
@@ -112,5 +118,5 @@
       "fixture": true
     }
   ],
-  "note": "These are preview fixtures only. They are not production stories and do not authorize publication."
+  "note": "Private preview fixture only. The Jamaica recovery story is an original draft prepared for owner review; it is not a production story and does not authorize publication."
 }
