@@ -4,7 +4,7 @@ Status: SAMPLE — UNPUBLISHED
 Project: PM-009 — AfrodescendantAli.com
 Editorial basis: RSS discovery → original reporting/context → source attribution → human review
 
-These samples were developed from retained-feed items collected on 2026-10-28. They are demonstrations of voice and structure, not approved news stories. No source text, image or media has been copied.
+These samples were developed from retained-feed items collected on 2026-10-28. They are demonstrations of voice and structure, not approved news stories. No source text, image or media has been copied. Each sample now has a clearly labeled Afrodescendant Ali editorial illustration; these visuals are conceptual, not documentary photographs.
 
 ---
 
@@ -15,6 +15,12 @@ These samples were developed from retained-feed items collected on 2026-10-28. T
 **Dek:** Senegal is preparing to host Africa’s first Olympic sporting event. The larger question is whether the promise of welcome will extend beyond the ceremony.
 
 **By Afrodescendant Ali | Analysis sample | Unpublished**
+
+![Editorial illustration of young African athletes and residents moving toward a shared sporting space in Dakar, with a coastal city beyond.](images/dakar-youth-olympics-inclusion-illustration.jpg)
+
+*Illustration — not documentary photography. Credit: Afrodescendant Ali editorial illustration, generated for sample use, 2026-10-28.*
+
+**Image record:** IMG-20261028-001 | Image status: IMAGE_FALLBACK_ONLY | Rights state: fallback_only | Alt text: Young Black African athletes and residents move toward a shared sporting venue overlooking Dakar’s coast. | The illustration represents inclusion and participation; it does not depict a specific real event.
 
 When the Youth Olympic Games open in Senegal on October 31, Dakar will host a sporting event that carries meaning beyond the competition. The 2026 Games are scheduled across Dakar, Diamniadio and Saly, with approximately 2,700 young athletes expected to participate in 25 sports.
 
@@ -54,6 +60,12 @@ The next test will be practical: how the authorities, Olympic bodies and local i
 
 **By Afrodescendant Ali | News brief sample | Unpublished**
 
+![Editorial illustration of a Jamaican hillside community checking repaired roofs after a storm.](images/jamaica-roofs-recovery-illustration.jpg)
+
+*Illustration — not documentary photography. Credit: Afrodescendant Ali editorial illustration, generated for sample use, 2026-10-28.*
+
+**Image record:** IMG-20261028-002 | Image status: IMAGE_FALLBACK_ONLY | Rights state: fallback_only | Alt text: A Jamaican family and community worker review roof repairs in a hillside neighborhood after a storm. | The illustration represents housing recovery; it does not depict a specific household or government programme site.
+
 Jamaica’s government has announced an additional $9.65 billion for the Restoration of Owner and Occupant Family Shelter programme, according to the Jamaica Observer.
 
 The programme is intended to support households whose homes were damaged by Hurricane Melissa. The report says more than 118,000 households have been assessed, with roughly half having received assistance. The government has set a target of reaching 90 per cent of assessed households by the end of December and completing the remaining cases by the end of January.
@@ -86,6 +98,12 @@ The next reporting question is therefore measurable: how many households receive
 **Dek:** Two schools have completed restoration work after Hurricane Melissa, while a new funding commitment aims to extend repairs to more students and communities.
 
 **By Afrodescendant Ali | Community recovery sample | Unpublished**
+
+![Editorial illustration of Jamaican students returning to a repaired school building with a teacher.](images/jamaica-school-recovery-illustration.jpg)
+
+*Illustration — not documentary photography. Credit: Afrodescendant Ali editorial illustration, generated for sample use, 2026-10-28.*
+
+**Image record:** IMG-20261028-003 | Image status: IMAGE_FALLBACK_ONLY | Rights state: fallback_only | Alt text: Jamaican students with backpacks walk toward a repaired school building with a teacher. | The illustration represents continuity after storm recovery; it does not depict a named school or identifiable children.
 
 At Little London High School in Westmoreland and Mayfield Primary and Infant School in St Elizabeth, recovery has moved from emergency response to the slower work of making daily education possible again.
 
