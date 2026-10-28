@@ -223,6 +223,97 @@
       "status": "candidate",
       "rightsReview": "Regional endpoint requires runtime verification. Keep disabled.",
       "enabled": false
+    },
+    {
+      "id": "allafrica-latest",
+      "lane": "africa",
+      "name": "AllAfrica — latest headlines",
+      "language": "en",
+      "endpoint": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "sourcePage": "https://allafrica.com/misc/tools/rss.html",
+      "status": "reviewed",
+      "rightsReview": "AllAfrica states that headline modules are provided at no charge, with credit to allAfrica.com and a link to AllAfrica or the relevant feed page. Pilot remains metadata-only with direct source links; underlying partner-publisher rights are not assumed.",
+      "freeFeed": true,
+      "attributionRequired": true,
+      "publisherLinkRequired": true,
+      "enabled": false
+    },
+    {
+      "id": "blavity-latest",
+      "lane": "black-america",
+      "name": "Blavity",
+      "language": "en",
+      "endpoint": "https://blavity.com/feed/",
+      "sourcePage": "https://blavity.com/terms",
+      "status": "candidate",
+      "rightsReview": "Publisher terms and feed behavior require review. Keep as metadata-only candidate with direct source links; no republication or excerpting assumed.",
+      "enabled": false
+    },
+    {
+      "id": "nation-barbados-latest",
+      "lane": "caribbean",
+      "name": "Nation News — Barbados",
+      "language": "en",
+      "endpoint": "https://nationnews.com/feed/rss",
+      "sourcePage": "https://nationnews.com/rss-feed/",
+      "status": "candidate",
+      "rightsReview": "Official RSS page confirms a feed, but reuse terms were not confirmed in this pass. Keep disabled pending runtime and terms review.",
+      "enabled": false
+    },
+    {
+      "id": "barbados-today-local",
+      "lane": "caribbean",
+      "name": "Barbados Today — local news",
+      "language": "en",
+      "endpoint": "https://barbadostoday.bb/category/local-news/feed",
+      "sourcePage": "https://barbadostoday.bb/terms-of-use/",
+      "status": "candidate",
+      "rightsReview": "Terms prohibit automated access and reuse without written permission. Candidate only; do not activate without publisher permission or a revised rights basis.",
+      "enabled": false
+    },
+    {
+      "id": "newsday-trinidad-latest",
+      "lane": "caribbean",
+      "name": "Trinidad and Tobago Newsday",
+      "language": "en",
+      "endpoint": "https://newsday.co.tt/feed/",
+      "sourcePage": "https://newsday.co.tt/",
+      "status": "candidate",
+      "rightsReview": "RSS endpoint is a candidate; reuse terms were not confirmed in this pass. Keep disabled pending runtime and terms review.",
+      "enabled": false
+    },
+    {
+      "id": "wic-news-latest",
+      "lane": "caribbean",
+      "name": "WIC News",
+      "language": "en",
+      "endpoint": "https://wicnews.com/feed/",
+      "sourcePage": "https://wicnews.com/terms-of-use",
+      "status": "candidate",
+      "rightsReview": "Terms allow informational/personal use but prohibit reproduction, distribution, modification or derivatives without written permission. Candidate only; no activation without permission.",
+      "enabled": false
+    },
+    {
+      "id": "news-americas-caribbean",
+      "lane": "caribbean",
+      "name": "News Americas Now — Caribbean news",
+      "language": "en",
+      "endpoint": "https://www.newsamericasnow.com/category/caribbean-news/feed/",
+      "sourcePage": "https://www.newsamericasnow.com/terms-and-conditions-news-americas-now/",
+      "status": "candidate",
+      "rightsReview": "Publisher lists machine-readable RSS/JSON feeds, but its terms restrict copying and distribution. Candidate metadata only; no activation without a rights determination.",
+      "enabled": false
+    },
+    {
+      "id": "caribbean-national-weekly",
+      "lane": "caribbean",
+      "name": "Caribbean National Weekly",
+      "language": "en",
+      "endpoint": "https://www.caribbeannationalweekly.com/feed/",
+      "sourcePage": "https://www.caribbeannationalweekly.com/",
+      "status": "candidate",
+      "rightsReview": "Feed candidate identified; RSS-specific reuse terms were not confirmed in this pass. Keep disabled pending runtime and terms review.",
+      "enabled": false
     }
   ],
   "knownEndpointIssues": [
@@ -231,6 +322,12 @@
       "endpoint": "https://www.stabroeknews.com/feed/",
       "issue": "Publisher RSS page exists, but endpoint returned 404 during verification.",
       "disposition": "Do not activate until endpoint is repaired or replaced."
+    },
+    {
+      "source": "Jamaica Gleaner",
+      "endpoint": "https://jamaica-gleaner.com/feed/carib.xml",
+      "issue": "Transport failure during the 2026-10-28 bounded read-only fetch; source terms were reviewed but endpoint health is unresolved.",
+      "disposition": "Keep disabled; retry once, then replace with the Caribbean candidate tranche if the failure persists."
     }
   ]
 }
