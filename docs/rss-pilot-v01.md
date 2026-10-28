@@ -198,3 +198,12 @@ A read-only fetch of the retained three-feed inventory produced 24 raw items, 24
 - Jamaica Observer — latest: timeout in this run; retained on rights basis but not runtime-cleared.
 
 The retained inventory therefore has an authorization-free rights basis, but it is not yet a production-ready source set: one endpoint needs a successful retry, six-lane balance is not satisfied, and owner activation/final QA remain gated.
+
+
+## Current discovery activation — 2026-10-28
+
+Owner authorization expanded the schedule from the three reviewed link-only feeds to all 25 manifest feeds for metadata-only discovery. This includes 22 candidate-restored feeds.
+
+The candidate feeds remain marked with their existing runtime, terms and rights warnings. They are not treated as rights-cleared publishers. The collector may collect headlines, dates, direct links, identifiers and source-health results, but it must not store source bodies, reuse images or media, write articles automatically, publish, notify readers, promote candidates or alter indexability.
+
+The first expanded discovery receipt is the next review point. It must report source success/failure, raw and unique item counts, duplicates, lane distribution, stale/empty feeds and any malformed or timed-out endpoints.
