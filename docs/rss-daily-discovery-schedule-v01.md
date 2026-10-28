@@ -7,13 +7,16 @@ Cadence: Daily morning window
 
 ## Active discovery sources
 
-Only the three sources with an existing reviewed link-only basis are enabled:
+All 25 manifest sources are enabled for metadata discovery:
 
-- AllAfrica — latest headlines
-- Jamaica Observer — latest
-- Jamaica Observer — news
+- Africa: AllAfrica, Africanews, VOA Africa, WHO AFRO
+- Black America: TheGrio, Black Enterprise, The Root, Blavity
+- Caribbean: Jamaica Observer — latest, Jamaica Observer — news, Jamaica Gleaner, Nation News, Barbados Today, Trinidad and Tobago Newsday, WIC News, News Americas Now, Caribbean National Weekly, CIJN
+- Afro-Latin America: Mundo Negro, Race & Equality, Global Voices Latin America
+- Afro-Europe: Afropean, The Voice
+- Indian Ocean/global: Diaspora Africa, Global Voices Indian Ocean
 
-The 22 restored candidate feeds remain disabled. Enabling a candidate requires separate runtime, terms and rights review.
+The 22 restored sources are enabled for discovery only. Their prior runtime, terms and rights warnings remain active. Discovery enablement is not permission to republish, quote, reuse images or publish automatically.
 
 ## Daily run
 
@@ -71,4 +74,4 @@ A discovered item is only a lead. The editor must:
 
 ## Release boundary
 
-This schedule activates discovery only. It does not authorize automatic article creation, automatic publishing, recurrence for disabled candidates, production deployment or indexability.
+This schedule activates metadata discovery across the current 25-feed manifest. It does not authorize source-text reuse, image or media reuse, automatic article creation, automatic publishing, reader notification, production deployment or indexability. Candidate sources remain rights-review items even while they are checked for leads.
