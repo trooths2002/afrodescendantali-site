@@ -89,7 +89,7 @@
       "endpoint": "https://thegrio.com/feed/",
       "sourcePage": "https://thegrio.com/about/",
       "status": "candidate",
-      "rightsReview": "Feed endpoint responds as RSS, but feed-use terms were not verified in this pass. Do not display or republish until reviewed.",
+      "rightsReview": "Runtime feed returned metadata, but no RSS-specific reuse permission was confirmed from the available publisher materials. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
       "enabled": false
     },
     {
@@ -100,7 +100,7 @@
       "endpoint": "https://www.blackenterprise.com/feed/",
       "sourcePage": "https://www.blackenterprise.com/",
       "status": "candidate",
-      "rightsReview": "Feed endpoint responds as RSS, but feed-use terms were not verified in this pass. Do not display or republish until reviewed.",
+      "rightsReview": "Runtime feed returned metadata, but RSS-specific reuse permission was not confirmed from the available publisher materials. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
       "enabled": false
     },
     {
@@ -111,7 +111,7 @@
       "endpoint": "https://www.theroot.com/rss",
       "sourcePage": "https://www.theroot.com/",
       "status": "candidate",
-      "rightsReview": "Endpoint is known but origin presented bot verification during web verification. Keep disabled until bounded runtime check and terms review.",
+      "rightsReview": "G/O Media terms identify The Root as a G/O site and grant site access for personal, noncommercial use; commercial usage may be charged. RSS-specific reuse permission is not confirmed. HOLD — keep disabled and direct-link-only.",
       "enabled": false
     },
     {
@@ -246,7 +246,7 @@
       "endpoint": "https://blavity.com/feed/",
       "sourcePage": "https://blavity.com/terms",
       "status": "candidate",
-      "rightsReview": "Publisher terms and feed behavior require review. Keep as metadata-only candidate with direct source links; no republication or excerpting assumed.",
+      "rightsReview": "Blavity terms limit use to personal, noncommercial access and prohibit reproduction, distribution, modification, republication and commercial use. RSS-specific permission is not confirmed. HOLD — keep disabled.",
       "enabled": false
     },
     {
@@ -326,8 +326,32 @@
     {
       "source": "Jamaica Gleaner",
       "endpoint": "https://jamaica-gleaner.com/feed/carib.xml",
-      "issue": "Transport failure during the 2026-10-28 bounded read-only fetch; source terms were reviewed but endpoint health is unresolved.",
-      "disposition": "Keep disabled; retry once, then replace with the Caribbean candidate tranche if the failure persists."
+      "issue": "Two bounded browser attempts returned no parseable RSS items; the first run recorded a transport failure and the retry remained unsupported/malformed.",
+      "disposition": "Keep disabled and replace or obtain publisher confirmation before activation."
+    },
+    {
+      "source": "Nation News — Barbados",
+      "endpoint": "https://nationnews.com/feed/rss",
+      "issue": "Two bounded browser attempts timed out during navigation.",
+      "disposition": "Keep disabled; retry through a non-browser collector only after the current pilot remains otherwise gated."
+    },
+    {
+      "source": "Trinidad and Tobago Newsday",
+      "endpoint": "https://newsday.co.tt/feed/",
+      "issue": "Retry returned no parseable RSS items in the bounded browser check.",
+      "disposition": "Keep disabled pending endpoint verification and terms review."
+    },
+    {
+      "source": "WIC News",
+      "endpoint": "https://wicnews.com/feed/",
+      "issue": "Two bounded browser attempts timed out; terms also restrict reproduction/distribution without permission.",
+      "disposition": "Keep disabled; rights permission and endpoint health both unresolved."
+    },
+    {
+      "source": "Caribbean National Weekly",
+      "endpoint": "https://www.caribbeannationalweekly.com/feed/",
+      "issue": "Two bounded browser attempts did not produce a verified parseable feed.",
+      "disposition": "Keep disabled pending runtime and terms review."
     }
   ]
 }
