@@ -170,3 +170,22 @@ A new bounded, read-only fetch was run against the full current 25-feed manifest
 Key runtime results: VOA Africa, WHO AFRO, AllAfrica, TheGrio, Black Enterprise, both Jamaica Observer feeds, Barbados Today, News Americas Now and CIJN returned parseable items. Africanews and The Voice timed out; Nation News, WIC News and Caribbean National Weekly timed out; Jamaica Gleaner and Trinidad and Tobago Newsday returned HTTP 503; The Root and Blavity returned HTML instead of feeds; Global Voices Indian Ocean returned an empty response.
 
 This fetch is evidence only. It does not constitute rights permission, approval, recurrence, automatic publication or production release. The pilot remains **PARTIAL / RELEASE HOLD** pending written permissions or documented link-only approvals and a follow-up QA/gate review.
+## Authorization-free inventory reduction — 2026-10-28
+
+The manifest was narrowed to feeds with an explicit documented basis for attributed, direct-link-only website display. Public RSS availability or successful parsing alone is not treated as authorization.
+
+### Retained inventory
+
+| Lane | Source | Basis |
+| --- | --- | --- |
+| Africa | AllAfrica — latest headlines | AllAfrica's RSS terms permit headline modules on a website at no charge when the publisher is credited and the site links to AllAfrica or the relevant feed page. |
+| Caribbean | Jamaica Observer — latest | Jamaica Observer RSS terms permit non-commercial use with direct article linking, no modification and attribution. |
+| Caribbean | Jamaica Observer — news | Same Jamaica Observer RSS basis. |
+
+The retained inventory is **3 feeds**. All remain `enabled:false`; owner activation and final QA are still required.
+
+### Excluded inventory
+
+The remaining **22 feeds** were moved from the active candidate list into `excludedFeeds` with source-specific reasons. They include feeds requiring written permission or a rights determination, feeds whose general terms conflict with website reuse, and feeds without a documented authorization-free link-only basis. This includes the Black America candidates, most Caribbean candidates, Africanews, VOA Africa, WHO AFRO, Afro-Latin America, Afropean, Diaspora Africa, The Voice and Global Voices Indian Ocean.
+
+This is a rights-basis classification, not a legal opinion. Publisher permission can be reconsidered later for any excluded source, but excluded feeds are no longer part of the current activation inventory.
