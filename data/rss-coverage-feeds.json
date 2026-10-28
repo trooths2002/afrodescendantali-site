@@ -314,6 +314,17 @@
       "status": "candidate",
       "rightsReview": "Feed candidate identified; RSS-specific reuse terms were not confirmed in this pass. Keep disabled pending runtime and terms review.",
       "enabled": false
+    },
+    {
+      "id": "cijn-latest",
+      "lane": "caribbean",
+      "name": "Caribbean Investigative Journalism Network",
+      "language": "en",
+      "endpoint": "https://www.cijn.org/feed/",
+      "sourcePage": "https://www.cijn.org/privacy-policy/",
+      "status": "candidate",
+      "rightsReview": "Official RSS endpoint is live and parseable. CIJN user agreement states site materials are copyrighted and expressly permits linking to the home page but does not grant RSS republication or automated metadata reuse. Candidate only — keep disabled pending written permission or a documented link-only basis.",
+      "enabled": false
     }
   ],
   "knownEndpointIssues": [
@@ -352,6 +363,12 @@
       "endpoint": "https://www.caribbeannationalweekly.com/feed/",
       "issue": "Two bounded browser attempts did not produce a verified parseable feed.",
       "disposition": "Keep disabled pending runtime and terms review."
+    },
+    {
+      "source": "Caribbean Investigative Journalism Network",
+      "endpoint": "https://www.cijn.org/feed/",
+      "issue": "Bounded retry returned a parseable RSS feed, but the feed is stale (latest item observed April 2026) and the user agreement confirms copyright while only clearly permitting ordinary linking; RSS reuse permission is not stated.",
+      "disposition": "Keep disabled pending freshness review and written permission or an explicit link-only rights determination."
     }
   ]
 }
