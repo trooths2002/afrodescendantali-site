@@ -89,8 +89,9 @@
       "endpoint": "https://thegrio.com/feed/",
       "sourcePage": "https://thegrio.com/about/",
       "status": "candidate",
-      "rightsReview": "Runtime feed returned metadata, but no RSS-specific reuse permission was confirmed from the available publisher materials. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
-      "enabled": false
+      "rightsReview": "Official contact page points to the full Terms of Service and describes editorial/video submissions as subject to publisher review. No RSS-specific reuse permission was confirmed. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
+      "enabled": false,
+      "termsPage": "https://thegrio.com/contact/"
     },
     {
       "id": "black-enterprise-latest",
@@ -100,8 +101,9 @@
       "endpoint": "https://www.blackenterprise.com/feed/",
       "sourcePage": "https://www.blackenterprise.com/",
       "status": "candidate",
-      "rightsReview": "Runtime feed returned metadata, but RSS-specific reuse permission was not confirmed from the available publisher materials. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
-      "enabled": false
+      "rightsReview": "Official About and Contact pages were reviewed and the publisher feed is publicly discoverable, but no RSS-specific reuse permission or free republication license was confirmed. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
+      "enabled": false,
+      "termsPage": "https://www.blackenterprise.com/contact/"
     },
     {
       "id": "the-root-latest",
@@ -112,7 +114,8 @@
       "sourcePage": "https://www.theroot.com/",
       "status": "candidate",
       "rightsReview": "G/O Media terms identify The Root as a G/O site and grant site access for personal, noncommercial use; commercial usage may be charged. RSS-specific reuse permission is not confirmed. HOLD — keep disabled and direct-link-only.",
-      "enabled": false
+      "enabled": false,
+      "termsPage": "https://www.g-omedia.com/terms-of-use"
     },
     {
       "id": "jamaica-observer-latest",
@@ -247,7 +250,8 @@
       "sourcePage": "https://blavity.com/terms",
       "status": "candidate",
       "rightsReview": "Blavity terms limit use to personal, noncommercial access and prohibit reproduction, distribution, modification, republication and commercial use. RSS-specific permission is not confirmed. HOLD — keep disabled.",
-      "enabled": false
+      "enabled": false,
+      "termsPage": "https://blavity.com/terms"
     },
     {
       "id": "nation-barbados-latest",
