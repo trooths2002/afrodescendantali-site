@@ -47,13 +47,7 @@ if (!args.has("--allow-readonly-fetch")) {
   process.exit(2);
 }
 
-const includeCandidates = args.has("--include-candidates");
-const feeds = manifest.feeds.filter((feed) => {
-  if (!feed.enabled) return false;
-  if (feed.status === "reviewed" || feed.status === "reviewed-link-only") return true;
-  if (includeCandidates && (feed.status === "candidate" || feed.status === "candidate-restored")) return true;
-  return false;
-});
+const feeds = manifest.feeds.filter((feed) => feed.enabled && (feed.status === "reviewed" || feed.status === "reviewed-link-only" || feed.status === "candidate" || feed.status === "candidate-restored"));
 const feedById = new Map(feeds.map((feed) => [feed.id, feed]));
 const retrievedAt = new Date().toISOString();
 const results = [];
