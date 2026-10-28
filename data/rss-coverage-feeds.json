@@ -91,7 +91,9 @@
       "status": "candidate",
       "rightsReview": "Official contact page points to the full Terms of Service and describes editorial/video submissions as subject to publisher review. No RSS-specific reuse permission was confirmed. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
       "enabled": false,
-      "termsPage": "https://thegrio.com/contact/"
+      "termsPage": "https://thegrio.com/contact/",
+      "outreachState": "CONTACT FORM REQUIRED — NOT SUBMITTED",
+      "permissionContactSource": "https://thegrio.com/contact/"
     },
     {
       "id": "black-enterprise-latest",
@@ -103,7 +105,10 @@
       "status": "candidate",
       "rightsReview": "Official About and Contact pages were reviewed and the publisher feed is publicly discoverable, but no RSS-specific reuse permission or free republication license was confirmed. REVIEW_REQUIRED — keep disabled, metadata-only and direct-link-only.",
       "enabled": false,
-      "termsPage": "https://www.blackenterprise.com/contact/"
+      "termsPage": "https://www.blackenterprise.com/contact/",
+      "outreachState": "REQUEST_DRAFT_PREPARED — NOT SENT",
+      "permissionContact": "beeditors@blackenterprise.com",
+      "permissionContactSource": "https://www.blackenterprise.com/contact/"
     },
     {
       "id": "the-root-latest",
@@ -262,7 +267,9 @@
       "sourcePage": "https://nationnews.com/rss-feed/",
       "status": "candidate",
       "rightsReview": "Official RSS page confirms a feed, but reuse terms were not confirmed in this pass. Keep disabled pending runtime and terms review.",
-      "enabled": false
+      "enabled": false,
+      "outreachState": "CONTACT FORM REQUIRED — NOT SUBMITTED",
+      "permissionContactSource": "https://nationnews.com/contact-us/"
     },
     {
       "id": "barbados-today-local",
@@ -273,7 +280,10 @@
       "sourcePage": "https://barbadostoday.bb/terms-of-use/",
       "status": "candidate",
       "rightsReview": "Terms prohibit automated access and reuse without written permission. Candidate only; do not activate without publisher permission or a revised rights basis.",
-      "enabled": false
+      "enabled": false,
+      "outreachState": "REQUEST_DRAFT_PREPARED — NOT SENT",
+      "permissionContact": "editor@barbadostoday.bb",
+      "permissionContactSource": "https://barbadostoday.bb/about-us/"
     },
     {
       "id": "newsday-trinidad-latest",
@@ -306,7 +316,10 @@
       "sourcePage": "https://www.newsamericasnow.com/terms-and-conditions-news-americas-now/",
       "status": "candidate",
       "rightsReview": "Publisher lists machine-readable RSS/JSON feeds, but its terms restrict copying and distribution. Candidate metadata only; no activation without a rights determination.",
-      "enabled": false
+      "enabled": false,
+      "outreachState": "LICENSING CONTACT REQUIRED — NOT SUBMITTED",
+      "permissionContactSource": "https://www.newsamericasnow.com/contact-news-americasnow/",
+      "licensingPage": "https://www.newsamericasnow.com/data-licensing/"
     },
     {
       "id": "caribbean-national-weekly",
@@ -328,7 +341,9 @@
       "sourcePage": "https://www.cijn.org/privacy-policy/",
       "status": "candidate",
       "rightsReview": "Official RSS endpoint is live and parseable. CIJN user agreement states site materials are copyrighted and expressly permits linking to the home page but does not grant RSS republication or automated metadata reuse. Candidate only — keep disabled pending written permission or a documented link-only basis.",
-      "enabled": false
+      "enabled": false,
+      "outreachState": "CONTACT FORM REQUIRED — NOT SUBMITTED",
+      "permissionContactSource": "https://www.cijn.org/contact-us/"
     }
   ],
   "knownEndpointIssues": [
