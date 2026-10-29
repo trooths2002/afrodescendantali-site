@@ -1,0 +1,334 @@
+{
+  "version": "0.1",
+  "project": "PM-009 — AfrodescendantAli.com",
+  "reviewedAt": "2026-10-28",
+  "status": "QUALIFICATION_IN_PROGRESS — no candidate activated",
+  "classificationRules": {
+    "CLEARED_LINK_ONLY": "Publisher or institution has an explicit documented basis for attributed direct-link use.",
+    "PARTNERSHIP_REQUIRED": "Relationship, license or written permission is needed before reuse.",
+    "DISCOVERY_ONLY": "Useful for lead generation; not publishable without rights and editorial verification.",
+    "OPEN_GAP": "No qualified source is currently assigned."
+  },
+  "lanes": [
+    {
+      "lane": "africa",
+      "target": {
+        "publisherSources": 2,
+        "institutionalSources": 1,
+        "humanChannels": 1,
+        "discoveryChannels": 1
+      },
+      "qualifiedCount": {
+        "publisherSources": 1,
+        "institutionalSources": 0,
+        "humanChannels": 0,
+        "discoveryChannels": 0
+      },
+      "sources": [
+        {
+          "id": "allafrica-latest",
+          "name": "AllAfrica",
+          "type": "publisher",
+          "evidenceUrl": "https://allafrica.com/misc/tools/rss.html",
+          "rightsState": "CLEARED_LINK_ONLY",
+          "runtimeState": "RUNTIME_VERIFIED",
+          "nextAction": "Retry latest endpoint and retain direct-link attribution."
+        },
+        {
+          "id": "auc-news-rss",
+          "name": "African Union News / RSS",
+          "type": "institutional",
+          "evidenceUrl": "https://library.au.int/auc-news-rss",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Verify endpoint, attribution and website-display terms."
+        },
+        {
+          "id": "africa-publisher-2-gap",
+          "name": "Second cleared African publisher",
+          "type": "publisher",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Identify a regionally diverse publisher and complete terms review."
+        },
+        {
+          "id": "africa-human-channel-gap",
+          "name": "Africa correspondent or community desk",
+          "type": "human",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Recruit or nominate a contributor with geography and beat."
+        }
+      ]
+    },
+    {
+      "lane": "black-america",
+      "target": {
+        "publisherSources": 2,
+        "institutionalSources": 1,
+        "humanChannels": 1,
+        "discoveryChannels": 1
+      },
+      "qualifiedCount": {
+        "publisherSources": 0,
+        "institutionalSources": 0,
+        "humanChannels": 0,
+        "discoveryChannels": 0
+      },
+      "sources": [
+        {
+          "id": "nnpa-network",
+          "name": "National Newspaper Publishers Association",
+          "type": "publisher-network",
+          "evidenceUrl": "https://nnpa.org/",
+          "rightsState": "PARTNERSHIP_REQUIRED",
+          "runtimeState": "NOT_APPLICABLE",
+          "nextAction": "Pursue a network or member-publisher relationship."
+        },
+        {
+          "id": "blackpressusa-network",
+          "name": "BlackPressUSA",
+          "type": "publisher-network",
+          "evidenceUrl": "https://blackpressusa.com/about-us/",
+          "rightsState": "PARTNERSHIP_REQUIRED",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Confirm feed or link-only partnership route."
+        },
+        {
+          "id": "black-america-web",
+          "name": "Black America Web RSS",
+          "type": "publisher",
+          "evidenceUrl": "https://blackamericaweb.com/rss-2/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Test the listed endpoints and verify current rights/terms."
+        },
+        {
+          "id": "black-america-human-channel-gap",
+          "name": "Black America correspondent or community desk",
+          "type": "human",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Recruit a contributor with a defined local or national beat."
+        },
+        {
+          "id": "black-america-institutional-gap",
+          "name": "Black America institutional pressroom",
+          "type": "institutional",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Select a primary institutional source and verify direct-link terms."
+        }
+      ]
+    },
+    {
+      "lane": "caribbean",
+      "target": {
+        "publisherSources": 2,
+        "institutionalSources": 1,
+        "humanChannels": 1,
+        "discoveryChannels": 1
+      },
+      "qualifiedCount": {
+        "publisherSources": 1,
+        "institutionalSources": 0,
+        "humanChannels": 0,
+        "discoveryChannels": 0
+      },
+      "sources": [
+        {
+          "id": "jamaica-observer",
+          "name": "Jamaica Observer",
+          "type": "publisher",
+          "evidenceUrl": "https://www.jamaicaobserver.com/rssfeeds/",
+          "rightsState": "CLEARED_LINK_ONLY",
+          "runtimeState": "PARTIAL",
+          "nextAction": "Retry the latest feed and treat the two endpoints as one publisher relationship."
+        },
+        {
+          "id": "caricom-press",
+          "name": "CARICOM Press Releases",
+          "type": "institutional",
+          "evidenceUrl": "https://caricom.org/category/pressreleases/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Verify direct-link and metadata display terms."
+        },
+        {
+          "id": "cana-news",
+          "name": "CANA News Press Releases",
+          "type": "regional-publisher",
+          "evidenceUrl": "https://www.cananews.com/press-releases/",
+          "rightsState": "PARTNERSHIP_REQUIRED",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Confirm whether curation requires partnership or payment."
+        },
+        {
+          "id": "caribbean-human-channel-gap",
+          "name": "Island and mainland Caribbean correspondent desk",
+          "type": "human",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Recruit contributors across at least two Caribbean subregions."
+        }
+      ]
+    },
+    {
+      "lane": "afro-latin-america",
+      "target": {
+        "publisherSources": 2,
+        "institutionalSources": 1,
+        "humanChannels": 1,
+        "discoveryChannels": 1
+      },
+      "qualifiedCount": {
+        "publisherSources": 0,
+        "institutionalSources": 0,
+        "humanChannels": 0,
+        "discoveryChannels": 0
+      },
+      "sources": [
+        {
+          "id": "oas-afrodescendant",
+          "name": "OAS Afro-descendant press material",
+          "type": "institutional",
+          "evidenceUrl": "https://www.oas.org/en/media_center/press_release.asp?sCodigo=E-036%2F26",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Locate the stable OAS media index and verify link-only terms."
+        },
+        {
+          "id": "mundo-negro",
+          "name": "Mundo Negro",
+          "type": "publisher",
+          "evidenceUrl": "https://mundonegro.es/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "RUNTIME_VERIFIED",
+          "nextAction": "Complete publisher terms review or request link-only permission."
+        },
+        {
+          "id": "race-and-equality",
+          "name": "Race & Equality",
+          "type": "publisher",
+          "evidenceUrl": "https://raceandequality.org/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "RUNTIME_VERIFIED",
+          "nextAction": "Complete publisher terms review or request link-only permission."
+        },
+        {
+          "id": "afro-latin-human-channel-gap",
+          "name": "Spanish/Portuguese Afro-descendant correspondent desk",
+          "type": "human",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Recruit bilingual contributors with country-level coverage."
+        }
+      ]
+    },
+    {
+      "lane": "afro-europe",
+      "target": {
+        "publisherSources": 2,
+        "institutionalSources": 1,
+        "humanChannels": 1,
+        "discoveryChannels": 1
+      },
+      "qualifiedCount": {
+        "publisherSources": 0,
+        "institutionalSources": 0,
+        "humanChannels": 0,
+        "discoveryChannels": 0
+      },
+      "sources": [
+        {
+          "id": "enar-news",
+          "name": "European Network Against Racism News",
+          "type": "institutional-network",
+          "evidenceUrl": "https://www.enar-eu.org/news/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Verify attribution and direct-link treatment."
+        },
+        {
+          "id": "afronews-de",
+          "name": "Afronews Germany",
+          "type": "community-publisher",
+          "evidenceUrl": "https://afronews.de/about-us/",
+          "rightsState": "PARTNERSHIP_REQUIRED",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Confirm feed availability and request a link-only or contributor relationship."
+        },
+        {
+          "id": "afropean",
+          "name": "Afropean",
+          "type": "publisher",
+          "evidenceUrl": "https://afropean.com/about/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "RUNTIME_VERIFIED",
+          "nextAction": "Complete publisher terms review or request link-only permission."
+        },
+        {
+          "id": "afro-europe-human-channel-gap",
+          "name": "Country-based Afro-European correspondent desk",
+          "type": "human",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Recruit contributors in priority countries and language markets."
+        }
+      ]
+    },
+    {
+      "lane": "indian-ocean-global",
+      "target": {
+        "publisherSources": 2,
+        "institutionalSources": 1,
+        "humanChannels": 1,
+        "discoveryChannels": 1
+      },
+      "qualifiedCount": {
+        "publisherSources": 0,
+        "institutionalSources": 0,
+        "humanChannels": 0,
+        "discoveryChannels": 0
+      },
+      "sources": [
+        {
+          "id": "diaspora-africa",
+          "name": "Diaspora Africa",
+          "type": "publisher",
+          "evidenceUrl": "https://diasporaafrica.org/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "RUNTIME_VERIFIED",
+          "nextAction": "Complete publisher terms review or request link-only permission."
+        },
+        {
+          "id": "africa-diaspora-media",
+          "name": "Africa Diaspora Media",
+          "type": "diaspora-network",
+          "evidenceUrl": "https://africadiaspora.africa/media/",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Verify source terms and press-release link treatment."
+        },
+        {
+          "id": "kenya-diaspora-press",
+          "name": "Kenya State Department for Diaspora Affairs Press",
+          "type": "institutional",
+          "evidenceUrl": "https://www.diaspora.go.ke/press",
+          "rightsState": "DISCOVERY_ONLY",
+          "runtimeState": "UNVERIFIED",
+          "nextAction": "Verify update frequency, attribution and direct-link treatment."
+        },
+        {
+          "id": "indian-ocean-human-channel-gap",
+          "name": "Indian Ocean and diaspora correspondent desk",
+          "type": "human",
+          "rightsState": "OPEN_GAP",
+          "runtimeState": "NOT_STARTED",
+          "nextAction": "Recruit contributors across Indian Ocean islands and diaspora corridors."
+        }
+      ]
+    }
+  ],
+  "nextGate": "No lane qualifies until its publisher, institutional and human requirements are all evidenced."
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.afrodescendantali.com/schemas/editorial-source-record-v01.json",
+  "title": "Afrodescendant Ali Editorial Source Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "lane", "state", "discovery", "rights", "claims", "draft", "review"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "lane": {
+      "type": "string",
+      "enum": ["africa", "black-america", "caribbean", "afro-latin-america", "afro-europe", "indian-ocean-global"]
+    },
+    "state": {
+      "type": "string",
+      "enum": ["DISCOVERY_ONLY", "SOURCE_OPENED", "CLAIMS_IN_REVIEW", "DRAFTING", "EDITORIAL_REVIEW", "APPROVED_FOR_PUBLISH", "PUBLISHED", "HOLD"]
+    },
+    "discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceName", "sourceUrl", "directUrl", "discoveredAt"],
+      "properties": {
+        "sourceName": { "type": "string" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "directUrl": { "type": "string", "format": "uri" },
+        "title": { "type": "string" },
+        "publishedAt": { "type": ["string", "null"], "format": "date-time" },
+        "discoveredAt": { "type": "string", "format": "date-time" },
+        "sourceType": { "type": "string" },
+        "sourceContentStored": { "type": "boolean", "const": false }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "attribution"],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": ["link_only_allowed", "permission_required", "discovery_only", "excluded"]
+        },
+        "termsUrl": { "type": ["string", "null"], "format": "uri" },
+        "permissionRecord": { "type": ["string", "null"] },
+        "attribution": { "type": "string" },
+        "mediaRights": { "type": "string" }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claimId", "proposedWording", "classification", "sourceRefs", "confidence"],
+        "properties": {
+          "claimId": { "type": "string" },
+          "proposedWording": { "type": "string" },
+          "classification": {
+            "type": "string",
+            "enum": ["confirmed", "attributed allegation", "supported inference", "disputed", "unclear", "unsupported"]
+          },
+          "sourceRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "approvedWording": { "type": ["string", "null"] },
+          "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+          "risk": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      }
+    },
+    "draft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["articleType", "headline", "body", "byline"],
+      "properties": {
+        "articleType": {
+          "type": "string",
+          "enum": ["NEWS_BRIEF", "ANALYSIS", "EXPLAINER", "TIMELINE", "CASE_FILE", "COMMUNITY_REPORT", "EDITORIAL"]
+        },
+        "headline": { "type": "string" },
+        "dek": { "type": ["string", "null"] },
+        "body": { "type": "string" },
+        "byline": { "type": "string" },
+        "attribution": { "type": "string" },
+        "sourceTextCopied": { "type": "boolean", "const": false },
+        "sourceMediaReused": { "type": "boolean", "const": false }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["editorialApproval", "automaticPublication"],
+      "properties": {
+        "editorialApproval": { "type": "boolean" },
+        "reviewer": { "type": ["string", "null"] },
+        "reviewedAt": { "type": ["string", "null"], "format": "date-time" },
+        "mobileQa": { "type": "boolean" },
+        "failureStateQa": { "type": "boolean" },
+        "automaticPublication": { "type": "boolean", "const": false },
+        "indexability": { "type": "boolean", "const": false }
+      }
+    }
+  }
+}
