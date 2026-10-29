@@ -53,6 +53,25 @@
       "fixture": false
     },
     {
+      "id": "pilot-africa-ebola-001",
+      "lane": "africa",
+      "sourceName": "WHO AFRO",
+      "sourceStatus": "CANDIDATE_FEED",
+      "approvalState": "approved_for_preview",
+      "publicationState": "PRIVATE_PREVIEW_ONLY",
+      "editorialApproval": "PENDING_OWNER_REVIEW",
+      "rightsState": "REVIEW_REQUIRED",
+      "title": "Kenya releases 20 contacts after monitoring in Bundibugyo virus response",
+      "summary": "Twenty people completed a 21-day monitoring period without symptoms, according to WHO.",
+      "link": "https://www.afro.who.int/countries/kenya/news/twenty-contacts-kenyas-first-ebola-case-released-quarantine",
+      "previewPath": "stories/kenya-ebola-contacts/index.html",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "imagePath": "assets/kenya-ebola-quarantine-completion-editorial-illustration.jpg",
+      "imageStatus": "GENERATED_EDITORIAL_ILLUSTRATION",
+      "imageRights": "Afrodescendant Ali generated editorial illustration; conceptual, not documentary photography.",
+      "fixture": false
+    },
+    {
       "id": "preview-afro-latin-america-001",
       "lane": "afro-latin-america",
       "sourceName": "Mundo Negro",
@@ -118,5 +137,5 @@
       "fixture": true
     }
   ],
-  "note": "Private preview fixture only. The Jamaica recovery story is an original draft prepared for owner review; it is not a production story and does not authorize publication."
+  "note": "Private preview fixture only. The Jamaica recovery story and Kenya public-health brief are original drafts prepared for owner review; neither is a production story and neither authorizes publication."
 }
