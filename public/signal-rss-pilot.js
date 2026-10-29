@@ -3,6 +3,7 @@
   const status = document.querySelector("[data-rss-pilot-status]");
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector("#mobile-menu");
+  const menuIcon = menuToggle && menuToggle.querySelector("span[aria-hidden=\"true\"]");
   if (!grid) return;
 
   const laneLabel = {
@@ -141,6 +142,7 @@
       mobileMenu.hidden = true;
       menuToggle.setAttribute("aria-expanded", "false");
       menuToggle.setAttribute("aria-label", "Open menu");
+      if (menuIcon) menuIcon.textContent = "☰";
       if (restoreFocus) menuToggle.focus();
     };
 
@@ -149,6 +151,7 @@
       mobileMenu.hidden = !opening;
       menuToggle.setAttribute("aria-expanded", String(opening));
       menuToggle.setAttribute("aria-label", opening ? "Close menu" : "Open menu");
+      if (menuIcon) menuIcon.textContent = opening ? "×" : "☰";
     });
 
     mobileMenu.addEventListener("click", (event) => {
