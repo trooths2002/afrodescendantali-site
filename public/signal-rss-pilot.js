@@ -51,8 +51,9 @@
 
     const title = document.createElement("h3");
     const link = document.createElement("a");
-    link.href = item.previewPath || item.link;
-    link.target = item.previewPath ? "_self" : "_blank";
+    const previewHref = item.previewPath ? "/news-design-preview/" + item.previewPath.replace(/^\\/+/, "") : "";
+    link.href = previewHref || item.link;
+    link.target = previewHref ? "_self" : "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = item.title;
     title.appendChild(link);
