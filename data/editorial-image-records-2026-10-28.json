@@ -1,0 +1,62 @@
+{
+  "project": "PM-009",
+  "status": "REFERENCE — UNPUBLISHED",
+  "created": "2026-10-28",
+  "policy": {
+    "source_images_reused": false,
+    "rss_images_reused": false,
+    "documentary_claims_supported_by_generated_art": false,
+    "automatic_publication": false,
+    "indexability": false
+  },
+  "assets": [
+    {
+      "asset_id": "IMG-20261028-001",
+      "article_sample": "Sample 1 — Africa / Analysis",
+      "file": "content/editorial-samples/images/dakar-youth-olympics-inclusion-illustration.jpg",
+      "asset_type": "illustration",
+      "visual_function": "scene / person-community / place",
+      "source_creator": "Afrodescendant Ali editorial illustration",
+      "generation_date": "2026-10-28",
+      "rights_state": "fallback_only",
+      "use_note": "Conceptual illustration for sample use; not documentary photography and not evidence of a specific event.",
+      "credit_line": "Afrodescendant Ali editorial illustration, generated for sample use, 2026-10-28.",
+      "caption": "Illustration of young African athletes and residents moving toward a shared sporting space in Dakar.",
+      "alt_text": "Young Black African athletes and residents move toward a shared sporting venue overlooking Dakar’s coast.",
+      "mobile_crop_review": "PENDING",
+      "editorial_approval": "PENDING"
+    },
+    {
+      "asset_id": "IMG-20261028-002",
+      "article_sample": "Sample 2 — Caribbean / News Brief",
+      "file": "content/editorial-samples/images/jamaica-roofs-recovery-illustration.jpg",
+      "asset_type": "illustration",
+      "visual_function": "scene / person-community / place",
+      "source_creator": "Afrodescendant Ali editorial illustration",
+      "generation_date": "2026-10-28",
+      "rights_state": "fallback_only",
+      "use_note": "Conceptual illustration for sample use; not a photograph of a specific Jamaican household or programme site.",
+      "credit_line": "Afrodescendant Ali editorial illustration, generated for sample use, 2026-10-28.",
+      "caption": "Illustration of a Jamaican family and community worker reviewing roof repairs after a storm.",
+      "alt_text": "A Jamaican family and community worker review roof repairs in a hillside neighborhood after a storm.",
+      "mobile_crop_review": "PENDING",
+      "editorial_approval": "PENDING"
+    },
+    {
+      "asset_id": "IMG-20261028-003",
+      "article_sample": "Sample 3 — Caribbean / Community Recovery",
+      "file": "content/editorial-samples/images/jamaica-school-recovery-illustration.jpg",
+      "asset_type": "illustration",
+      "visual_function": "scene / person-community / place",
+      "source_creator": "Afrodescendant Ali editorial illustration",
+      "generation_date": "2026-10-28",
+      "rights_state": "fallback_only",
+      "use_note": "Conceptual illustration for sample use; not a named school or image of identifiable children.",
+      "credit_line": "Afrodescendant Ali editorial illustration, generated for sample use, 2026-10-28.",
+      "caption": "Illustration of Jamaican students returning to a repaired school building with a teacher.",
+      "alt_text": "Jamaican students with backpacks walk toward a repaired school building with a teacher.",
+      "mobile_crop_review": "PENDING",
+      "editorial_approval": "PENDING"
+    }
+  ]
+}
