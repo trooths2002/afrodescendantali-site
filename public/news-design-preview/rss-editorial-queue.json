@@ -18,7 +18,9 @@
       "summary": "Farmers report higher yields as a regional program expands.",
       "link": "https://www.africanews.com/",
       "publishedAt": "2026-10-28T06:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "DISCOVERY"
     },
     {
       "id": "preview-black-america-001",
@@ -31,7 +33,9 @@
       "summary": "Community leaders call for investment in clean energy training.",
       "link": "https://www.blackenterprise.com/",
       "publishedAt": "2026-10-28T05:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "DISCOVERY"
     },
     {
       "id": "pilot-caribbean-roofs-001",
@@ -50,7 +54,10 @@
       "imagePath": "assets/jamaica-roofs-recovery-illustration.jpg",
       "imageStatus": "IMAGE_FALLBACK_ONLY",
       "imageRights": "Afrodescendant Ali editorial illustration; not documentary photography.",
-      "fixture": false
+      "fixture": false,
+      "recordType": "authored_story",
+      "editorialStage": "ORIGINAL_DRAFT",
+      "articleFormat": "news_brief"
     },
     {
       "id": "pilot-africa-ebola-001",
@@ -69,7 +76,10 @@
       "imagePath": "assets/kenya-ebola-quarantine-completion-editorial-illustration.jpg",
       "imageStatus": "GENERATED_EDITORIAL_ILLUSTRATION",
       "imageRights": "Afrodescendant Ali generated editorial illustration; conceptual, not documentary photography.",
-      "fixture": false
+      "fixture": false,
+      "recordType": "authored_story",
+      "editorialStage": "ORIGINAL_DRAFT",
+      "articleFormat": "news_brief"
     },
     {
       "id": "preview-afro-latin-america-001",
@@ -82,7 +92,9 @@
       "summary": "Local initiatives are transforming public space and reducing risk.",
       "link": "https://mundonegro.es/",
       "publishedAt": "2026-10-28T02:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "DISCOVERY"
     },
     {
       "id": "preview-afro-europe-001",
@@ -95,7 +107,9 @@
       "summary": "New partnerships aim to grow sustainable trade and innovation.",
       "link": "https://afropean.com/",
       "publishedAt": "2026-10-28T00:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "DISCOVERY"
     },
     {
       "id": "preview-indian-ocean-001",
@@ -108,7 +122,9 @@
       "summary": "Regional alliances call for fairer access to climate insurance.",
       "link": "https://diasporaafrica.org/",
       "publishedAt": "2026-10-27T23:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "DISCOVERY"
     },
     {
       "id": "queue-candidate-001",
@@ -121,7 +137,9 @@
       "summary": "Not rendered in the approved preview surface.",
       "link": "https://example.com/pending",
       "publishedAt": "2026-10-28T03:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "PENDING_REVIEW"
     },
     {
       "id": "queue-held-001",
@@ -134,8 +152,10 @@
       "summary": "Not rendered until a direct source link is available.",
       "link": "",
       "publishedAt": "2026-10-28T01:00:00Z",
-      "fixture": true
+      "fixture": true,
+      "recordType": "feed_lead",
+      "editorialStage": "PENDING_REVIEW"
     }
   ],
-  "note": "Private preview fixture only. The Jamaica recovery story and Kenya public-health brief are original drafts prepared for owner review; neither is a production story and neither authorizes publication."
+  "note": "Feed records are discovery leads only. Jamaica and Kenya are authored Afrodescendant Ali drafts prepared for owner review; neither is approved for publication. Public rendering requires an authored_story record plus every explicit publication gate."
 }
