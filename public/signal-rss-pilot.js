@@ -12,7 +12,8 @@
     caribbean: "Caribbean",
     "afro-latin-america": "Afro-Latin America",
     "afro-europe": "Afro-Europe",
-    "indian-ocean-global": "Indian Ocean"
+    "indian-ocean-global": "Indian Ocean",
+    "black-world": "Black World"
   };
 
   const thumbByLane = {
@@ -21,8 +22,40 @@
     caribbean: "thumb-caribbean",
     "afro-latin-america": "thumb-latin",
     "afro-europe": "thumb-europe",
-    "indian-ocean-global": "thumb-ocean"
+    "indian-ocean-global": "thumb-ocean",
+    "black-world": "thumb-america"
   };
+
+  const publishedAnalysis = [
+    {
+      lane: "africa",
+      label: "Implementation brief",
+      title: "AfCFTA Is an Implementation Problem Before It Is a Profit Opportunity",
+      summary: "An implementation brief on why readiness matters more than opportunity headlines.",
+      link: "/analysis/afcfta-implementation-watch/issue-001/"
+    },
+    {
+      lane: "africa",
+      label: "Explainer",
+      title: "What Is AfCFTA?",
+      summary: "An explainer on the continental trade framework and the practical challenge of implementation.",
+      link: "/analysis/afcfta-implementation-watch/explainers/what-is-afcfta/"
+    },
+    {
+      lane: "black-world",
+      label: "Media systems",
+      title: "Why Black Media Needs Controlled Source Infrastructure",
+      summary: "How source control supports verification, rights decisions, and human editorial judgment.",
+      link: "/analysis/black-world-source-infrastructure/"
+    },
+    {
+      lane: "black-world",
+      label: "Historical memory",
+      title: "How Black Scholars Restored Kush to the History of the Ancient World",
+      summary: "A source-grounded account of Black historical recovery and what the record supports.",
+      link: "/analysis/black-scholars-kush-historical-recovery/"
+    }
+  ];
 
   const timeLabel = (value) => {
     if (!value) return "time unknown";
@@ -58,15 +91,48 @@
     laneLabel[item.lane] &&
     isDirectHttpsLink(item.link);
 
-  const emptyState = () => {
+  const analysisCardFor = (item) => {
     const article = document.createElement("article");
-    article.className = "story-grid-empty";
-    const heading = document.createElement("h3");
-    heading.textContent = "No stories cleared for public display";
-    const message = document.createElement("p");
-    message.textContent = "Feed items remain leads until original reporting is reviewed and approved for publication.";
-    article.append(heading, message);
+    article.className = "story-card";
+    article.dataset.contentType = "published-analysis";
+
+    const thumb = document.createElement("div");
+    thumb.className = "story-thumb " + (thumbByLane[item.lane] || "thumb-africa");
+    const thumbLabel = document.createElement("span");
+    thumbLabel.textContent = laneLabel[item.lane];
+    thumb.appendChild(thumbLabel);
+
+    const body = document.createElement("div");
+    body.className = "story-card-body";
+
+    const kicker = document.createElement("p");
+    kicker.className = "story-kicker";
+    kicker.textContent = item.label + " · Published analysis";
+
+    const title = document.createElement("h3");
+    const link = document.createElement("a");
+    link.href = item.link;
+    link.textContent = item.title;
+    title.appendChild(link);
+
+    const summary = document.createElement("p");
+    summary.textContent = item.summary;
+
+    const source = document.createElement("p");
+    source.className = "card-source";
+    source.textContent = "Afrodescendant Ali · Public analysis";
+
+    body.append(kicker, title, summary, source);
+    article.append(thumb, body);
     return article;
+  };
+
+  const renderPublishedAnalysis = () => {
+    grid.replaceChildren(...publishedAnalysis.map(analysisCardFor));
+    if (status) {
+      status.dataset.state = "published-analysis";
+      status.textContent = "Published analysis · " + publishedAnalysis.length + " public pieces · Signal queue remains review-only.";
+    }
   };
 
   const cardFor = (item) => {
@@ -111,12 +177,14 @@
 
   const renderItems = (items) => {
     const approved = items.filter(isPubliclyApproved);
-    grid.replaceChildren(...(approved.length ? approved.map(cardFor) : [emptyState()]));
-    if (status) {
-      status.dataset.state = "ready";
-      status.textContent = approved.length
-        ? "Signal · " + approved.length + (approved.length === 1 ? " owner-approved story" : " owner-approved stories")
-        : "No stories are currently cleared for public display. Editorial review is required before homepage placement.";
+    if (approved.length) {
+      grid.replaceChildren(...approved.map(cardFor));
+      if (status) {
+        status.dataset.state = "ready";
+        status.textContent = "Signal · " + approved.length + (approved.length === 1 ? " owner-approved story" : " owner-approved stories");
+      }
+    } else {
+      renderPublishedAnalysis();
     }
   };
 
@@ -130,10 +198,10 @@
       renderItems(payload.items);
     })
     .catch(() => {
-      grid.replaceChildren(emptyState());
+      renderPublishedAnalysis();
       if (status) {
-        status.dataset.state = "error";
-        status.textContent = "Editorial queue unavailable. No external items are displayed.";
+        status.dataset.state = "published-analysis";
+        status.textContent = "Editorial queue unavailable. Existing public analysis shown; no external items are displayed.";
       }
     });
 
