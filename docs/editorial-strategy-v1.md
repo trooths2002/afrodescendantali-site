@@ -24,7 +24,7 @@ RSS and other feeds are discovery inputs. They are never presented as Afrodescen
 - **Editorial Method** — sources, methods, corrections, rights, and feedback.
 - **Work with Ali** — a secondary commercial pathway that does not displace the public-information mission.
 
-Review-stage work is private editorial material. It must not appear in the public homepage, archive, sitemap, search-facing feeds, or customer-facing filters.
+Review-stage work is editorial material, not public publication. It must not appear in the public homepage, archive, sitemap, search-facing feeds, or customer-facing filters. The existing noindex draft routes remain a separate access-control follow-up.
 
 ## Editorial lifecycle
 
