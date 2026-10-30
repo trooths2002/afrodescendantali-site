@@ -132,7 +132,7 @@
     grid.replaceChildren(...publishedAnalysis.map(analysisCardFor));
     if (status) {
       status.dataset.state = "published-analysis";
-      status.textContent = "Published analysis · " + publishedAnalysis.length + " public pieces · Signal queue remains review-only.";
+      status.textContent = "Stories, analysis, and context from across the Black World.";
     }
   };
 
@@ -202,7 +202,7 @@
       renderPublishedAnalysis();
       if (status) {
         status.dataset.state = "published-analysis";
-        status.textContent = "Editorial queue unavailable. Existing public analysis shown; no external items are displayed.";
+        status.textContent = "Our published analysis is available while the newsroom is refreshed.";
       }
     });
 
