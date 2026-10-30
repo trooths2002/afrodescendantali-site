@@ -77,6 +77,7 @@
   // Public display needs every explicit approval/publication gate. Preview state alone never qualifies.
   const isPubliclyApproved = (item) =>
     item &&
+    item.recordType === "authored_story" &&
     item.fixture === false &&
     item.approvalState === "approved_for_publication" &&
     item.editorialApproval === "OWNER_APPROVED_FOR_PUBLICATION" &&
