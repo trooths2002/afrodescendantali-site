@@ -39,9 +39,9 @@ jobs:
           npm run test:lhci
           LIGHTHOUSE_STATUS=$?
 
-          printf "\nQA status: content=%s html=%s playwright=%s lighthouse=%s\n"             "$CONTENT_STATUS" "$HTML_STATUS" "$PLAYWRIGHT_STATUS" "$LIGHTHOUSE_STATUS"
+          printf "QA status: content=%s html=%s playwright=%s lighthouse=%s\n" "$CONTENT_STATUS" "$HTML_STATUS" "$PLAYWRIGHT_STATUS" "$LIGHTHOUSE_STATUS"
 
-          if [ "$CONTENT_STATUS" -ne 0 ] || [ "$HTML_STATUS" -ne 0 ] ||              [ "$PLAYWRIGHT_STATUS" -ne 0 ] || [ "$LIGHTHOUSE_STATUS" -ne 0 ]; then
+          if [ "$CONTENT_STATUS" -ne 0 ] || [ "$HTML_STATUS" -ne 0 ] || [ "$PLAYWRIGHT_STATUS" -ne 0 ] || [ "$LIGHTHOUSE_STATUS" -ne 0 ]; then
             exit 1
           fi
 
