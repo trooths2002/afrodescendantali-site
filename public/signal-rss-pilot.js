@@ -97,7 +97,7 @@
     body.className = "story-card-body";
     const kicker = document.createElement("p");
     kicker.className = "story-kicker";
-    kicker.textContent = laneLabel[item.lane] + " · Monitored signal · " + timeLabel(item.publishedAt);
+    kicker.textContent = laneLabel[item.lane] + " · We’re tracking · " + timeLabel(item.publishedAt);
     const title = document.createElement("h3");
     const link = document.createElement("a");
     link.href = item.link;
@@ -109,7 +109,7 @@
     summary.textContent = item.summary || "Open the original publisher for the source report.";
     const source = document.createElement("p");
     source.className = "card-source";
-    source.textContent = item.sourceName + " · Source link · Not an Afrodescendant Ali article";
+    source.textContent = item.sourceName + " · Read the original · Not an Afrodescendant Ali article";
     body.append(kicker, title, summary, source);
     article.append(thumb, body);
     return article;
@@ -120,7 +120,7 @@
     grid.replaceChildren(...signals.map(signalCardFor), ...publishedAnalysis.map(analysisCardFor));
     if (status) {
       status.dataset.state = "ready";
-      status.textContent = "Source-linked coverage · " + signals.length + " monitored signals · original reporting follows editorial review";
+      status.textContent = "Stories we’re tracking · " + signals.length + " source links · original reporting follows editorial review";
     }
   };
 
