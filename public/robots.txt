@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /news-design-preview/
+Disallow: /signal-rss-pilot.js
 
 Sitemap: https://www.afrodescendantali.com/sitemap.xml
