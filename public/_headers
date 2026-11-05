@@ -15,3 +15,12 @@
 
 /services/specialist-intelligence-automation/service.json
   Link: <https://www.afrodescendantali.com/services/specialist-intelligence-automation>; rel="describedby"
+
+
+/news-design-preview/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/signal-rss-pilot.js
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
