@@ -58,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         window.afrodescendantAliLeadEvents = window.afrodescendantAliLeadEvents || [];
         window.afrodescendantAliLeadEvents.push(payload);
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', 'lead_intent_click', {
+                lead_name: name,
+                lead_path: window.location.pathname,
+                lead_detail: JSON.stringify(detail || {})
+            });
+        }
         if (Array.isArray(window.dataLayer)) {
             window.dataLayer.push(payload);
         }

@@ -106,6 +106,8 @@ img { display: block; max-width: 100%; }
 .tag-row span { padding: .35rem .7rem; border: 1px solid rgba(242,234,223,.35); border-radius: 999px; color: var(--paper); font-size: .68rem; }
 .primary-button { color: var(--paper); background: rgba(173,94,53,.82); }
 .primary-button:hover { background: var(--copper); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; margin-top: 1.15rem; }
+.hero-offer-button { margin: 0; }
 .image-credit { position: absolute; right: 1.1rem; bottom: .8rem; margin: 0; max-width: 18rem; color: rgba(242,234,223,.7); font-size: .63rem; text-align: right; }
 
 .briefing-card { position: relative; overflow: hidden; }
@@ -238,6 +240,8 @@ img { display: block; max-width: 100%; }
   .hero-grid { width: 100%; padding-top: 0; }
   .hero-story { border-inline: 0; }
   .hero-image { min-height: 36rem; }
+  .hero-actions { align-items: stretch; flex-direction: column; }
+  .hero-actions > a { width: 100%; }
   .hero-copy { left: 1.15rem; right: 1.15rem; bottom: 2.2rem; }
   .hero-copy h1 { max-width: 10ch; font-size: clamp(2.55rem, 12vw, 4rem); }
   .hero-deck { font-size: 1.05rem; }
