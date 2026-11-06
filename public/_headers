@@ -24,3 +24,6 @@
 /signal-rss-pilot.js
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: no-store
+/work/monitoring
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
