@@ -140,6 +140,8 @@ const report = {
     mode: payload.mode,
     retrievedAt: payload.retrievedAt || null,
     sourcesChecked: sources.length,
+    eligibleFeeds: payload.eligibleFeeds || sources.length,
+    skippedFeeds: payload.skippedFeeds || 0,
     reachableSources: reachableSources.length,
     sourceFailures: sourceFailures.length,
     itemsRetrieved: payload.itemsRetrieved || 0,
