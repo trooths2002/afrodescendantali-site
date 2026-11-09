@@ -20,7 +20,8 @@ const requiredFiles = [
   "coverage/index.html",
   "coverage/indian-ocean.html",
   "standards.html",
-  "corrections.html"
+  "corrections.html",
+  "news.html"
 ];
 
 async function walk(dir, files = []) {
@@ -52,6 +53,12 @@ for (const file of textFiles) {
     failures.push(`${file.replace(publicRoot, "public/")}: unanchored relative freshness label`);
   }
 }
+
+const newsroom = await readFile(join(publicRoot, "news.html"), "utf8");
+if (!/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(newsroom)) failures.push("review newsroom must remain noindex until release approval");
+if (!/Daily review/i.test(newsroom)) failures.push("newsroom is missing its daily review status");
+if (!/Last desk review:/i.test(newsroom)) failures.push("newsroom is missing an explicit desk-review date");
+if (!/Source note/i.test(newsroom)) failures.push("newsroom is missing explicit source-note labeling");
 
 const index = await readFile(join(publicRoot, "index.html"), "utf8");
 if (!/<link[^>]+rel=["']canonical["'][^>]+>/i.test(index)) failures.push("homepage is missing a canonical link");
