@@ -33,3 +33,7 @@
 /work/monitoring
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: no-store
+
+/news.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
