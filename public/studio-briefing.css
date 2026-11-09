@@ -278,7 +278,10 @@ img { display: block; max-width: 100%; }
 }
 
 .briefs-section { padding: 3rem 0 1rem; border-top: 1px solid rgba(227,164,84,.2); }
-.briefs-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem; }
+.briefs-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .8rem; }
+@media (max-width: 1100px) {
+  .briefs-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
 .brief-card { min-height: 15rem; padding: 1.15rem; border: 1px solid rgba(227,164,84,.32); background: #1a1410; display: flex; flex-direction: column; justify-content: end; }
 .brief-card h3 { margin: 0 0 .6rem; max-width: 19ch; font: 1.55rem/1.04 var(--serif); }
 .brief-card h3 a:hover { color: var(--gold-2); }
