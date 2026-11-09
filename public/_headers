@@ -37,3 +37,7 @@
 /news.html
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: no-store
+
+/news
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
