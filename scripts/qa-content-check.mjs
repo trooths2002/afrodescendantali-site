@@ -18,7 +18,9 @@ const requiredFiles = [
   "robots.txt",
   "analysis/index.html",
   "coverage/index.html",
-  "coverage/indian-ocean.html"
+  "coverage/indian-ocean.html",
+  "standards.html",
+  "corrections.html"
 ];
 
 async function walk(dir, files = []) {
@@ -46,13 +48,26 @@ for (const file of textFiles) {
   for (const phrase of forbidden) {
     if (source.includes(phrase)) failures.push(`${file.replace(publicRoot, "public/")}: forbidden public phrase "${phrase}"`);
   }
+  if (/\b\d+\s*(?:s|m|h|d)\s+ago\b/i.test(source)) {
+    failures.push(`${file.replace(publicRoot, "public/")}: unanchored relative freshness label`);
+  }
 }
 
 const index = await readFile(join(publicRoot, "index.html"), "utf8");
 if (!/<link[^>]+rel=["']canonical["'][^>]+>/i.test(index)) failures.push("homepage is missing a canonical link");
 if (!/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*index/i.test(index)) failures.push("homepage is not explicitly indexable");
 if (!/<script[^>]+type=["']application\/ld\+json["']/i.test(index)) failures.push("homepage is missing JSON-LD structured data");
-if (/\b\d+\s*(?:s|m|h|d)\s+ago\b/i.test(index)) failures.push("homepage contains an unanchored relative freshness label; use an explicit source date/time");
+if (!/standards\.html/i.test(index)) failures.push("homepage is missing a visible editorial standards link");
+if (!/corrections\.html/i.test(index)) failures.push("homepage is missing a visible corrections link");
+if (!/Source note/i.test(index)) failures.push("homepage is missing explicit source-note labeling");
+
+for (const file of textFiles) {
+  const source = await readFile(file, "utf8");
+  if (/"@type"\s*:\s*"NewsArticle"/i.test(source)) {
+    if (!/"datePublished"\s*:/i.test(source)) failures.push(`${file.replace(publicRoot, "public/")}: NewsArticle is missing datePublished`);
+    if (!/"dateModified"\s*:/i.test(source)) failures.push(`${file.replace(publicRoot, "public/")}: NewsArticle is missing dateModified`);
+  }
+}
 
 const sitemap = await readFile(join(publicRoot, "sitemap.xml"), "utf8");
 for (const lane of ["sub-saharan-africa", "black-america", "black-caribbean", "afro-latino", "afro-europe", "indian-ocean"]) {
