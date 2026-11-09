@@ -69,6 +69,18 @@ for (const file of textFiles) {
   }
 }
 
+const briefsStart = index.indexOf('id="latest-briefs"');
+const briefsEnd = index.indexOf("</section>", briefsStart);
+const briefs = briefsStart >= 0 && briefsEnd > briefsStart ? index.slice(briefsStart, briefsEnd) : "";
+const briefDates = ["2026-11-08", "2026-11-04", "2026-11-03"];
+let previousDatePosition = -1;
+for (const date of briefDates) {
+  const position = briefs.indexOf(date);
+  if (position < 0) failures.push(`homepage latest briefs is missing date: ${date}`);
+  if (position >= 0 && position <= previousDatePosition) failures.push("homepage latest briefs are not ordered newest first");
+  if (position >= 0) previousDatePosition = position;
+}
+
 const sitemap = await readFile(join(publicRoot, "sitemap.xml"), "utf8");
 for (const lane of ["sub-saharan-africa", "black-america", "black-caribbean", "afro-latino", "afro-europe", "indian-ocean"]) {
   if (!sitemap.toLowerCase().includes(`/coverage/${lane}`)) failures.push(`sitemap is missing coverage lane: ${lane}`);
