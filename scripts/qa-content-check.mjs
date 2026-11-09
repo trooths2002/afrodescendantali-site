@@ -52,6 +52,7 @@ const index = await readFile(join(publicRoot, "index.html"), "utf8");
 if (!/<link[^>]+rel=["']canonical["'][^>]+>/i.test(index)) failures.push("homepage is missing a canonical link");
 if (!/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*index/i.test(index)) failures.push("homepage is not explicitly indexable");
 if (!/<script[^>]+type=["']application\/ld\+json["']/i.test(index)) failures.push("homepage is missing JSON-LD structured data");
+if (/\b\d+\s*(?:s|m|h|d)\s+ago\b/i.test(index)) failures.push("homepage contains an unanchored relative freshness label; use an explicit source date/time");
 
 const sitemap = await readFile(join(publicRoot, "sitemap.xml"), "utf8");
 for (const lane of ["sub-saharan-africa", "black-america", "black-caribbean", "afro-latino", "afro-europe", "indian-ocean"]) {
