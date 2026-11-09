@@ -72,7 +72,7 @@ for (const file of textFiles) {
 const briefsStart = index.indexOf('id="latest-briefs"');
 const briefsEnd = index.indexOf("</section>", briefsStart);
 const briefs = briefsStart >= 0 && briefsEnd > briefsStart ? index.slice(briefsStart, briefsEnd) : "";
-const briefDates = ["2026-11-08", "2026-11-04", "2026-11-03"];
+const briefDates = ["2026-11-08", "2026-11-06", "2026-11-04", "2026-11-03"];
 let previousDatePosition = -1;
 for (const date of briefDates) {
   const position = briefs.indexOf(date);
