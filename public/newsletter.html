@@ -37,7 +37,7 @@
       <form class="reader-form" data-newsletter-preview>
         <label class="sr-only" for="newsletter-email">Email address</label>
         <input id="newsletter-email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="newsletter-note">
-        <button class="primary-button" type="button" data-newsletter-submit>Test the reader path</button>
+        <button class="primary-button" type="button" data-newsletter-submit onclick="document.getElementById('newsletter-note').textContent='Preview only: no email address was sent or stored. The receiver and double-opt-in flow still need to be connected.';">Test the reader path</button>
       </form>
       <p id="newsletter-note" class="reader-state" data-newsletter-state>Preview only — no address is sent or stored in this build.</p>
       <p class="tip-note">The receiver, consent record, double-opt-in, unsubscribe, privacy notice, and retention rules still need owner-approved configuration.</p>
