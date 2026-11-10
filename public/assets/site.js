@@ -21,12 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
         { label: 'Analysis', href: '/analysis/' },
         { label: 'Video & audio', href: '/media.html' },
         { label: 'Briefings', href: '/starter-brief.html' },
+        { label: 'Newsletter', href: '/newsletter.html' },
+        { label: 'Search', href: '/search.html' },
+        { label: 'Send a tip', href: '/tips.html' },
         { label: 'Work with us', href: '/work.html' },
         { label: 'About', href: '/about.html' }
     ];
     var footerNavLinks = [
         { label: 'How we report', href: '/standards.html' },
         { label: 'Corrections', href: '/corrections.html' },
+        { label: 'Newsletter', href: '/newsletter.html' },
+        { label: 'Search', href: '/search.html' },
+        { label: 'Send a tip', href: '/tips.html' },
         { label: 'Contact', href: '/contact.html' }
     ];
     var renderLinks = function (selector, links, className) {
@@ -80,6 +86,26 @@ document.addEventListener('DOMContentLoaded', function () {
         syncForViewport();
     }
 
+    var recordAudienceEvent = function (name, detail) {
+        var payload = {
+            event: 'ada_audience_event',
+            name: name,
+            detail: detail || {},
+            path: window.location.pathname,
+            ts: new Date().toISOString()
+        };
+        window.afrodescendantAliAudienceEvents = window.afrodescendantAliAudienceEvents || [];
+        window.afrodescendantAliAudienceEvents.push(payload);
+        if (typeof window.gtag === 'function') { window.gtag('event', name, detail || {}); }
+        if (Array.isArray(window.dataLayer)) { window.dataLayer.push(payload); }
+        try {
+            var key = 'afrodescendantAliAudienceEvents';
+            var current = JSON.parse(window.localStorage.getItem(key) || '[]');
+            current.push(payload);
+            window.localStorage.setItem(key, JSON.stringify(current.slice(-200)));
+        } catch (error) {}
+    };
+
     var trackLeadIntent = function (name, detail) {
         var payload = {
             event: 'lead_intent_click',
@@ -129,10 +155,91 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll('[data-lead-track]').forEach(function (item) {
         item.addEventListener('click', function () {
-            trackLeadIntent(item.getAttribute('data-lead-track'), {
+            var leadName = item.getAttribute('data-lead-track');
+            trackLeadIntent(leadName, {
                 text: (item.textContent || '').trim(),
                 href: item.getAttribute('href') || ''
             });
+            if (/starter_brief|briefing/i.test(leadName || '')) { recordAudienceEvent('briefing_request', { lead_name: leadName }); }
+            if (/qualified_inquiry|contact_mailto/i.test(leadName || '')) { recordAudienceEvent('qualified_inquiry', { lead_name: leadName }); }
+        });
+    });
+
+    document.querySelectorAll('[data-story-link]').forEach(function (item) {
+        item.addEventListener('click', function () {
+            var parent = item.closest('[data-story-id]');
+            recordAudienceEvent('story_click', {
+                story_id: parent ? parent.getAttribute('data-story-id') : '',
+                story_type: parent ? parent.getAttribute('data-story-type') : '',
+                region: parent ? parent.getAttribute('data-region') : ''
+            });
+        });
+    });
+
+    document.querySelectorAll('[data-story-id]').forEach(function (item) {
+        recordAudienceEvent('story_impression', {
+            story_id: item.getAttribute('data-story-id') || '',
+            story_type: item.getAttribute('data-story-type') || '',
+            region: item.getAttribute('data-region') || ''
+        });
+    });
+
+    document.querySelectorAll('[data-publication-meta]').forEach(function (item) {
+        recordAudienceEvent('publishing_cadence_snapshot', {
+            last_reviewed: item.getAttribute('data-last-reviewed') || '',
+            cadence: item.getAttribute('data-cadence') || '',
+            visible_stories: item.getAttribute('data-visible-stories') || ''
+        });
+    });
+
+    try {
+        var visitKey = 'afrodescendantAliReaderVisits';
+        var visits = Number(window.localStorage.getItem(visitKey) || '0') + 1;
+        window.localStorage.setItem(visitKey, String(visits));
+        recordAudienceEvent(visits > 1 ? 'reader_returning' : 'reader_first_visit', { visit_count: visits });
+    } catch (error) {}
+
+    document.querySelectorAll('[data-site-search]').forEach(function (root) {
+        var form = root.querySelector('[data-search-form]');
+        var input = root.querySelector('[data-search-input]');
+        var items = Array.prototype.slice.call(root.querySelectorAll('[data-search-item]'));
+        var status = root.querySelector('[data-search-status]');
+        var empty = root.querySelector('[data-search-empty]');
+        if (!form || !input) { return; }
+        var apply = function (query) {
+            var needle = (query || '').trim().toLowerCase();
+            var visible = 0;
+            items.forEach(function (item) {
+                var show = !needle || (item.textContent || '').toLowerCase().indexOf(needle) !== -1;
+                item.hidden = !show;
+                if (show) { visible += 1; }
+            });
+            if (status) { status.textContent = needle ? visible + ' result' + (visible === 1 ? '' : 's') + ' for “' + query.trim() + '”' : 'Showing ' + visible + ' newsroom items'; }
+            if (empty) { empty.classList.toggle('is-visible', visible === 0); }
+        };
+        var params = new URLSearchParams(window.location.search);
+        var initial = params.get('q') || '';
+        input.value = initial;
+        apply(initial);
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var query = input.value.trim();
+            var url = new URL(window.location.href);
+            if (query) { url.searchParams.set('q', query); } else { url.searchParams.delete('q'); }
+            window.history.replaceState({}, '', url);
+            apply(query);
+            recordAudienceEvent('search_query', { query_length: query.length, result_count: items.filter(function (item) { return !item.hidden; }).length });
+        });
+    });
+
+    document.querySelectorAll('[data-newsletter-preview]').forEach(function (root) {
+        var button = root.querySelector('[data-newsletter-submit]');
+        var state = root.querySelector('[data-newsletter-state]');
+        if (!button) { return; }
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            if (state) { state.textContent = 'Preview only: no email address was sent or stored. The receiver and double-opt-in flow still need to be connected.'; }
+            recordAudienceEvent('newsletter_interest', { state: 'preview_only' });
         });
     });
 
