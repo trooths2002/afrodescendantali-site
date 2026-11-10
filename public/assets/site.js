@@ -15,6 +15,38 @@
 })(window, document, 'G-11B3ZP3DH2');
 
 document.addEventListener('DOMContentLoaded', function () {
+    var readerNavLinks = [
+        { label: 'News', href: '/news.html' },
+        { label: 'Regions', href: '/coverage/' },
+        { label: 'Analysis', href: '/analysis/' },
+        { label: 'Video & audio', href: '/media.html' },
+        { label: 'Briefings', href: '/starter-brief.html' },
+        { label: 'Work with us', href: '/work.html' },
+        { label: 'About', href: '/about.html' }
+    ];
+    var footerNavLinks = [
+        { label: 'How we report', href: '/standards.html' },
+        { label: 'Corrections', href: '/corrections.html' },
+        { label: 'Contact', href: '/contact.html' }
+    ];
+    var renderLinks = function (selector, links, className) {
+        document.querySelectorAll(selector).forEach(function (root) {
+            root.textContent = '';
+            links.forEach(function (item) {
+                var link = document.createElement('a');
+                link.href = item.href;
+                link.textContent = item.label;
+                link.className = className;
+                if (window.location.pathname === item.href || (item.href === '/news.html' && window.location.pathname === '/news')) {
+                    link.setAttribute('aria-current', 'page');
+                }
+                root.appendChild(link);
+            });
+        });
+    };
+    renderLinks('[data-nav-menu]', readerNavLinks, 'site-nav-link');
+    renderLinks('[data-footer-nav]', footerNavLinks, 'footer-nav-link');
+
     var toggle = document.querySelector('[data-nav-toggle]');
     var menu = document.querySelector('[data-nav-menu]');
 
@@ -208,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (main) {
             var cta = document.createElement('section');
             cta.className = 'briefing-cta-layer';
-            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Briefing layer</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this analysis applied to a real decision?</h2><p>Send the decision, deadline, audience, and context. The inquiry can be routed to a paid briefing, custom memo, or media intelligence audit.</p></div><a href="/contact" class="site-button site-button--light" data-lead-track="global_qualified_inquiry">Start a qualified inquiry</a></div>';
+            cta.innerHTML = '<div class="briefing-cta-inner"><div><span class="eyebrow mb-4 block">Need a clear next move?</span><h2 class="serif-display text-3xl md:text-4xl font-light leading-tight mb-4">Need this work applied to a real decision?</h2><p>Tell us the outcome, deadline, audience, and context. We can route the request to a briefing, memo, or media and intelligence review.</p></div><a href="/contact" class="site-button site-button--light" data-lead-track="global_qualified_inquiry">Work with us</a></div>';
             main.appendChild(cta);
             cta.querySelectorAll('[data-lead-track]').forEach(function (item) {
                 item.addEventListener('click', function () { trackLeadIntent(item.getAttribute('data-lead-track'), { text: (item.textContent || '').trim(), href: item.getAttribute('href') || '' }); });
