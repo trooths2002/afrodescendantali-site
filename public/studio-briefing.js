@@ -185,4 +185,44 @@
       recordAudienceEvent("newsletter_interest", { state: "preview_only" });
     });
   });
+  const emailAddress = "info@afrodescendantali.com";
+  const buildMailto = (subject, body) => {
+    const params = [];
+    if (subject) params.push("subject=" + encodeURIComponent(subject));
+    if (body) params.push("body=" + encodeURIComponent(body));
+    return "mailto:" + emailAddress + (params.length ? "?" + params.join("&") : "");
+  };
+
+  document.querySelectorAll("[data-email-link]").forEach((item) => {
+    const subject = item.getAttribute("data-email-subject") || "";
+    const body = item.getAttribute("data-email-body") || "";
+    item.href = buildMailto(subject, body);
+    if (item.hasAttribute("data-email-text")) item.textContent = emailAddress;
+  });
+
+  document.querySelectorAll("[data-tip-helper]").forEach((root) => {
+    const type = root.querySelector("[data-tip-type]");
+    const objective = root.querySelector("[data-tip-objective]");
+    const deadline = root.querySelector("[data-tip-followup]");
+    const mailto = root.querySelector("[data-tip-mailto]");
+    if (!type || !objective || !deadline || !mailto) return;
+    const updateMailto = () => {
+      const body = [
+        "Tip type: " + (type.value || "News tip"),
+        "",
+        "What should the newsroom know?",
+        objective.value || "[Add the lead, document, or source concern.]",
+        "",
+        "How can we follow up?",
+        deadline.value || "[Add a safe reply route or write anonymous.]"
+      ].join("\n");
+      mailto.href = buildMailto("Newsroom tip", body);
+    };
+    [type, objective, deadline].forEach((field) => {
+      field.addEventListener("input", updateMailto);
+      field.addEventListener("change", updateMailto);
+    });
+    updateMailto();
+  });
+
 })();
