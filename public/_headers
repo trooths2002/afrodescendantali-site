@@ -1,3 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: SAMEORIGIN
+
 /services/manifest.json
   Link: <https://www.afrodescendantali.com/services>; rel="describedby"
 
@@ -15,3 +21,23 @@
 
 /services/specialist-intelligence-automation/service.json
   Link: <https://www.afrodescendantali.com/services/specialist-intelligence-automation>; rel="describedby"
+
+
+/news-design-preview/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/signal-rss-pilot.js
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+/work/monitoring
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/news.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/news
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store

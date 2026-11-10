@@ -47,7 +47,8 @@ if (!args.has("--allow-readonly-fetch")) {
   process.exit(2);
 }
 
-const feeds = manifest.feeds.filter((feed) => feed.enabled && (feed.status === "reviewed" || feed.status === "reviewed-link-only" || feed.status === "candidate" || feed.status === "candidate-restored"));
+// Fail closed: unresolved candidate feeds never enter the network fetch path.
+const feeds = manifest.feeds.filter((feed) => feed.enabled && ["reviewed", "reviewed-link-only"].includes(feed.status));
 const feedById = new Map(feeds.map((feed) => [feed.id, feed]));
 const retrievedAt = new Date().toISOString();
 const results = [];
@@ -115,6 +116,8 @@ console.log(JSON.stringify({
   publishAutomatically: false,
   retrievedAt,
   sourcesChecked: results.length,
+  eligibleFeeds: feeds.length,
+  skippedFeeds: manifest.feeds.length - feeds.length,
   itemsRetrieved: allItems.length,
   uniqueItems: uniqueItems.length,
   lanes: laneSummary,
