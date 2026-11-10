@@ -613,3 +613,16 @@ img { display: block; max-width: 100%; }
   .search-form .primary-button, .reader-form button { width: 100%; }
   .audience-section { padding: 2.7rem 0; }
 }
+
+/* Intermediate-width navigation */
+@media (max-width: 980px) and (min-width: 761px) {
+  .header-inner { width: calc(100% - 1.2rem); gap: .8rem; }
+  .brand { min-width: 0; flex: 1; }
+  .brand-name { font-size: 1.2rem; }
+  .brand-tagline { font-size: .52rem; letter-spacing: .12em; }
+  .desktop-nav, .support-button { display: none; }
+  .header-actions { gap: .7rem; }
+  .menu-toggle { display: inline-flex; }
+  .mobile-menu[hidden] { display: none; }
+  .mobile-menu:not([hidden]) { display: grid; }
+}
