@@ -1,0 +1,40 @@
+name: Signal RSS discovery
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the source manifest
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run parser tests
+        run: node --test scripts/rss-pilot.test.mjs
+
+      - name: Run bounded metadata-only discovery
+        env:
+          SIGNAL_PARENT_EXECUTION_ID: EXE-20261120-016-ADN-SIGNAL-FIVE-STORY-PRODUCTION-RSS
+          SIGNAL_AUTOMATION_RUN_ID: GHA-${{ github.run_id }}
+        run: node scripts/rss-pilot.mjs --fetch --allow-readonly-fetch > rss-review-queue.json
+
+      - name: Upload review queue artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: signal-rss-review-${{ github.run_id }}
+          path: rss-review-queue.json
+          if-no-files-found: warn
+          retention-days: 14

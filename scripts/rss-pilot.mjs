@@ -22,6 +22,8 @@ import {
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const manifest = JSON.parse(await fs.readFile(path.resolve(here, "../data/rss-coverage-feeds.json"), "utf8"));
+const parentExecutionId = process.env.SIGNAL_PARENT_EXECUTION_ID || manifest.executionId;
+const automationRunId = process.env.SIGNAL_AUTOMATION_RUN_ID || null;
 const args = new Set(process.argv.slice(2));
 
 if (!args.has("--fetch")) {
@@ -30,7 +32,8 @@ if (!args.has("--fetch")) {
     return result;
   }, {});
   console.log(JSON.stringify({
-    executionId: "EXE-20261028-007",
+    executionId: parentExecutionId,
+    automationRunId,
     mode: "MANIFEST_INSPECTION",
     activation: manifest.activation,
     publishAutomatically: manifest.defaults.publishAutomatically,
@@ -109,7 +112,8 @@ const laneSummary = markUniqueAndPending(summarizeLanes(allItems), uniqueItems);
 const reviewQueue = uniqueItems.map((item) => toReviewItem(item, feedById.get(item.sourceId), retrievedAt));
 
 console.log(JSON.stringify({
-  executionId: "EXE-20261028-007",
+  executionId: parentExecutionId,
+    automationRunId,
   mode: "READ_ONLY_REVIEW_QUEUE",
   activation: manifest.activation,
   publishAutomatically: false,

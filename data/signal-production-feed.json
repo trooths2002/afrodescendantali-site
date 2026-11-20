@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "project": "PM-009 — AfrodescendantAli.com",
+  "executionId": "EXE-20261120-016-ADN-SIGNAL-FIVE-STORY-PRODUCTION-RSS",
+  "decisionId": "DEC-20261120-006-ADN-SIGNAL-FIVE-STORY-PRODUCTION-RSS",
+  "status": "PUBLISHED",
+  "activation": "PRODUCTION_RSS_ENABLED",
+  "automaticPublication": false,
+  "externalFeedDiscovery": "REVIEW_ONLY",
+  "generatedAt": "2026-11-20T12:21:41Z",
+  "siteUrl": "https://www.afrodescendantali.com/",
+  "feedUrl": "https://www.afrodescendantali.com/rss.xml",
+  "items": [
+    {
+      "id": "signal-20261120-seychelles-cruise-tourism",
+      "slug": "seychelles-cruise-tourism",
+      "lane": "indian-ocean-global",
+      "laneLabel": "Indian Ocean",
+      "format": "NEWS_BRIEF",
+      "title": "Seychelles pushes cruise tourism toward higher value, lower impact",
+      "description": "Seychelles is steering its cruise-tourism strategy toward higher-value visits, local business participation and managed environmental impact.",
+      "path": "/news/seychelles-cruise-tourism.html",
+      "publishedAt": "2026-11-20T12:21:41Z",
+      "sourceLabels": [
+        "Seychelles News Agency",
+        "Tourism Seychelles"
+      ]
+    },
+    {
+      "id": "signal-20261120-mauritius-cassava-ai-mou",
+      "slug": "mauritius-cassava-ai-mou",
+      "lane": "indian-ocean-global",
+      "laneLabel": "Indian Ocean",
+      "format": "NEWS_BRIEF",
+      "title": "Mauritius Telecom and Cassava sign AI partnership MoU",
+      "description": "Mauritius Telecom and Cassava Technologies signed an AI partnership MoU at Africa Tech Festival 2026.",
+      "path": "/news/mauritius-cassava-ai-mou.html",
+      "publishedAt": "2026-11-20T12:21:41Z",
+      "sourceLabels": [
+        "Mauritius Telecom",
+        "Top FM"
+      ]
+    },
+    {
+      "id": "signal-20261120-michel-zecler-trial",
+      "slug": "michel-zecler-trial",
+      "lane": "afro-europe",
+      "laneLabel": "Afro-Europe",
+      "format": "NEWS_BRIEF",
+      "title": "Michel Zecler trial examines violence and police reports",
+      "description": "A French court is examining the 2020 arrest of Michel Zecler, disputed police accounts and video evidence.",
+      "path": "/news/michel-zecler-trial.html",
+      "publishedAt": "2026-11-20T12:21:41Z",
+      "sourceLabels": [
+        "AFP",
+        "Le Monde"
+      ]
+    },
+    {
+      "id": "signal-20261120-trinidad-third-country-deportees",
+      "slug": "trinidad-third-country-deportees",
+      "lane": "caribbean",
+      "laneLabel": "Caribbean",
+      "format": "NEWS_BRIEF",
+      "title": "Trinidad and Tobago says it is not negotiating to receive US third-country deportees",
+      "description": "Trinidad and Tobago's government says it is not negotiating to receive US-deported third-country nationals.",
+      "path": "/news/trinidad-third-country-deportees.html",
+      "publishedAt": "2026-11-20T12:21:41Z",
+      "sourceLabels": [
+        "TTT News",
+        "Trinidad and Tobago Parliament"
+      ]
+    },
+    {
+      "id": "signal-20261120-africa-conflict-prevention-analysis",
+      "slug": "africa-conflict-prevention-analysis",
+      "lane": "africa",
+      "laneLabel": "Africa",
+      "format": "ANALYSIS",
+      "title": "Analysis: Africa’s conflict-prevention gap is action after warning",
+      "description": "Opinion: Prof. Adeoye O. Akinola argues that African conflict prevention depends on acting on early-warning signals.",
+      "path": "/news/africa-conflict-prevention-analysis.html",
+      "publishedAt": "2026-11-20T12:21:41Z",
+      "sourceLabels": [
+        "SABC News"
+      ]
+    }
+  ]
+}
