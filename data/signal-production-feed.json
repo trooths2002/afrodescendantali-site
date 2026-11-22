@@ -1,89 +1,179 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "project": "PM-009 — AfrodescendantAli.com",
-  "executionId": "EXE-20261120-016-ADN-SIGNAL-FIVE-STORY-PRODUCTION-RSS",
-  "decisionId": "DEC-20261120-006-ADN-SIGNAL-FIVE-STORY-PRODUCTION-RSS",
+  "executionId": "EXE-20261122-002-ADN-SIGNAL-RELEASE-PREP",
+  "decisionId": "DEC-20261122-002-ADN-SIGNAL-RELEASE",
+  "assetId": "AST-20261122-002-ADN-SIGNAL-RELEASE-MANIFEST",
   "status": "PUBLISHED",
   "activation": "PRODUCTION_RSS_ENABLED",
   "automaticPublication": false,
   "externalFeedDiscovery": "REVIEW_ONLY",
-  "generatedAt": "2026-11-20T12:21:41Z",
+  "generatedAt": "2026-11-22T10:45:00+03:00",
   "siteUrl": "https://www.afrodescendantali.com/",
   "feedUrl": "https://www.afrodescendantali.com/rss.xml",
+  "approval": "Owner authorization received in current turn for the seven-story latest-news release; bounded by source, claim, rights, accessibility, manifest and QA gates.",
   "items": [
     {
-      "id": "signal-20261120-seychelles-cruise-tourism",
-      "slug": "seychelles-cruise-tourism",
-      "lane": "indian-ocean-global",
-      "laneLabel": "Indian Ocean",
+      "id": "signal-20261122-gambia-decarbonisation-roadmap",
+      "slug": "gambia-decarbonisation-roadmap",
+      "lane": "africa",
+      "laneLabel": "Africa",
       "format": "NEWS_BRIEF",
-      "title": "Seychelles pushes cruise tourism toward higher value, lower impact",
-      "description": "Seychelles is steering its cruise-tourism strategy toward higher-value visits, local business participation and managed environmental impact.",
-      "path": "/news/seychelles-cruise-tourism.html",
-      "publishedAt": "2026-11-20T12:21:41Z",
+      "title": "Gambia receives roadmap for national decarbonisation toward 2063",
+      "description": "An AU-backed roadmap sets out long-term emissions and renewable-energy targets for The Gambia; implementation and financing remain the test.",
+      "path": "/news/gambia-decarbonisation-roadmap.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
       "sourceLabels": [
-        "Seychelles News Agency",
-        "Tourism Seychelles"
-      ]
+        "African Union / AFREC"
+      ],
+      "sourceRefs": [
+        "https://au.int/en/pressreleases/20261119/afrec-hands-over-gambias-national-decarbonisation-roadmap-2063"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-01",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Schematic editorial map and data graphic for The Gambia’s decarbonisation roadmap, showing solar, energy and long-term planning pathways.",
+      "status": "APPROVED_FOR_PUBLISH"
     },
     {
-      "id": "signal-20261120-mauritius-cassava-ai-mou",
-      "slug": "mauritius-cassava-ai-mou",
-      "lane": "indian-ocean-global",
-      "laneLabel": "Indian Ocean",
-      "format": "NEWS_BRIEF",
-      "title": "Mauritius Telecom and Cassava sign AI partnership MoU",
-      "description": "Mauritius Telecom and Cassava Technologies signed an AI partnership MoU at Africa Tech Festival 2026.",
-      "path": "/news/mauritius-cassava-ai-mou.html",
-      "publishedAt": "2026-11-20T12:21:41Z",
-      "sourceLabels": [
-        "Mauritius Telecom",
-        "Top FM"
-      ]
-    },
-    {
-      "id": "signal-20261120-michel-zecler-trial",
-      "slug": "michel-zecler-trial",
-      "lane": "afro-europe",
-      "laneLabel": "Afro-Europe",
-      "format": "NEWS_BRIEF",
-      "title": "Michel Zecler trial examines violence and police reports",
-      "description": "A French court is examining the 2020 arrest of Michel Zecler, disputed police accounts and video evidence.",
-      "path": "/news/michel-zecler-trial.html",
-      "publishedAt": "2026-11-20T12:21:41Z",
-      "sourceLabels": [
-        "AFP",
-        "Le Monde"
-      ]
-    },
-    {
-      "id": "signal-20261120-trinidad-third-country-deportees",
-      "slug": "trinidad-third-country-deportees",
+      "id": "signal-20261122-haiti-q3-human-rights",
+      "slug": "haiti-q3-human-rights-report",
       "lane": "caribbean",
       "laneLabel": "Caribbean",
       "format": "NEWS_BRIEF",
-      "title": "Trinidad and Tobago says it is not negotiating to receive US third-country deportees",
-      "description": "Trinidad and Tobago's government says it is not negotiating to receive US-deported third-country nationals.",
-      "path": "/news/trinidad-third-country-deportees.html",
-      "publishedAt": "2026-11-20T12:21:41Z",
+      "title": "UN report documents 1,167 killings in Haiti in third quarter",
+      "description": "A BINUH report covering 1 July–30 September records 1,167 people killed and 459 injured amid gang attacks, security operations and self-defence incidents.",
+      "path": "/news/haiti-q3-human-rights-report.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
       "sourceLabels": [
-        "TTT News",
-        "Trinidad and Tobago Parliament"
-      ]
+        "UN / BINUH"
+      ],
+      "sourceRefs": [
+        "https://dppa.un.org/sites/default/files/2026-11/Q3%202026%20-%20ENGLISH.pdf",
+        "https://transcripts.un.org/en/briefing/geneva/2026-11-17"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-02",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Editorial data graphic summarizing the BINUH third-quarter Haiti report, with counts for people killed and injured and a schematic map motif.",
+      "status": "APPROVED_FOR_PUBLISH"
     },
     {
-      "id": "signal-20261120-africa-conflict-prevention-analysis",
-      "slug": "africa-conflict-prevention-analysis",
-      "lane": "africa",
-      "laneLabel": "Africa",
-      "format": "ANALYSIS",
-      "title": "Analysis: Africa’s conflict-prevention gap is action after warning",
-      "description": "Opinion: Prof. Adeoye O. Akinola argues that African conflict prevention depends on acting on early-warning signals.",
-      "path": "/news/africa-conflict-prevention-analysis.html",
-      "publishedAt": "2026-11-20T12:21:41Z",
+      "id": "signal-20261122-sheriff-287g-elections",
+      "slug": "sheriff-elections-287g-agreements",
+      "lane": "black-america",
+      "laneLabel": "Black America",
+      "format": "NEWS_BRIEF",
+      "title": "Sheriff elections put local immigration agreements in focus",
+      "description": "An AP review of roughly 250 sheriff races examined where 287(g) agreements featured in campaigns; official and local results show the issue’s local political stakes.",
+      "path": "/news/sheriff-elections-287g-agreements.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
       "sourceLabels": [
-        "SABC News"
-      ]
+        "Associated Press",
+        "Maryland State Archives",
+        "WUNC"
+      ],
+      "sourceRefs": [
+        "https://apnews.com/article/immigration-sheriffs-elections-ice-agreements-0bca2d5add91614df4cbe1b92df8f5e4",
+        "https://msa.maryland.gov/msa/mdmanual/36loc/fr/elect/general/fr2026.html",
+        "https://www.wunc.org/politics/2026-11-04/alamance-county-voters-oust-sheriff-terry-johnson"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-03",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Schematic U.S. election and immigration-enforcement graphic showing a ballot, a local sheriff badge and a 287(g) agreement label.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
+    {
+      "id": "signal-20261122-southern-organizers-political-bench",
+      "slug": "southern-organizers-political-bench",
+      "lane": "black-america",
+      "laneLabel": "Black America",
+      "format": "ANALYSIS",
+      "title": "Analysis: Southern organizers are building a longer Black political bench",
+      "description": "Across Georgia, Tennessee, South Carolina and Mississippi, organizers are trying to connect voter registration to candidate recruitment and durable local power.",
+      "path": "/news/southern-organizers-political-bench.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
+      "sourceLabels": [
+        "Axios"
+      ],
+      "sourceRefs": [
+        "https://www.axios.com/2026/11/21/black-organizers-southern-political-bench"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-04",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Schematic map-style illustration connecting Georgia, Tennessee, South Carolina and Mississippi to a candidate-recruitment pathway.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
+    {
+      "id": "signal-20261122-brazil-black-women-violence-income",
+      "slug": "brazil-black-women-violence-income",
+      "lane": "afro-latin-america",
+      "laneLabel": "Afro-Latin America",
+      "format": "NEWS_BRIEF",
+      "title": "Brazil data shows income gap among Black women reporting violence",
+      "description": "A data update reported by Agência Brasil says 73% of Black women reporting domestic or family violence lived in households earning up to two minimum wages, compared with 54% of white women.",
+      "path": "/news/brazil-black-women-violence-income.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
+      "sourceLabels": [
+        "Agência Brasil"
+      ],
+      "sourceRefs": [
+        "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/renda-de-73-de-negras-vitimas-de-violencia-e-de-ate-2-salarios-minimo"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-05",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Editorial bar chart comparing the reported 73 percent and 54 percent household-income figures for Black and white women in Brazil’s violence data update.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
+    {
+      "id": "signal-20261122-michel-zecler-sentencing",
+      "slug": "michel-zecler-sentencing",
+      "lane": "afro-europe",
+      "laneLabel": "Afro-Europe",
+      "format": "NEWS_BRIEF",
+      "title": "French court recognizes racist nature of violence in Michel Zecler case",
+      "description": "Three officers received prison sentences in the case arising from the 2020 beating of the Black music producer; the court’s reasoning remains the key legal record.",
+      "path": "/news/michel-zecler-sentencing.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
+      "sourceLabels": [
+        "Associated Press",
+        "Le Monde"
+      ],
+      "sourceRefs": [
+        "https://apnews.com/article/police-racism-case-zecler-black-man-7d0ab2336e474f115f866ea7adf7b3e4",
+        "https://www.lemonde.fr/en/france/article/2026/11/21/police-beating-of-black-music-producer-court-recognizes-racist-nature-of-violence-sentences-officers-to-prison-raising-hopes-for-new-legal-precedent_6785803_7.html"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-06",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Editorial courtroom timeline graphic for the Michel Zecler case, connecting the 2020 arrest, video evidence and the reported 2026 court ruling.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
+    {
+      "id": "signal-20261122-mauritius-indian-ocean-health-forum",
+      "slug": "mauritius-indian-ocean-health-forum",
+      "lane": "indian-ocean-global",
+      "laneLabel": "Indian Ocean",
+      "format": "NEWS_BRIEF",
+      "title": "Mauritius hosts Indian Ocean regional health forum",
+      "description": "The 22nd colloquium on HIV, hepatitis and addictions brought regional health stakeholders together in Quatre-Bornes from 18 to 20 November.",
+      "path": "/news/mauritius-indian-ocean-health-forum.html",
+      "publishedAt": "2026-11-22T10:45:00+03:00",
+      "sourceLabels": [
+        "Mauritius Government Information Service"
+      ],
+      "sourceRefs": [
+        "https://govmu.org/EN/newsgov/SitePages/Minister-Bachoo-reaffirms-Mauritius%E2%80%99-Strong-Determination-to-Work-Closely-with-Regional-Partners.aspx",
+        "https://gisnews.govmu.org/GalleryFile/GetCommuniqueDocument?communiquesFileName=22%C3%A8me+Colloque+de+l%E2%80%99oc%C3%A9an+Indien+sur+le+VIH%2C+les+h%C3%A9patites+et+les+addictions.pdf&newsId=3035"
+      ],
+      "visualAssetId": "AST-20261122-002-IMG-07",
+      "rightsState": "cleared_original",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Schematic Indian Ocean network graphic connecting Mauritius with regional health partners around a forum on HIV, hepatitis and addictions.",
+      "status": "APPROVED_FOR_PUBLISH"
     }
   ]
 }

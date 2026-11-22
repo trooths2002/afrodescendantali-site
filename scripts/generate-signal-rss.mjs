@@ -15,8 +15,8 @@ if (manifest.status !== "PUBLISHED" || manifest.activation !== "PRODUCTION_RSS_E
 if (manifest.automaticPublication !== false || manifest.externalFeedDiscovery !== "REVIEW_ONLY") {
   throw new Error("Production feed may contain only approved pages; automatic publication must remain disabled");
 }
-if (!Array.isArray(manifest.items) || manifest.items.length !== 5) {
-  throw new Error("Expected exactly five approved production feed items");
+if (!Array.isArray(manifest.items) || manifest.items.length !== 7) {
+  throw new Error("Expected exactly seven approved production feed items");
 }
 
 const escapeXml = (value) => String(value)

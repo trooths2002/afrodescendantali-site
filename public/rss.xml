@@ -1,51 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Signal — Afrodescendant Ali</title>
-    <link>https://www.afrodescendantali.com/</link>
-    <description>Published stories from Afrodescendant Ali’s Signal desk across the Black World.</description>
-    <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 12:21:41 GMT</lastBuildDate>
-    <atom:link href="https://www.afrodescendantali.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>Seychelles pushes cruise tourism toward higher value, lower impact</title>
-      <link>https://www.afrodescendantali.com/news/seychelles-cruise-tourism.html</link>
-      <guid isPermaLink="true">https://www.afrodescendantali.com/news/seychelles-cruise-tourism.html</guid>
-      <description>Seychelles is steering its cruise-tourism strategy toward higher-value visits, local business participation and managed environmental impact.</description>
-      <pubDate>Fri, 20 Nov 2026 12:21:41 GMT</pubDate>
-      <category>Indian Ocean</category>
-    </item>
-    <item>
-      <title>Mauritius Telecom and Cassava sign AI partnership MoU</title>
-      <link>https://www.afrodescendantali.com/news/mauritius-cassava-ai-mou.html</link>
-      <guid isPermaLink="true">https://www.afrodescendantali.com/news/mauritius-cassava-ai-mou.html</guid>
-      <description>Mauritius Telecom and Cassava Technologies signed an AI partnership MoU at Africa Tech Festival 2026.</description>
-      <pubDate>Fri, 20 Nov 2026 12:21:41 GMT</pubDate>
-      <category>Indian Ocean</category>
-    </item>
-    <item>
-      <title>Michel Zecler trial examines violence and police reports</title>
-      <link>https://www.afrodescendantali.com/news/michel-zecler-trial.html</link>
-      <guid isPermaLink="true">https://www.afrodescendantali.com/news/michel-zecler-trial.html</guid>
-      <description>A French court is examining the 2020 arrest of Michel Zecler, disputed police accounts and video evidence.</description>
-      <pubDate>Fri, 20 Nov 2026 12:21:41 GMT</pubDate>
-      <category>Afro-Europe</category>
-    </item>
-    <item>
-      <title>Trinidad and Tobago says it is not negotiating to receive US third-country deportees</title>
-      <link>https://www.afrodescendantali.com/news/trinidad-third-country-deportees.html</link>
-      <guid isPermaLink="true">https://www.afrodescendantali.com/news/trinidad-third-country-deportees.html</guid>
-      <description>Trinidad and Tobago&apos;s government says it is not negotiating to receive US-deported third-country nationals.</description>
-      <pubDate>Fri, 20 Nov 2026 12:21:41 GMT</pubDate>
-      <category>Caribbean</category>
-    </item>
-    <item>
-      <title>Analysis: Africa’s conflict-prevention gap is action after warning</title>
-      <link>https://www.afrodescendantali.com/news/africa-conflict-prevention-analysis.html</link>
-      <guid isPermaLink="true">https://www.afrodescendantali.com/news/africa-conflict-prevention-analysis.html</guid>
-      <description>Opinion: Prof. Adeoye O. Akinola argues that African conflict prevention depends on acting on early-warning signals.</description>
-      <pubDate>Fri, 20 Nov 2026 12:21:41 GMT</pubDate>
-      <category>Africa</category>
-    </item>
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Signal — Afrodescendant Ali</title><link>https://www.afrodescendantali.com/</link><description>Published stories from Afrodescendant Ali’s Signal desk across the Black World.</description><language>en</language><lastBuildDate>Sun, 22 Nov 2026 07:45:00 GMT</lastBuildDate><atom:link href="https://www.afrodescendantali.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item><title>Gambia receives roadmap for national decarbonisation toward 2063</title><link>https://www.afrodescendantali.com/news/gambia-decarbonisation-roadmap.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/gambia-decarbonisation-roadmap.html</guid><description>An AU-backed roadmap sets out long-term emissions and renewable-energy targets for The Gambia; implementation and financing remain the test.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Africa</category></item>
+    <item><title>UN report documents 1,167 killings in Haiti in third quarter</title><link>https://www.afrodescendantali.com/news/haiti-q3-human-rights-report.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/haiti-q3-human-rights-report.html</guid><description>A BINUH report covering 1 July–30 September records 1,167 people killed and 459 injured amid gang attacks, security operations and self-defence incidents.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Caribbean</category></item>
+    <item><title>Sheriff elections put local immigration agreements in focus</title><link>https://www.afrodescendantali.com/news/sheriff-elections-287g-agreements.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/sheriff-elections-287g-agreements.html</guid><description>An AP review of roughly 250 sheriff races examined where 287(g) agreements featured in campaigns; official and local results show the issue’s local political stakes.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Black America</category></item>
+    <item><title>Analysis: Southern organizers are building a longer Black political bench</title><link>https://www.afrodescendantali.com/news/southern-organizers-political-bench.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/southern-organizers-political-bench.html</guid><description>Across Georgia, Tennessee, South Carolina and Mississippi, organizers are trying to connect voter registration to candidate recruitment and durable local power.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Black America</category></item>
+    <item><title>Brazil data shows income gap among Black women reporting violence</title><link>https://www.afrodescendantali.com/news/brazil-black-women-violence-income.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/brazil-black-women-violence-income.html</guid><description>A data update reported by Agência Brasil says 73% of Black women reporting domestic or family violence lived in households earning up to two minimum wages, compared with 54% of white women.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Afro-Latin America</category></item>
+    <item><title>French court recognizes racist nature of violence in Michel Zecler case</title><link>https://www.afrodescendantali.com/news/michel-zecler-sentencing.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/michel-zecler-sentencing.html</guid><description>Three officers received prison sentences in the case arising from the 2020 beating of the Black music producer; the court’s reasoning remains the key legal record.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Afro-Europe</category></item>
+    <item><title>Mauritius hosts Indian Ocean regional health forum</title><link>https://www.afrodescendantali.com/news/mauritius-indian-ocean-health-forum.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/mauritius-indian-ocean-health-forum.html</guid><description>The 22nd colloquium on HIV, hepatitis and addictions brought regional health stakeholders together in Quatre-Bornes from 18 to 20 November.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Indian Ocean</category></item>
+</channel></rss>
