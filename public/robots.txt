@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://www.afrodescendantali.com/sitemap.xml
+# Protected preview — EXE-20261122-026-ADN-CLEAN-DESIGN-PREVIEW
