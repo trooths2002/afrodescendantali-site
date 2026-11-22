@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Gambia receives roadmap for national decarbonisation toward 2063</title>
+<desc id="d">Text-free schematic editorial map and data graphic for The Gambia’s decarbonisation roadmap, showing solar, energy and long-term planning pathways. The visual is conceptual and not documentary photography or an engineering map.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1820"/><stop offset="1" stop-color="#102b34"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#173442"/><stop offset="1" stop-color="#11232e"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<rect x="26" y="26" width="1548" height="848" rx="26" fill="url(#panel)" stroke="#2b5360" stroke-width="2"/>
+<path d="M133.33333333333334 0V900 M266.6666666666667 0V900 M400 0V900 M533.3333333333334 0V900 M666.6666666666666 0V900 M800 0V900 M933.3333333333334 0V900 M1066.6666666666667 0V900 M1200 0V900 M1333.3333333333333 0V900 M1466.6666666666667 0V900" stroke="#1f3a45" stroke-width="1" opacity=".7"/>
+<path d="M0 128.57142857142858H1600 M0 257.14285714285717H1600 M0 385.7142857142857H1600 M0 514.2857142857143H1600 M0 642.8571428571429H1600 M0 771.4285714285714H1600" stroke="#1f3a45" stroke-width="1" opacity=".7"/>
+<g fill="none" stroke="#8fe4de" stroke-width="4" opacity=".95">
+  <path d="M260 300 C390 140 620 165 690 310 C770 145 1060 130 1310 290 C1190 430 1045 470 880 430 C665 520 445 470 260 300Z"/>
+  <path d="M420 300 L1120 270 M520 220 L980 390 M700 180 L760 430 M880 190 L930 410" stroke="#ef6c5b" stroke-width="5"/>
+</g>
+<g opacity=".92">
+  <rect x="92" y="570" width="370" height="106" rx="14" fill="#142735" stroke="#2b5360"/>
+  <path d="M122 606h170 M122 631h230 M122 656h110" stroke="#8fe4de" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="392" cy="622" r="20" fill="none" stroke="#ef6c5b" stroke-width="5"/>
+  <rect x="488" y="570" width="370" height="106" rx="14" fill="#142735" stroke="#2b5360"/>
+  <circle cx="610" cy="623" r="25" fill="none" stroke="#f7f1e6" stroke-width="5"/>
+  <path d="M610 582v82 M569 623h82 M581 594l58 58 M639 594l-58 58" stroke="#8fe4de" stroke-width="4" stroke-linecap="round"/>
+  <rect x="884" y="570" width="370" height="106" rx="14" fill="#142735" stroke="#2b5360"/>
+  <path d="M920 648l52-34 52 18 58-43 65 28" fill="none" stroke="#ef6c5b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="920" cy="648" r="7" fill="#8fe4de"/><circle cx="1024" cy="632" r="7" fill="#8fe4de"/><circle cx="1082" cy="589" r="7" fill="#8fe4de"/><circle cx="1147" cy="617" r="7" fill="#8fe4de"/>
+</g>
+<path d="M92 790 C300 742 502 824 712 781 S1125 730 1436 792" fill="none" stroke="#3f7380" stroke-width="3" opacity=".65"/>
+<circle cx="92" cy="790" r="6" fill="#ef6c5b"/><circle cx="1436" cy="792" r="6" fill="#8fe4de"/>
+</svg>
