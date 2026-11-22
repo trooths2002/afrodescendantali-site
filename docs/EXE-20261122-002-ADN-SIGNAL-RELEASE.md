@@ -1,13 +1,13 @@
 # EXE-20261122-002 — Afrodescendant Ali seven-story latest-news release
 
-Status: PROTECTED PREVIEW STAGED / PRODUCTION GATE PENDING
+Status: PRODUCTION PUBLISHED AND VERIFIED
 Date: 2026-11-22 (Africa/Nairobi)
 Decision: DEC-20261122-002-ADN-SIGNAL-RELEASE
 Manifest: AST-20261122-002-ADN-SIGNAL-RELEASE-MANIFEST
 
 ## Scope
 
-Seven current Signal stories were prepared for the homepage and static RSS release:
+Seven current Signal stories were published to the homepage and static RSS release:
 
 1. Africa — Gambia decarbonisation roadmap
 2. Caribbean — Haiti Q3 human-rights report
@@ -26,12 +26,21 @@ Seven current Signal stories were prepared for the homepage and static RSS relea
 - The manifest contains seven unique article IDs, paths and visual asset IDs.
 - Static RSS contains the seven approved internal story pages.
 - External feed discovery remains review-only; automatic publication remains false.
-- Preview branch uses noindex/no-store headers and Disallow in robots.txt. These preview protections must be removed only in the production release commit after preview QA.
+- Preview branch used noindex/no-store headers and Disallow in robots.txt. Those protections were removed only in the separate production release commit after preview QA.
 
-## Required QA
+## QA and production evidence
 
-- Validate JSON, unique IDs, feed generator check and XML.
-- Verify all story and visual paths exist.
-- Verify protected preview headers and robots behavior.
-- Run reachable desktop/mobile route QA and check positive image dimensions, alt text, broken-image state and overflow.
-- Confirm the production manifest exactly matches the approved release before merging.
+- JSON, unique IDs, feed-generator checks and XML were verified.
+- All seven story routes and visual paths were included in the release manifest.
+- Protected preview headers and robots behavior were verified before production.
+- Reachable desktop/mobile route QA passed: homepage and all seven article routes returned 200; RSS returned 200 application/xml with seven items; robots.txt returned 200; no horizontal overflow; no empty alt text; no broken images.
+- Desktop QA used a 1005px viewport; mobile QA used a 390px viewport.
+- GitHub PR: https://github.com/trooths2002/afrodescendantali-site/pull/58
+- Production merge commit: e063426635bd74b7e2fec68f166d2b6cee2214f7
+- Cloudflare Pages deployment: 8cac397f-422b-4780-ac3c-f73457fc69ec
+- Live custom domain: https://www.afrodescendantali.com/
+- Drive release pack: https://docs.google.com/document/d/1iBdUJJ8Wf2UACYPxjOWqsypZ0FPWXKnLj1xTzfJw3tQ/edit?usp=drivesdk
+
+## Closeout
+
+Status is PASS. The production manifest matched the approved release, the live homepage served the seven current stories, static RSS contained exactly seven approved items, and external-feed discovery remained separate from automatic publication. The Drive release pack and canonical execution, decision, asset and learning records contain the detailed source, claim, rights, accessibility, timing and rollback evidence.
