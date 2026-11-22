@@ -333,3 +333,12 @@ img{display:block;max-width:100%}
   .rail-title{font-size:27px}
   .rail-body{max-height:330px}
 }
+
+
+/* Hero image — preserve the supplied wide editorial artwork on small screens */
+@media (max-width:540px){
+  .lead-art{height:auto;overflow:visible;background:#030709}
+  .lead-art img{display:block;width:100%;height:auto;min-height:0;object-fit:contain;filter:saturate(.8) contrast(1.06)}
+  .art-scrim{display:none}
+  .lead-story-copy{position:relative;inset:auto;width:100%;padding:18px 18px 22px;background:#030709}
+}
