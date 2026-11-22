@@ -1,3 +1,12 @@
+/*
+  Protected preview controls — EXE-20261122-026-ADN-CLEAN-DESIGN-PREVIEW
+  Remove only from the preview branch; do not promote to production.
+*/
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  Referrer-Policy: no-referrer
+*/
 /services/manifest.json
   Link: <https://www.afrodescendantali.com/services>; rel="describedby"
 
