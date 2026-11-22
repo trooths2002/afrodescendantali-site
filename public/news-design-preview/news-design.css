@@ -270,3 +270,66 @@ img{display:block;max-width:100%}
   text-decoration-thickness: .08em;
   text-underline-offset: .12em;
 }
+
+/* African Markets & Exchanges — static source-directory module */
+.market-section{padding:0 0 34px}
+.market-section-heading{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:end;gap:28px;border-top:2px solid var(--ink);padding:13px 0 16px}
+.market-section-heading h2{margin:7px 0 0;font:400 34px/1 var(--serif);letter-spacing:-.04em}
+.market-intro{max-width:620px;margin:10px 0 0;color:var(--muted);font:14px/1.35 var(--serif)}
+.market-disclaimer{max-width:450px;margin:0;color:var(--muted);font-size:10px;line-height:1.4}
+.market-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:11px}
+.market-card{display:flex;min-width:0;min-height:154px;flex-direction:column;padding:14px 13px 15px;border:1px solid var(--line);background:var(--paper)}
+.market-card:hover{border-color:var(--red)}
+.market-region{margin:0 0 8px;color:var(--red);font-size:9px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.market-card h3{margin:0 0 8px;font:400 20px/1.03 var(--serif);letter-spacing:-.03em}
+.market-card h3 a{text-decoration:none}
+.market-card h3 a:hover,.market-card h3 a:focus-visible{text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.12em}
+.market-card>p:not(.market-region):not(.market-source){margin:0;color:var(--muted);font:12px/1.35 var(--serif)}
+.market-source{margin:auto 0 0;padding-top:13px;color:var(--muted);font-size:8px;font-weight:800;line-height:1.25;letter-spacing:.06em;text-transform:uppercase}
+.market-card a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+@media (max-width:1100px){
+  .market-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:800px){
+  .market-section-heading{grid-template-columns:1fr;gap:10px}
+  .market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:540px){
+  .market-section{padding-bottom:28px}
+  .market-section-heading h2{font-size:31px}
+  .market-grid{grid-template-columns:1fr}
+  .market-card{min-height:0}
+}
+
+
+/* Latest Stories rail — compact disclosure with an internal scroll region */
+.live-rail{padding:0}
+.live-rail-details{padding:19px 21px 16px}
+.live-rail-details>summary{list-style:none;cursor:pointer;user-select:none}
+.live-rail-details>summary::-webkit-details-marker{display:none}
+.rail-title{display:flex;align-items:center;gap:10px;margin:0;font:400 30px/1 var(--serif);letter-spacing:-.03em}
+.rail-title .developing-dot{background:#ff6b5f}
+.rail-toggle{display:inline-flex;align-items:center;gap:6px;color:#c9c1b6;font-size:10px;font-weight:700;white-space:nowrap}
+.rail-toggle::before{content:"Expand"}
+.rail-toggle::after{content:"▾";font-size:13px;transform:rotate(-90deg)}
+.live-rail-details[open] .rail-toggle::before{content:"Collapse"}
+.live-rail-details[open] .rail-toggle::after{transform:none}
+.rail-body{max-height:min(500px,calc(100vh - 210px));margin-top:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:8px}
+.rail-actions{display:flex;justify-content:flex-end;margin:16px 0 0}
+.rail-actions a{color:#c9c1b6;font-size:10px;font-weight:700;white-space:nowrap}
+.rail-actions a:hover{color:#fff}
+.live-rail-details[open] .timeline{margin-top:16px}
+.live-rail-details[open] .timeline li:last-child{padding-bottom:0}
+.live-rail-details>summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media (max-width:1100px){
+  .rail-title{font-size:27px}
+  .rail-body{max-height:min(440px,calc(100vh - 190px))}
+}
+@media (max-width:800px){
+  .rail-body{max-height:360px}
+}
+@media (max-width:540px){
+  .live-rail-details{padding:17px}
+  .rail-title{font-size:27px}
+  .rail-body{max-height:330px}
+}
