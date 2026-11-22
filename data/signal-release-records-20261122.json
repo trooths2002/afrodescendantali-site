@@ -1,0 +1,450 @@
+{
+  "executionId": "EXE-20261122-002-ADN-SIGNAL-RELEASE-PREP",
+  "decisionId": "DEC-20261122-002-ADN-SIGNAL-RELEASE",
+  "manifestAssetId": "AST-20261122-002-ADN-SIGNAL-RELEASE-MANIFEST",
+  "project": "PM-009 — AfrodescendantAli.com",
+  "releaseDate": "2026-11-22",
+  "status": "PUBLISHED",
+  "automaticPublication": false,
+  "externalFeedDiscovery": "REVIEW_ONLY",
+  "rightsPolicy": "All seven visuals are original newsroom SVG data/illustrations; no publisher image or RSS enclosure was reused.",
+  "accessibilityPolicy": "Every story has non-empty alt text, a visible illustration/data label and a portrait-safe crop asset.",
+  "stories": [
+    {
+      "articleId": "signal-20261122-gambia-decarbonisation-roadmap",
+      "lane": "africa",
+      "state": "PUBLISHED",
+      "format": "NEWS_BRIEF",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-01-01",
+          "sourceName": "African Union / AFREC",
+          "directUrl": "https://au.int/en/pressreleases/20261119/afrec-hands-over-gambias-national-decarbonisation-roadmap-2063",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-01-01",
+          "summary": "What We Know",
+          "classification": "confirmed",
+          "wording": "The African Union’s African Energy Commission said on 19 November that it handed The Gambia a National Decarbonisation and Development Plan aligned with Agenda 2063. The release describes a roadmap covering seven sectors and nine priority actions.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-01-02",
+          "summary": "The numbers are projections",
+          "classification": "supported inference",
+          "wording": "According to the AU release, the plan models potential savings of $8.4 billion through 2063, a 90% reduction in energy-related emissions and a 70% solar share by 2030. Those figures are plan projections, not measured results.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-01-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "The practical test is whether the roadmap becomes a financed programme: grid access, renewable procurement, transport and land-use choices will determine what is delivered.",
+          "risk": "medium"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-01",
+        "hero": "public/assets/news/ADN-IMG-20261122-01-AFR-GAMBIA-DECARBONISATION-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-01-AFR-GAMBIA-DECARBONISATION-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali data illustration based on the African Union / AFREC release. The map and pathways are schematic, not a geographic or engineering map.",
+        "altText": "Schematic editorial map and data graphic for The Gambia’s decarbonisation roadmap, showing solar, energy and long-term planning pathways.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Recheck the AU/AFREC release and any implementation update before changing the projected figures, sector count or target dates.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": false,
+        "analysisLabel": false,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    },
+    {
+      "articleId": "signal-20261122-haiti-q3-human-rights",
+      "lane": "caribbean",
+      "state": "PUBLISHED",
+      "format": "NEWS_BRIEF",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-02-01",
+          "sourceName": "UN / BINUH Q3 2026 report",
+          "directUrl": "https://dppa.un.org/sites/default/files/2026-11/Q3%202026%20-%20ENGLISH.pdf",
+          "use": "attribution and claim support"
+        },
+        {
+          "sourceId": "SRC-20261122-02-02",
+          "sourceName": "UN Geneva briefing, 17 November 2026",
+          "directUrl": "https://transcripts.un.org/en/briefing/geneva/2026-11-17",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-02-01",
+          "summary": "What We Know",
+          "classification": "confirmed",
+          "wording": "The UN Integrated Office in Haiti (BINUH) report covers 1 July through 30 September 2026. It records 1,167 people killed and 459 injured in the reporting period.",
+          "risk": "high"
+        },
+        {
+          "claimId": "CLM-20261122-02-02",
+          "summary": "How the report classifies incidents",
+          "classification": "supported inference",
+          "wording": "The report attributes 45% of recorded incidents to gang attacks, 50% to security-force operations and 5% to self-defence or unorganized violence. It says 85% of recorded incidents were in the West Department.",
+          "risk": "high"
+        },
+        {
+          "claimId": "CLM-20261122-02-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "The figures describe reported and documented violence during a defined quarter. They do not by themselves settle responsibility for every death or measure all violence that went unreported.",
+          "risk": "high"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-02",
+        "hero": "public/assets/news/ADN-IMG-20261122-02-CAR-HAITI-Q3-HUMAN-RIGHTS-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-02-CAR-HAITI-Q3-HUMAN-RIGHTS-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali data illustration based on the UN/BINUH Q3 2026 report. It is a schematic summary, not an incident map or documentary scene.",
+        "altText": "Editorial data graphic summarizing the BINUH third-quarter Haiti report, with counts for people killed and injured and a schematic map motif.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Recheck the report’s methodology, reporting period and category definitions before changing any count or percentage. Keep all figures attributed to the report.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": true,
+        "analysisLabel": false,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    },
+    {
+      "articleId": "signal-20261122-sheriff-287g-elections",
+      "lane": "black-america",
+      "state": "PUBLISHED",
+      "format": "NEWS_BRIEF",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-03-01",
+          "sourceName": "Associated Press",
+          "directUrl": "https://apnews.com/article/immigration-sheriffs-elections-ice-agreements-0bca2d5add91614df4cbe1b92df8f5e4",
+          "use": "attribution and claim support"
+        },
+        {
+          "sourceId": "SRC-20261122-03-02",
+          "sourceName": "Maryland State Archives — 2026 general election returns",
+          "directUrl": "https://msa.maryland.gov/msa/mdmanual/36loc/fr/elect/general/fr2026.html",
+          "use": "attribution and claim support"
+        },
+        {
+          "sourceId": "SRC-20261122-03-03",
+          "sourceName": "WUNC — Alamance County sheriff election",
+          "directUrl": "https://www.wunc.org/politics/2026-11-04/alamance-county-voters-oust-sheriff-terry-johnson",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-03-01",
+          "summary": "What We Know",
+          "classification": "confirmed",
+          "wording": "The Associated Press reviewed roughly 250 2026 sheriff races involving 287(g) agreements and examined contests where cooperation with federal immigration enforcement was part of the campaign context.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-03-02",
+          "summary": "Local results",
+          "classification": "supported inference",
+          "wording": "Maryland’s official 2026 returns list Bickel with 67,164 votes and Jenkins with 45,939 in the contest reported in the research record. WUNC reported that Shannon Long defeated incumbent Terry Johnson in Alamance County, where the 287(g) programme was part of the local political debate.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-03-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "Sheriffs operate through local offices with discretion over cooperation and enforcement priorities. The results show political contestation around those choices, but they do not prove immigration policy alone determined any one outcome.",
+          "risk": "medium"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-03",
+        "hero": "public/assets/news/ADN-IMG-20261122-03-BAM-SHERIFF-ICE-ELECTIONS-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-03-BAM-SHERIFF-ICE-ELECTIONS-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali data illustration based on AP reporting, Maryland’s official returns and WUNC reporting. It does not depict an individual sheriff or election site.",
+        "altText": "Schematic U.S. election and immigration-enforcement graphic showing a ballot, a local sheriff badge and a 287(g) agreement label.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Confirm the county and office attached to each vote total before changing the Maryland comparison. Do not convert correlation or campaign emphasis into a causal claim.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": false,
+        "analysisLabel": false,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    },
+    {
+      "articleId": "signal-20261122-southern-organizers-political-bench",
+      "lane": "black-america",
+      "state": "PUBLISHED",
+      "format": "ANALYSIS",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-04-01",
+          "sourceName": "Axios",
+          "directUrl": "https://www.axios.com/2026/11/21/black-organizers-southern-political-bench",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-04-01",
+          "summary": "This is analysis",
+          "classification": "confirmed",
+          "wording": "Axios reports that Working Families Party organizers held recruitment events in Georgia, Tennessee, South Carolina and Mississippi. The organizers describe a strategy that links voter registration with identifying and supporting candidates.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-04-02",
+          "summary": "The strategic shift",
+          "classification": "supported inference",
+          "wording": "The argument is about infrastructure: a durable bench of local candidates and organizers may matter beyond one election cycle. That is an interpretation advanced by the organizers and reported by Axios, not a verified prediction of future victories.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-04-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "For Black political power, turnout and candidacy are related but different capacities. Recruitment can change who is available to contest local offices, while local institutions determine whether campaigns become durable.",
+          "risk": "medium"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-04",
+        "hero": "public/assets/news/ADN-IMG-20261122-04-BAM-SOUTHERN-POLITICAL-BENCH-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-04-BAM-SOUTHERN-POLITICAL-BENCH-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali editorial illustration based on Axios reporting. The lines and pathway are conceptual; they do not map actual campaign operations.",
+        "altText": "Schematic map-style illustration connecting Georgia, Tennessee, South Carolina and Mississippi to a candidate-recruitment pathway.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Keep the analysis label and attribution visible. Recheck the reported organizer activities and the methodology of any survey cited before adding quantitative conclusions.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": false,
+        "analysisLabel": true,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    },
+    {
+      "articleId": "signal-20261122-brazil-black-women-violence-income",
+      "lane": "afro-latin-america",
+      "state": "PUBLISHED",
+      "format": "NEWS_BRIEF",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-05-01",
+          "sourceName": "Agência Brasil",
+          "directUrl": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/renda-de-73-de-negras-vitimas-de-violencia-e-de-ate-2-salarios-minimo",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-05-01",
+          "summary": "What We Know",
+          "classification": "confirmed",
+          "wording": "Agência Brasil reported that 73% of Black women who reported domestic or family violence lived in households earning up to two minimum wages, compared with 54% of white women.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-05-02",
+          "summary": "The source and sample",
+          "classification": "supported inference",
+          "wording": "The report describes an updated data map drawing on interviews with 21,641 women, including 13,794 Black or mixed-race women, conducted from 16 May to 8 July 2025. The figures are presented as a distribution of reported cases and household income.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-05-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "Income is part of the context in which survivors seek safety and services. The comparison does not, by itself, establish that household income causes violence or explain every difference in reporting.",
+          "risk": "medium"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-05",
+        "hero": "public/assets/news/ADN-IMG-20261122-05-ALA-BRAZIL-BLACK-WOMEN-VIOLENCE-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-05-ALA-BRAZIL-BLACK-WOMEN-VIOLENCE-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali data illustration based on Agência Brasil’s report. The bars summarize reported percentages and are not a causal model.",
+        "altText": "Editorial bar chart comparing the reported 73 percent and 54 percent household-income figures for Black and white women in Brazil’s violence data update.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Recheck the underlying map and its definitions before changing the percentages, sample size or interview dates. Keep the non-causal limitation in the article.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": false,
+        "analysisLabel": false,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    },
+    {
+      "articleId": "signal-20261122-michel-zecler-sentencing",
+      "lane": "afro-europe",
+      "state": "PUBLISHED",
+      "format": "NEWS_BRIEF",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-06-01",
+          "sourceName": "Associated Press",
+          "directUrl": "https://apnews.com/article/police-racism-case-zecler-black-man-7d0ab2336e474f115f866ea7adf7b3e4",
+          "use": "attribution and claim support"
+        },
+        {
+          "sourceId": "SRC-20261122-06-02",
+          "sourceName": "Le Monde",
+          "directUrl": "https://www.lemonde.fr/en/france/article/2026/11/21/police-beating-of-black-music-producer-court-recognizes-racist-nature-of-violence-sentences-officers-to-prison-raising-hopes-for-new-legal-precedent_6785803_7.html",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-06-01",
+          "summary": "What We Know",
+          "classification": "confirmed",
+          "wording": "AP and Le Monde report that a Paris court recognized the racist nature of the violence against Michel Zecler and sentenced three police officers to prison terms. The case arose from his 2020 arrest and beating.",
+          "risk": "high"
+        },
+        {
+          "claimId": "CLM-20261122-06-02",
+          "summary": "The record matters",
+          "classification": "supported inference",
+          "wording": "Video evidence and disputed police accounts were central to the case. The reported ruling is a court finding in this case; it should not be generalized to every allegation of police racism or violence.",
+          "risk": "high"
+        },
+        {
+          "claimId": "CLM-20261122-06-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "The legal significance will depend on the written judgment, the treatment of racial motive and how any appeal proceeds. A sentence is a judicial outcome, not a substitute for reading the court’s reasoning.",
+          "risk": "high"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-06",
+        "hero": "public/assets/news/ADN-IMG-20261122-06-EUR-ZECLER-SENTENCING-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-06-EUR-ZECLER-SENTENCING-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali case graphic based on AP and Le Monde reporting. It is not a courtroom photograph and does not depict the officers or Mr. Zecler.",
+        "altText": "Editorial courtroom timeline graphic for the Michel Zecler case, connecting the 2020 arrest, video evidence and the reported 2026 court ruling.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Before changing the sentence details or legal characterization, recheck the judgment or a direct court/AFP readback. Keep the distinction between reported coverage and the court’s written reasoning.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": true,
+        "analysisLabel": false,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    },
+    {
+      "articleId": "signal-20261122-mauritius-indian-ocean-health-forum",
+      "lane": "indian-ocean-global",
+      "state": "PUBLISHED",
+      "format": "NEWS_BRIEF",
+      "sourceRegister": [
+        {
+          "sourceId": "SRC-20261122-07-01",
+          "sourceName": "Mauritius Government Information Service",
+          "directUrl": "https://govmu.org/EN/newsgov/SitePages/Minister-Bachoo-reaffirms-Mauritius%E2%80%99-Strong-Determination-to-Work-Closely-with-Regional-Partners.aspx",
+          "use": "attribution and claim support"
+        },
+        {
+          "sourceId": "SRC-20261122-07-02",
+          "sourceName": "Mauritius health colloquium communique",
+          "directUrl": "https://gisnews.govmu.org/GalleryFile/GetCommuniqueDocument?communiquesFileName=22%C3%A8me+Colloque+de+l%E2%80%99oc%C3%A9an+Indien+sur+le+VIH%2C+les+h%C3%A9patites+et+les+addictions.pdf&newsId=3035",
+          "use": "attribution and claim support"
+        }
+      ],
+      "claimRegister": [
+        {
+          "claimId": "CLM-20261122-07-01",
+          "summary": "What We Know",
+          "classification": "confirmed",
+          "wording": "Mauritius hosted the 22nd Indian Ocean colloquium on HIV, hepatitis and addictions from 18 to 20 November in Quatre-Bornes. Government information describes the theme as “bridging the gap” and frames the meeting as regional cooperation.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-07-02",
+          "summary": "Who was represented",
+          "classification": "supported inference",
+          "wording": "The communique names health stakeholders and delegates from Comoros, Madagascar, Mayotte, Rodrigues, Réunion and Seychelles alongside Mauritius.",
+          "risk": "medium"
+        },
+        {
+          "claimId": "CLM-20261122-07-03",
+          "summary": "Why It Matters",
+          "classification": "supported inference",
+          "wording": "A regional forum can create a place to compare public-health practice and service gaps across islands. The meeting itself is evidence of coordination, not proof that health outcomes or services have changed.",
+          "risk": "medium"
+        }
+      ],
+      "visual": {
+        "assetId": "AST-20261122-002-IMG-07",
+        "hero": "public/assets/news/ADN-IMG-20261122-07-IO-MAURITIUS-HEALTH-FORUM-hero.svg",
+        "portrait": "public/assets/news/ADN-IMG-20261122-07-IO-MAURITIUS-HEALTH-FORUM-4x5.svg",
+        "type": "original_svg_data_illustration",
+        "rightsState": "cleared_original",
+        "credit": "Afrodescendant Ali editorial illustration, 22 November 2026.",
+        "caption": "Original Afrodescendant Ali regional-health illustration based on Mauritius Government Information Service material. The lines are schematic and do not show travel routes or programme coverage.",
+        "altText": "Schematic Indian Ocean network graphic connecting Mauritius with regional health partners around a forum on HIV, hepatitis and addictions.",
+        "factualFit": "reviewed against the article source register",
+        "mobileCrop": "portrait-safe SVG viewBox reviewed"
+      },
+      "correctionPath": "Recheck the event dates, venue, participating territories and any later recommendations against the government release and communique.",
+      "review": {
+        "sourceReview": true,
+        "legalSensitivityReview": false,
+        "analysisLabel": false,
+        "accessibilityReview": true,
+        "rightsReview": true,
+        "approvedForPublish": true
+      }
+    }
+  ]
+}
