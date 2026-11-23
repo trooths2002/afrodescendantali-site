@@ -1801,3 +1801,11 @@
 .hero-art { background-color: #0d0d0d !important; }
 .hero-art img { mix-blend-mode: normal; }
 
+
+/* Protected SEO preview responsive hardening */
+.site-cta-row,
+.site-cta-stack { min-width: 0; }
+.site-button { min-width: 0; max-width: 100%; }
+@media (max-width: 767px) {
+  .site-button { white-space: normal; overflow-wrap: anywhere; }
+}
