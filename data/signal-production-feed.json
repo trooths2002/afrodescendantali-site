@@ -1,18 +1,90 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "project": "PM-009 — AfrodescendantAli.com",
-  "executionId": "EXE-20261122-002-ADN-SIGNAL-RELEASE-PREP",
-  "decisionId": "DEC-20261122-002-ADN-SIGNAL-RELEASE",
-  "assetId": "AST-20261122-002-ADN-SIGNAL-RELEASE-MANIFEST",
+  "executionId": "EXE-20261126-005-ADN-NEWS-RELEASE-PREP",
+  "decisionId": "DEC-20261126-005-ADN-NEWS-IMAGE-RECON",
+  "assetId": "AST-20261126-005-ADN-NEWS-IMAGE-RECON",
   "status": "PUBLISHED",
   "activation": "PRODUCTION_RSS_ENABLED",
   "automaticPublication": false,
   "externalFeedDiscovery": "REVIEW_ONLY",
-  "generatedAt": "2026-11-22T10:45:00+03:00",
+  "generatedAt": "2026-11-26T16:45:00+03:00",
   "siteUrl": "https://www.afrodescendantali.com/",
   "feedUrl": "https://www.afrodescendantali.com/rss.xml",
-  "approval": "Owner authorization received in current turn for the seven-story latest-news release; bounded by source, claim, rights, accessibility, manifest and QA gates.",
+  "approval": "Owner authorization received in the current turn for production publication of the three-story reconciled set; feed automation remains review-only and automatic external publication remains disabled.",
   "items": [
+    {
+      "id": "signal-20261126-haiti-operations-geography",
+      "slug": "haiti-operations-geography",
+      "lane": "caribbean",
+      "laneLabel": "Caribbean",
+      "format": "NEWS_BRIEF",
+      "title": "Security operations reported across several areas in Haiti",
+      "description": "AP, UN/BINUH and local reporting describe operations and violence in different parts of the country; the accounts are not merged into a single measure of success.",
+      "path": "/news/haiti-operations-geography.html",
+      "publishedAt": "2026-11-26T16:45:00+03:00",
+      "sourceLabels": [
+        "Associated Press",
+        "UN / BINUH",
+        "Ayiti Minute"
+      ],
+      "sourceRefs": [
+        "https://apnews.com/article/haiti-el-salvador-bukele-gangs-killed-a8e4b6c757733cc05d01a0f3809528b5",
+        "https://binuca.unmissions.org/sites/default/files/2026-11/Q3%202026%20-%20ENGLISH.pdf",
+        "https://ayitiminute.com/pnh-frg-operations-tabarre-martissant-matissant-novembre-2026/"
+      ],
+      "visualAssetId": "AST-20261126-IMG-02-RECON-HAITI-OPERATIONS-4X5",
+      "rightsState": "conditional_openai_terms_not_exclusive_clearance",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Text-free editorial map illustration of Haiti's capital and southern corridor with connected routes and abstract monitored zones, without depicting violence.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
+    {
+      "id": "signal-20261126-eclac-femicides-2025",
+      "slug": "eclac-femicides-2025",
+      "lane": "afro-latin-america",
+      "laneLabel": "Afro-Latin America",
+      "format": "NEWS_BRIEF",
+      "title": "ECLAC records at least 3,386 femicides across 27 countries and territories",
+      "description": "The regional observatory’s official 2025 measure separates recorded femicides from attempted or frustrated cases and does not support the conflicting 24-per-day claim.",
+      "path": "/news/eclac-femicides-2025.html",
+      "publishedAt": "2026-11-26T16:45:00+03:00",
+      "sourceLabels": [
+        "ECLAC Gender Equality Observatory"
+      ],
+      "sourceRefs": [
+        "https://oig.cepal.org/es/documento/boletin-violencia-feminicida-cifras-america-latina-caribe-ndeg5-medir-actuar-territorio"
+      ],
+      "visualAssetId": "AST-20261126-IMG-04-RECON-ECLAC-DATA-4X5",
+      "rightsState": "conditional_openai_terms_not_exclusive_clearance",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Text-free regional data illustration showing Latin America and the Caribbean with separate coral circular and aqua bar systems representing completed and attempted or frustrated cases.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
+    {
+      "id": "signal-20261126-canary-islands-emergency",
+      "slug": "canary-islands-emergency",
+      "lane": "afro-europe",
+      "laneLabel": "Afro-Europe",
+      "format": "NEWS_BRIEF",
+      "title": "Canary Islands declares emergency as maritime arrivals strain El Hierro",
+      "description": "The Canary Islands government declared a health, social and security emergency on El Hierro; reporting describes maritime arrivals without assigning nationality, intent or legal status.",
+      "path": "/news/canary-islands-emergency.html",
+      "publishedAt": "2026-11-26T16:45:00+03:00",
+      "sourceLabels": [
+        "Government of the Canary Islands",
+        "Associated Press"
+      ],
+      "sourceRefs": [
+        "https://www3.gobiernodecanarias.org/noticias/el-gobierno-de-canarias-declara-la-emergencia-de-caracter-sanitario-social-y-de-seguridad-en-el-hierro/",
+        "https://apnews.com/article/dfa1b036283a58d040ea6a6ae6d8141a"
+      ],
+      "visualAssetId": "AST-20261126-IMG-05-REPLACEMENT-CANARY-EMERGENCY-4X5",
+      "rightsState": "conditional_openai_terms_not_exclusive_clearance",
+      "imageStatus": "IMAGE_READY",
+      "altText": "Text-free Atlantic mobility illustration linking maritime routes to island nodes and civic response systems near the Canary Islands.",
+      "status": "APPROVED_FOR_PUBLISH"
+    },
     {
       "id": "signal-20261122-gambia-decarbonisation-roadmap",
       "slug": "gambia-decarbonisation-roadmap",

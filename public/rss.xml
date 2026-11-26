@@ -1,10 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Signal — Afrodescendant Ali</title><link>https://www.afrodescendantali.com/</link><description>Published stories from Afrodescendant Ali’s Signal desk across the Black World.</description><language>en</language><lastBuildDate>Sun, 22 Nov 2026 07:45:00 GMT</lastBuildDate><atom:link href="https://www.afrodescendantali.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <item><title>Gambia receives roadmap for national decarbonisation toward 2063</title><link>https://www.afrodescendantali.com/news/gambia-decarbonisation-roadmap.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/gambia-decarbonisation-roadmap.html</guid><description>An AU-backed roadmap sets out long-term emissions and renewable-energy targets for The Gambia; implementation and financing remain the test.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Africa</category></item>
-    <item><title>UN report documents 1,167 killings in Haiti in third quarter</title><link>https://www.afrodescendantali.com/news/haiti-q3-human-rights-report.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/haiti-q3-human-rights-report.html</guid><description>A BINUH report covering 1 July–30 September records 1,167 people killed and 459 injured amid gang attacks, security operations and self-defence incidents.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Caribbean</category></item>
-    <item><title>Sheriff elections put local immigration agreements in focus</title><link>https://www.afrodescendantali.com/news/sheriff-elections-287g-agreements.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/sheriff-elections-287g-agreements.html</guid><description>An AP review of roughly 250 sheriff races examined where 287(g) agreements featured in campaigns; official and local results show the issue’s local political stakes.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Black America</category></item>
-    <item><title>Analysis: Southern organizers are building a longer Black political bench</title><link>https://www.afrodescendantali.com/news/southern-organizers-political-bench.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/southern-organizers-political-bench.html</guid><description>Across Georgia, Tennessee, South Carolina and Mississippi, organizers are trying to connect voter registration to candidate recruitment and durable local power.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Black America</category></item>
-    <item><title>Brazil data shows income gap among Black women reporting violence</title><link>https://www.afrodescendantali.com/news/brazil-black-women-violence-income.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/brazil-black-women-violence-income.html</guid><description>A data update reported by Agência Brasil says 73% of Black women reporting domestic or family violence lived in households earning up to two minimum wages, compared with 54% of white women.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Afro-Latin America</category></item>
-    <item><title>French court recognizes racist nature of violence in Michel Zecler case</title><link>https://www.afrodescendantali.com/news/michel-zecler-sentencing.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/michel-zecler-sentencing.html</guid><description>Three officers received prison sentences in the case arising from the 2020 beating of the Black music producer; the court’s reasoning remains the key legal record.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Afro-Europe</category></item>
-    <item><title>Mauritius hosts Indian Ocean regional health forum</title><link>https://www.afrodescendantali.com/news/mauritius-indian-ocean-health-forum.html</link><guid isPermaLink="true">https://www.afrodescendantali.com/news/mauritius-indian-ocean-health-forum.html</guid><description>The 22nd colloquium on HIV, hepatitis and addictions brought regional health stakeholders together in Quatre-Bornes from 18 to 20 November.</description><pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate><category>Indian Ocean</category></item>
-</channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Signal — Afrodescendant Ali</title>
+    <link>https://www.afrodescendantali.com/</link>
+    <description>Published stories from Afrodescendant Ali’s Signal desk across the Black World.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 Nov 2026 13:45:00 GMT</lastBuildDate>
+    <atom:link href="https://www.afrodescendantali.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Security operations reported across several areas in Haiti</title>
+      <link>https://www.afrodescendantali.com/news/haiti-operations-geography.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/haiti-operations-geography.html</guid>
+      <description>AP, UN/BINUH and local reporting describe operations and violence in different parts of the country; the accounts are not merged into a single measure of success.</description>
+      <pubDate>Thu, 26 Nov 2026 13:45:00 GMT</pubDate>
+      <category>Caribbean</category>
+    </item>
+    <item>
+      <title>ECLAC records at least 3,386 femicides across 27 countries and territories</title>
+      <link>https://www.afrodescendantali.com/news/eclac-femicides-2025.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/eclac-femicides-2025.html</guid>
+      <description>The regional observatory’s official 2025 measure separates recorded femicides from attempted or frustrated cases and does not support the conflicting 24-per-day claim.</description>
+      <pubDate>Thu, 26 Nov 2026 13:45:00 GMT</pubDate>
+      <category>Afro-Latin America</category>
+    </item>
+    <item>
+      <title>Canary Islands declares emergency as maritime arrivals strain El Hierro</title>
+      <link>https://www.afrodescendantali.com/news/canary-islands-emergency.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/canary-islands-emergency.html</guid>
+      <description>The Canary Islands government declared a health, social and security emergency on El Hierro; reporting describes maritime arrivals without assigning nationality, intent or legal status.</description>
+      <pubDate>Thu, 26 Nov 2026 13:45:00 GMT</pubDate>
+      <category>Afro-Europe</category>
+    </item>
+    <item>
+      <title>Gambia receives roadmap for national decarbonisation toward 2063</title>
+      <link>https://www.afrodescendantali.com/news/gambia-decarbonisation-roadmap.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/gambia-decarbonisation-roadmap.html</guid>
+      <description>An AU-backed roadmap sets out long-term emissions and renewable-energy targets for The Gambia; implementation and financing remain the test.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Africa</category>
+    </item>
+    <item>
+      <title>UN report documents 1,167 killings in Haiti in third quarter</title>
+      <link>https://www.afrodescendantali.com/news/haiti-q3-human-rights-report.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/haiti-q3-human-rights-report.html</guid>
+      <description>A BINUH report covering 1 July–30 September records 1,167 people killed and 459 injured amid gang attacks, security operations and self-defence incidents.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Caribbean</category>
+    </item>
+    <item>
+      <title>Sheriff elections put local immigration agreements in focus</title>
+      <link>https://www.afrodescendantali.com/news/sheriff-elections-287g-agreements.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/sheriff-elections-287g-agreements.html</guid>
+      <description>An AP review of roughly 250 sheriff races examined where 287(g) agreements featured in campaigns; official and local results show the issue’s local political stakes.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Black America</category>
+    </item>
+    <item>
+      <title>Analysis: Southern organizers are building a longer Black political bench</title>
+      <link>https://www.afrodescendantali.com/news/southern-organizers-political-bench.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/southern-organizers-political-bench.html</guid>
+      <description>Across Georgia, Tennessee, South Carolina and Mississippi, organizers are trying to connect voter registration to candidate recruitment and durable local power.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Black America</category>
+    </item>
+    <item>
+      <title>Brazil data shows income gap among Black women reporting violence</title>
+      <link>https://www.afrodescendantali.com/news/brazil-black-women-violence-income.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/brazil-black-women-violence-income.html</guid>
+      <description>A data update reported by Agência Brasil says 73% of Black women reporting domestic or family violence lived in households earning up to two minimum wages, compared with 54% of white women.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Afro-Latin America</category>
+    </item>
+    <item>
+      <title>French court recognizes racist nature of violence in Michel Zecler case</title>
+      <link>https://www.afrodescendantali.com/news/michel-zecler-sentencing.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/michel-zecler-sentencing.html</guid>
+      <description>Three officers received prison sentences in the case arising from the 2020 beating of the Black music producer; the court’s reasoning remains the key legal record.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Afro-Europe</category>
+    </item>
+    <item>
+      <title>Mauritius hosts Indian Ocean regional health forum</title>
+      <link>https://www.afrodescendantali.com/news/mauritius-indian-ocean-health-forum.html</link>
+      <guid isPermaLink="true">https://www.afrodescendantali.com/news/mauritius-indian-ocean-health-forum.html</guid>
+      <description>The 22nd colloquium on HIV, hepatitis and addictions brought regional health stakeholders together in Quatre-Bornes from 18 to 20 November.</description>
+      <pubDate>Sun, 22 Nov 2026 07:45:00 GMT</pubDate>
+      <category>Indian Ocean</category>
+    </item>
+  </channel>
+</rss>
