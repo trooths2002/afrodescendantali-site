@@ -1,0 +1,128 @@
+{
+  "previewId": "EXE-20261126-005-ADN-NEWS-RECONCILED-PREVIEW",
+  "status": "PROTECTED_PREVIEW_ONLY",
+  "productionChanged": false,
+  "rssChanged": false,
+  "feedAutomationChanged": false,
+  "rightsState": "CONDITIONAL_OPENAI_TERMS_NOT_EXCLUSIVE_CLEARANCE",
+  "stories": [
+    {
+      "storyId": "signal-20261126-haiti-operations-geography",
+      "lane": "Caribbean",
+      "format": "NEWS_BRIEF",
+      "slug": "haiti-operations-geography",
+      "title": "Security operations reported across several areas in Haiti",
+      "deck": "AP, UN/BINUH and local reporting describe operations and violence in different parts of the country; the accounts are not merged into a single measure of success.",
+      "previewPath": "/news-design-preview/20261126-news-update/stories/haiti-operations-geography.html",
+      "sources": [
+        {
+          "sourceId": "SRC-20261126-HAITI-AP",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/haiti-el-salvador-bukele-gangs-killed-a8e4b6c757733cc05d01a0f3809528b5",
+          "supports": "Reported operations and security developments; use attributed language.",
+          "limits": "Does not establish a complete national operational picture or prove territorial control."
+        },
+        {
+          "sourceId": "SRC-20261126-HAITI-BINUH",
+          "publisher": "United Nations / BINUH",
+          "url": "https://binuca.unmissions.org/sites/default/files/2026-11/Q3%202026%20-%20ENGLISH.pdf",
+          "supports": "Defined Q3 2026 human-rights reporting period and documented incidents.",
+          "limits": "Casualty and incident categories are not interchangeable with operational claims."
+        },
+        {
+          "sourceId": "SRC-20261126-HAITI-AYITI-MINUTE",
+          "publisher": "Ayiti Minute",
+          "url": "https://ayitiminute.com/pnh-frg-operations-tabarre-martissant-matissant-novembre-2026/",
+          "supports": "Local reporting on named operation locations.",
+          "limits": "Use as attributed local reporting; no independent claim of success."
+        }
+      ],
+      "claims": [
+        { "claimId": "CLM-20261126-HAITI-001", "text": "Operations were reported in more than one Haitian area.", "support": ["SRC-20261126-HAITI-AP", "SRC-20261126-HAITI-AYITI-MINUTE"], "wording": "reported operations" },
+        { "claimId": "CLM-20261126-HAITI-002", "text": "The UN/BINUH report covers a defined Q3 2026 reporting period.", "support": ["SRC-20261126-HAITI-BINUH"], "wording": "according to the Q3 report" },
+        { "claimId": "CLM-20261126-HAITI-003", "text": "The reports do not support merging casualty totals or declaring operational success.", "support": ["SRC-20261126-HAITI-AP", "SRC-20261126-HAITI-BINUH", "SRC-20261126-HAITI-AYITI-MINUTE"], "wording": "editorial limitation" }
+      ],
+      "asset": {
+        "assetId": "AST-20261126-IMG-02-RECON-HAITI-OPERATIONS-4X5",
+        "path": "/assets/news/ADN-20261126-IMG-02-RECON-HAITI-OPERATIONS-4x5.webp",
+        "dimensions": "1122x1402",
+        "sha256": "FFD6477ADB0E747CD2E957AFDFB7FBF9FC7D6000888A649861AE2857C24A1A68",
+        "alt": "Text-free editorial map illustration of Haiti's capital and southern corridor with connected routes and abstract monitored zones, without depicting violence.",
+        "rights": "Conditional under applicable OpenAI Terms; not exclusive legal clearance.",
+        "neutrality": "Abstract route map only; no casualty numbers, weapons, bodies, flags or claim of military success; geography is illustrative."
+      }
+    },
+    {
+      "storyId": "signal-20261126-eclac-femicides-2025",
+      "lane": "Afro-Latin America",
+      "format": "NEWS_BRIEF",
+      "slug": "eclac-femicides-2025",
+      "title": "ECLAC records at least 3,386 femicides across 27 countries and territories",
+      "deck": "The regional observatory’s official 2025 measure separates recorded femicides from attempted or frustrated cases and does not support the conflicting 24-per-day claim.",
+      "previewPath": "/news-design-preview/20261126-news-update/stories/eclac-femicides-2025.html",
+      "sources": [
+        {
+          "sourceId": "SRC-20261126-ECLAC-BOLETIN-05",
+          "publisher": "ECLAC Gender Equality Observatory",
+          "url": "https://oig.cepal.org/es/documento/boletin-violencia-feminicida-cifras-america-latina-caribe-ndeg5-medir-actuar-territorio",
+          "supports": "Official 2025 regional measure: at least 3,386 femicides across 27 countries and territories; attempted or frustrated cases are reported separately for 10 countries.",
+          "limits": "Country coverage and definitions vary; the measure is not a complete count of all gender-based violence."
+        }
+      ],
+      "claims": [
+        { "claimId": "CLM-20261126-ECLAC-001", "text": "At least 3,386 femicides were recorded across 27 Latin American and Caribbean countries and territories in 2025.", "support": ["SRC-20261126-ECLAC-BOLETIN-05"], "wording": "ECLAC records" },
+        { "claimId": "CLM-20261126-ECLAC-002", "text": "Attempted or frustrated cases are kept as a separate measure for 10 countries.", "support": ["SRC-20261126-ECLAC-BOLETIN-05"], "wording": "reported separately" },
+        { "claimId": "CLM-20261126-ECLAC-003", "text": "The conflicting 24-per-day claim is excluded from this story.", "support": ["SRC-20261126-ECLAC-BOLETIN-05"], "wording": "editorial exclusion" }
+      ],
+      "asset": {
+        "assetId": "AST-20261126-IMG-04-RECON-ECLAC-DATA-4X5",
+        "path": "/assets/news/ADN-20261126-IMG-04-RECON-ECLAC-DATA-4x5.webp",
+        "dimensions": "1122x1402",
+        "sha256": "D4D37779DC0412CD1948EBA1D72676ACFDC0A8273BF4D35706AC005B3D96D6F6",
+        "alt": "Text-free regional data illustration showing Latin America and the Caribbean with separate coral circular and aqua bar systems representing completed and attempted or frustrated cases.",
+        "rights": "Conditional under applicable OpenAI Terms; not exclusive legal clearance.",
+        "neutrality": "Two visually distinct systems; no counts, labels, faces, graphic violence, ranking or false precision."
+      }
+    },
+    {
+      "storyId": "signal-20261126-canary-islands-emergency",
+      "lane": "Afro-Europe",
+      "format": "NEWS_BRIEF",
+      "slug": "canary-islands-emergency",
+      "title": "Canary Islands declares emergency as maritime arrivals strain El Hierro",
+      "deck": "The Canary Islands government declared a health, social and security emergency on El Hierro; reporting describes maritime arrivals without assigning nationality, intent or legal status.",
+      "previewPath": "/news-design-preview/20261126-news-update/stories/canary-islands-emergency.html",
+      "sources": [
+        {
+          "sourceId": "SRC-20261126-CANARY-GOV",
+          "publisher": "Government of the Canary Islands",
+          "url": "https://www3.gobiernodecanarias.org/noticias/el-gobierno-de-canarias-declara-la-emergencia-de-caracter-sanitario-social-y-de-seguridad-en-el-hierro/",
+          "supports": "Official emergency declaration and its stated health, social and security scope.",
+          "limits": "The declaration does not by itself establish the identity, intent or legal status of people arriving by sea."
+        },
+        {
+          "sourceId": "SRC-20261126-CANARY-AP",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/dfa1b036283a58d040ea6a6ae6d8141a",
+          "supports": "Independent reporting on the arrival context and response.",
+          "limits": "Use neutral migration language and preserve attribution for reported details."
+        }
+      ],
+      "claims": [
+        { "claimId": "CLM-20261126-CANARY-001", "text": "The Canary Islands government declared a health, social and security emergency on El Hierro.", "support": ["SRC-20261126-CANARY-GOV"], "wording": "the government declared" },
+        { "claimId": "CLM-20261126-CANARY-002", "text": "The story concerns maritime arrivals and the island response.", "support": ["SRC-20261126-CANARY-GOV", "SRC-20261126-CANARY-AP"], "wording": "people arriving by sea" },
+        { "claimId": "CLM-20261126-CANARY-003", "text": "Nationality, intent, criminality and legal status are not inferred.", "support": ["SRC-20261126-CANARY-GOV", "SRC-20261126-CANARY-AP"], "wording": "editorial limitation" }
+      ],
+      "asset": {
+        "assetId": "AST-20261126-IMG-05-REPLACEMENT-CANARY-EMERGENCY-4X5",
+        "path": "/assets/news/ADN-20261126-IMG-05-REPLACEMENT-CANARY-EMERGENCY-4x5.webp",
+        "dimensions": "1122x1402",
+        "sha256": "2DC91E768CE88833B44C0612DC8911F71E1E9E00E9FCD16CF4356B44CB845C91",
+        "alt": "Text-free Atlantic mobility illustration linking maritime routes to island nodes and civic response systems near the Canary Islands.",
+        "rights": "Conditional under applicable OpenAI Terms; not exclusive legal clearance.",
+        "neutrality": "Abstract mobility routes and health, social and public-safety symbols; no nationality, origin, legal status, criminality, threat, crowded vessel or militarized border."
+      }
+    }
+  ]
+}
+
